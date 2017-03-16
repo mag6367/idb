@@ -2,6 +2,7 @@
 
 PHASE     := IDB1
 APP       := app/eklogi.py
+CONFIG    := app/config.py
 MODELS    := app/models.py
 TESTS     := app/tests.py
 TEST_DEST := eklogi-test.out
@@ -90,11 +91,13 @@ eklogi.log:
 
 format:
 	$(AUTOPEP8) -i $(APP)
+	$(AUTOPEP8) -i $(CONFIG)
 	$(AUTOPEP8) -i $(MODELS)
 	$(AUTOPEP8) -i $(TESTS)
 
 inspect:
 	-$(PYLINT) $(APP)
+	-$(PYLINT) $(CONFIG)
 	-$(PYLINT) $(MODELS)
 	-$(PYLINT) $(TESTS)
 
