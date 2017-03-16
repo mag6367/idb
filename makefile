@@ -6,7 +6,7 @@ CONFIG    := app/config.py
 MODELS    := app/models.py
 TESTS     := app/tests.py
 TEST_DEST := eklogi-test.out
-DOC_SRC   := models.html
+DOC_SRC   := app/models.html
 DOC_DEST  := $(PHASE).html
 LOG_DEST  := $(PHASE).log
 
@@ -82,7 +82,7 @@ config:
 	git config -l
 
 eklogi.html: $(MODELS)
-	pydoc3 -w $(MODELS)
+	cd app; pydoc3 -w models
 	cp $(DOC_SRC) $(DOC_DEST)
 	rm $(DOC_SRC)
 
@@ -109,6 +109,7 @@ status:
 	git status
 
 test: eklogi.html eklogi.log inspect
+	make versions
 	-$(COVERAGE) run --branch $(TESTS) > $(TEST_DEST) 2>&1
 	-$(COVERAGE) report -m >> $(TEST_DEST)
 	cat $(TEST_DEST)
