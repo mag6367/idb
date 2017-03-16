@@ -6,6 +6,8 @@ CONFIG     := app/config.py
 MODELS     := app/models.py
 TESTS      := app/tests.py
 TEST_DEST  := eklogi-test.out
+DOC_TARGET := models
+DOC_SRC    := app/models.html
 DOC_DEST   := $(PHASE).html
 LOG_DEST   := $(PHASE).log
 
@@ -81,7 +83,9 @@ config:
 	git config -l
 
 eklogi.html: $(MODELS)
-	cd app; make
+	cd app; pydoc3 -w $(DOC_TARGET)
+	cp $(DOC_SRC) $(DOC_DEST)
+	rm $(DOC_SRC)
 
 eklogi.log:
 	git log > $(LOG_DEST)
