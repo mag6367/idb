@@ -142,4 +142,7 @@ versions:
 	which $(AUTOPEP8)
 	$(AUTOPEP8) --version
 	@echo
+	which flask
+	flask --version
+	@echo
 	$(PIP) list
