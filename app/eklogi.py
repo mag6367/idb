@@ -5,8 +5,11 @@ This module contains the backend application for the eklogi website.
 
 """
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)  # pylint: disable=invalid-name
+app.config.from_object('config.TestingConfig')
+db = SQLAlchemy(app)
 
 
 @app.route('/')

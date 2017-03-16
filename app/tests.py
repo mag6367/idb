@@ -10,7 +10,7 @@ Model unit tests ensure database schema validity, testing for loading, saving, a
 """
 from unittest import main, TestCase
 
-from app import eklogi  # pylint: disable=import-error
+from app.eklogi import app  # pylint: disable=import-error
 
 
 class EklogiTests(TestCase):
@@ -21,7 +21,7 @@ class EklogiTests(TestCase):
     """
 
     def setUp(self):
-        self.app = eklogi.app.test_client()
+        self.app = app.test_client()
 
     def test_index(self):
         """
