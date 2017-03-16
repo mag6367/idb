@@ -6,7 +6,7 @@ This module contains the model classes which represent database tables.
 Models all are subclasses of SQLAlchemy's Model class.
 
 """
-from .eklogi import db  # pylint: disable=import-error
+from app.eklogi import db  # pylint: disable=import-error
 
 
 class Person(db.Model):  # pylint: disable=too-few-public-methods
