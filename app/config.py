@@ -8,14 +8,28 @@ All uppercase attributes of the config object will be passed to the Flask applic
 """
 
 
-class Config(object):
+class Config(object):  # pylint: disable=too-few-public-methods
+    """
+    Config
+
+    Base configuration for launching in any environment.
+    """
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
-class ProductionConfig(Config):
-    # TODO: Convert to Postgresql connection string once database is setup.
+class TestingConfig(Config):  # pylint: disable=too-few-public-methods
+    """
+    TestingConfig
+
+    Database/Flask configuration for launching locally.
+    """
     SQLALCHEMY_DATABASE_URI = 'sqlite://:memory:'
 
 
-class TestingConfig(Config):
+class ProductionConfig(Config):  # pylint: disable=too-few-public-methods
+    """
+    ProductionConfig
+
+    Database/Flask configuration for launching on AWS production server.
+    """
     SQLALCHEMY_DATABASE_URI = 'sqlite://:memory:'

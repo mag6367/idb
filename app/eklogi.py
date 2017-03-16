@@ -9,7 +9,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)  # pylint: disable=invalid-name
 app.config.from_object('config.TestingConfig')
-db = SQLAlchemy(app)
+db = SQLAlchemy(app)  # pylint: disable=invalid-name
 
 
 @app.route('/')
