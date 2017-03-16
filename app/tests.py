@@ -10,7 +10,7 @@ Model unit tests ensure database schema validity, testing for loading, saving, a
 """
 from unittest import main, TestCase
 
-from eklogi import app  # pylint: disable=import-error
+from app.eklogi import app  # pylint: disable=import-error
 
 
 class EklogiTests(TestCase):
