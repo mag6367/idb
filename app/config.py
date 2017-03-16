@@ -23,7 +23,7 @@ class TestingConfig(Config):  # pylint: disable=too-few-public-methods
 
     Database/Flask configuration for launching locally.
     """
-    SQLALCHEMY_DATABASE_URI = 'sqlite://:memory:'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/test.db'
 
 
 class ProductionConfig(Config):  # pylint: disable=too-few-public-methods
@@ -32,4 +32,4 @@ class ProductionConfig(Config):  # pylint: disable=too-few-public-methods
 
     Database/Flask configuration for launching on AWS production server.
     """
-    SQLALCHEMY_DATABASE_URI = 'sqlite://:memory:'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/test.db'
