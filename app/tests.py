@@ -23,7 +23,7 @@ class EklogiTests(TestCase):
     def setUp(self):
         self.app = app.test_client()
 
-    def testroute(route, *, method='get', code='200 OK'):  # pylint: disable=no-self-argument
+    def route(route, *, method='get', code='200 OK'):  # pylint: disable=no-self-argument
         """
         Performs a basic check against a route.
 
@@ -54,7 +54,7 @@ class EklogiTests(TestCase):
 
         return wrap
 
-    @testroute('/')
+    @route('/')
     def test_index(self, res):
         """
         Checks the route to '/' exists and returns the test string 'Hello World'.
