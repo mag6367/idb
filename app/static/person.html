@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Eklogi Poltical Database</title>
+<title>Eklogi Poltical Database [PERSON]</title>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- CDN based loading of Bootstrap and JQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!-- Local loading of Bootstrap and JQuery -->
 <!-- 	<script src="/bower_components/bootstrap-css/css/bootstrap.min.css"></script>
 	<script src="/bower_components/bootstrap-css/js/bootstrap.min.js"></script>
 	<script src="/bower_components/jquery/dist/jquery.min.js"></script> -->
-
-	<link rel="stylesheet" href="css/style.css">
-	<script src="./eklogi.js"></script>
 </head>
 <body>
 	<!-- <div class="container"> -->
@@ -26,7 +24,8 @@
 			<h1>Eklogi: The US Political Database</h1>
 			<!-- grab a random quote from a list? get rid of this bit entirely? -->
 			<div class="hidden-sm hidden-xs">
-				<p><i id="header-quote"></i></p>
+				<p><i>It has been observed that a pure democracy if it were practicable would be the most perfect government.
+				Experience has proved that no position is more false than this. - Alexander Hamilton </i></p>
 			</div>
 		</div>
 	</div>
@@ -45,8 +44,8 @@
 
 			<div class="collapse navbar-collapse" id="pillars">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="person.html">People</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="#">People</a></li>
 					<li><a href="#">Elections</a></li>
 					<li><a href="#">Districts</a></li>
 					<li><a href="#">Committees</a></li>
@@ -64,51 +63,32 @@
 	<div class="container">
 		<h1>My First Bootstrap Page</h1>
 		<p>This is some text.</p>
-	</div>
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-				<img src="./img/constitutional_convention_2.jpg" alt="Chania">
-				<div class="carousel-caption">
-					<h3>Constitutional Convention</h3>
-					<p>The constitution was drafted there.</p>
+		<div class="row">
+			<!-- Portrait and basic details -->
+			<div class="col-sm-6">
+				<div class="thumbnail">
+					<img src="./img/astronaut-sloth.jpg" alt="A true American Hero (TM)" style="width:350px">
+          <div class="caption text-center">
+						<h2>Astronaut Sloth</h2>
+						<p>Independent</p>
+						<p>July 04, 1776 - Present</p>
+						<a href="#">Website</a>
+          </div>
 				</div>
 			</div>
-
-			<div class="item">
-				<img src="./img/constitutional_convention.jpg" alt="Chania">
-				<div class="carousel-caption">
-					<h3>Constitutional Convention</h3>
-					<p>The constitution was drafted there.</p>
-				</div>
-			</div>
-
-			<div class="item">
-				<img src="./img/cicero_denounces_catiline.jpg" alt="Flower">
-				<div class="carousel-caption">
-					<h3>Cicero</h3>
-					<p>Cicero denounces Cateline following the failed Cateline Conspiracy.</p>
+			<div class="col-sm-6">
+				<!-- Office specific details -->
+				<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Office
+				  <span class="caret"></span></button>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">Secretary of Space</a></li>
+				    <li><a href="#">Hero of the People (TM)</a></li>
+				    <li><a href="#">Commander Shepard's Drinking Buddy</a></li>
+				  </ul>
 				</div>
 			</div>
 		</div>
-
-		<!-- Left and right controls -->
-		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
 	</div>
 </body>
 </html>
