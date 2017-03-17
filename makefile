@@ -83,7 +83,6 @@ config:
 	git config -l
 
 eklogi.html: $(MODELS)
-	ls /home/travis/virtualenv/python3.5.2/lib/python3.5/site-packages
 	$(PYDOC) -w $(DOC_TARGET)
 	cp $(DOC_SRC) $(DOC_DEST)
 	rm $(DOC_SRC)
@@ -110,13 +109,14 @@ status:
 	git remote -v
 	git status
 
-test: eklogi.html eklogi.log inspect
+submit: eklogi.html eklogi.log
+	make check
+
+test: inspect
 	make versions
 	-$(COVERAGE) run --branch $(TESTS) > $(TEST_DEST) 2>&1
 	-$(COVERAGE) report -m >> $(TEST_DEST)
 	cat $(TEST_DEST)
-	ls -al
-	make check
 
 versions:
 	which make
