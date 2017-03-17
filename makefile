@@ -83,6 +83,7 @@ config:
 	git config -l
 
 eklogi.html: $(MODELS)
+	ls /home/travis/virtualenv/python3.5.2/lib/python3.5/site-packages
 	$(PYDOC) -w $(DOC_TARGET)
 	cp $(DOC_SRC) $(DOC_DEST)
 	rm $(DOC_SRC)
