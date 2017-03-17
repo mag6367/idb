@@ -8,7 +8,6 @@ Route tests ensure attempts to reach a route return a 200 OK response and the da
 Model unit tests ensure database schema validity, testing for loading, saving, and updating entries.
 
 """
-from functools import wraps
 from unittest import main, TestCase
 
 from app.eklogi import app  # pylint: disable=import-error
@@ -24,36 +23,43 @@ class EklogiTests(TestCase):
     def setUp(self):
         self.app = app.test_client()
 
-    @wraps
-    def routeCheck(self, f):
+    def testroute(route, *, method='get', code='200 OK'):  # pylint: disable=no-self-argument
         """
         Performs a basic check against a route.
 
-        The route meta data must be an iterable which contains the
-        route path, response code/status, and expected result.
-
-        :param f: the route meta data
-        :param extra: any extra checks to perform on the response
+        :param route: the route path to query
+        :param method: the name of the method to perform on the client (get, post, etc.)
+        :param code: the response code to expect from the route
         :return: the route check wrapper
         """
-        route, code, expected = f()
 
-        def check():
+        def wrap(f):  # pylint: disable=invalid-name
             """
-            Queries the client at the specified route, checking the status and data.
+            Returns a decorator which performs all response checks.
+
+            :param f: the function to perform additional response checks
+            :return: the check function to query client and test the response
             """
-            res = self.app.get(route)
-            self.assertEqual(code, res.status)
-            self.assertEqual(expected, res.data)
 
-        return check
+            def check(self):
+                """
+                Queries the client at the specified route, checking the status and data.
 
-    @routeCheck
-    def test_index(self):
+                """
+                res = getattr(self.app, method)(route)
+                self.assertEqual(code, res.status)
+                f(self, res)
+
+            return check
+
+        return wrap
+
+    @testroute('/')
+    def test_index(self, res):
         """
         Checks the route to '/' exists and returns the test string 'Hello World'.
         """
-        return '/', '200 OK', b'Hello World!'
+        self.assertEqual(b'Hello World!', res.data)
 
 
 if __name__ == '__main__':
