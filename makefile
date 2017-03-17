@@ -30,7 +30,7 @@ else ifeq ($(CI), true)                # Travis CI
     PIP      := pip3.5
     PYLINT   := pylint
     COVERAGE := coverage-3.5
-    PYDOC    := pydoc3.5
+    PYDOC    := pydoc3
     AUTOPEP8 := autopep8
 else ifeq ($(shell uname -p), unknown) # Docker
     PYTHON   := python3.5
@@ -83,7 +83,7 @@ config:
 	git config -l
 
 eklogi.html: $(MODELS)
-	pydoc3 -w $(DOC_TARGET)
+	$(PYDOC) -w $(DOC_TARGET)
 	cp $(DOC_SRC) $(DOC_DEST)
 	rm $(DOC_SRC)
 
