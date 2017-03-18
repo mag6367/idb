@@ -1,5 +1,9 @@
 /* Image and Title at the top of the splash page */
 
+body {
+    background-color: #FCFCFF;
+}
+
 .header-text {
 	/*background: url("img/cicero_denounces_catiline.jpg");*/
 	position: relative;
@@ -35,6 +39,10 @@
 	bottom: 0;
 	background-color: #000000;
 	z-index: -2;
+}
+
+#person-info-display {
+	margin-left: 15px;
 }
 
 /* Nav Bar Configuration */

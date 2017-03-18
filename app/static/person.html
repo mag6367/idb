@@ -5,15 +5,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- CDN based loading of Bootstrap and JQuery -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+	<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
 
-	<!-- Local loading of Bootstrap and JQuery -->
-<!-- 	<script src="/bower_components/bootstrap-css/css/bootstrap.min.css"></script>
-	<script src="/bower_components/bootstrap-css/js/bootstrap.min.js"></script>
-	<script src="/bower_components/jquery/dist/jquery.min.js"></script> -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="./eklogi.js"></script>
+	<script type="text/babel" src="./person.js"></script>
 </head>
 <body>
 	<!-- <div class="container"> -->
@@ -61,34 +62,80 @@
 	</nav>
 
 	<div class="container">
-		<h1>My First Bootstrap Page</h1>
-		<p>This is some text.</p>
 		<div class="row">
 			<!-- Portrait and basic details -->
 			<div class="col-sm-6">
 				<div class="thumbnail">
-					<img src="./img/astronaut-sloth.jpg" alt="A true American Hero (TM)" style="width:350px">
+					<img src="./img/astronaut-sloth.jpg" alt="A true American Hero (TM)" style="width:300px">
           <div class="caption text-center">
-						<h2>Astronaut Sloth</h2>
-						<p>Independent</p>
-						<p>July 04, 1776 - Present</p>
-						<a href="#">Website</a>
+						<h2 id="person-name">Astronaut Sloth</h2>
+						<p id="person-party">Party affiliation: Independent</p>
+						<p id="person-lifespan">July 04, 1776 - Present</p>
+						<a id="person-website" href="#">Website</a>
+          </div>
+					<div class="caption text-center">
+						<p>Birth Place: Palaven, Apien Crest, Milky Way</p>
+						<p>Degrees: Astronaut Sloth needs none of your "degrees"</p>
+				    <p>Military: Official Advisor to Admiral Hackett</p>
           </div>
 				</div>
 			</div>
+			<!-- Office specific details -->
 			<div class="col-sm-6">
-				<!-- Office specific details -->
-				<div class="dropdown">
-				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Office
-				  <span class="caret"></span></button>
-				  <ul class="dropdown-menu">
-				    <li><a href="#">Secretary of Space</a></li>
-				    <li><a href="#">Hero of the People (TM)</a></li>
-				    <li><a href="#">Commander Shepard's Drinking Buddy</a></li>
-				  </ul>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="dropdown col-xs-6">
+							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+									Select Information
+									<span class="caret"></span>
+								</button>
+							  <ul class="dropdown-menu" id="person-info-select">
+									<li><a href="#">Summary</a></li>
+							    <li><a href="#">Secretary of Space</a></li>
+							    <li><a href="#">Hero of the People (TM)</a></li>
+							    <li><a href="#">Commander Shepard's Drinking Buddy</a></li>
+							  </ul>
+							</div>
+							<div class="col-xs-6" id="person-info-selected">
+								<h4>Secretary of Space</h4>
+							</div>
+						</div>
+					</div>
+					<div id="person-info-display"></div>
+					<!-- <div class="panel-content" id="person-info-display">
+		        <h4>Office: Secretary of Space</h4>
+		        <p>Level: Intergalactic </p>
+		        <p>Branch: Executive </p>
+		        <p>Chamber: NA </p>
+		        <p>District: Milky Way, Unfashionable Arm</p>
+		        <p>Status: Incumbant</p>
+						<div id="Election Data">
+							<p>Date First Elected: </p>
+			        <p>Date Last Elected</p>
+			        <p>Date Next Election</p>
+						</div>
+						<div id="Appointment Data">
+							<p>Date Nominated</p>
+			        <p>Date Confirmed</p>
+			        <p>Date Appointed</p>
+			        <p>Appointed By</p>
+			        <p>Date Expires</p>
+						</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+					<div class="panel-content" id="person-summary">
+						Summary
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </body>
 </html>

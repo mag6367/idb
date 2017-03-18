@@ -1,29 +1,8 @@
 var quotes;
-//
-//
-//
-// $("#header-quote").text("HELLO");
-//
-// var quoteIndex = -1;
-//
-// var getQuote = function () {
-//   $("#header-quote").text("HELLO");
-//
-//   // var quotes = JSON.parse("")
-// };
 
-// function testFoo() {
-//   $("#header-quote").text("HELLO");
-//   // alert("Hi");
-// };
 
-// window.onload = function() {
-//   testFoo();
-// };
 
-// window.onload = function() {
-//   $("#header-quote").text("HELLO");
-// };
+
 
 function setQuote(text, source) {
   $("#header-quote").text(text + " - " + source);
