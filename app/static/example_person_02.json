@@ -1,0 +1,75 @@
+{
+	"Name": "Jim Langevin",
+	"Image": "http://ballotpedia.org/wiki/images/8/86/James_Langevin.jpg",
+	"PageURL": "http://ballotpedia.org/Jim_Langevin",
+	"DateBorn": "1964-04-22",
+	"IsDeceased": false,
+	"PartyAffiliation": "Democratic",
+	"Offices": [
+		{
+			"Name": "Rhode Island House of Representatives",
+			"Title": "Representative",
+			"Level": "State",
+			"Branch": "Legislative",
+			"Chamber": "Lower",
+			"District": {
+				"ID": 2736,
+				"Type": "StateLegLower",
+				"Name": "Rhode Island House of Representatives District 29",
+				"State": "RI"
+			},
+			"Status": "Former",
+			"OfficeIsElected": true,
+			"Election": {
+				"ID": 3098,
+				"Date": "1988"
+			},
+			"OfficeIsAppointed": false,
+			"DateAssumed": "1989",
+			"DateExpires": "1995"
+		},
+		{
+			"Name": "Secretary of State of Rhode Island",
+			"Title": "Secretary",
+			"Level": "State",
+			"Branch": "Executive",
+			"District": {
+				"ID": 2347,
+				"Type": "State",
+				"Name": "Rhode Island",
+				"state": "RI"
+			},
+			"Status": "Former",
+			"OfficeIsElected": true,
+			"Election": {
+				"ID": 9164,
+				"Date": "1994"
+			},
+			"OfficeIsAppointed": false,
+			"DateAssumed": "1995",
+			"DateExpires": "2001"
+		},
+		{
+			"Name": "U.S. Representative",
+			"Title": "Representative",
+			"Level": "Federal",
+			"Branch": "Legislative",
+			"Chamber": "Lower",
+			"District": {
+				"ID": 8347,
+				"Type": "Congress",
+				"Name": "Rhode Island 2nd Congressional District",
+				"State": "RI"
+			},
+			"Status": "Incumbent",
+			"OfficeIsElected": true,
+			"Election": {
+				"ID": 2387,
+				"Date": "2000-11-072"
+			},
+			"OfficeIsAppointed": false,
+			"DateAssumed": "2001",
+			"DateExpires": "2017-01-03"
+		}
+	]
+}

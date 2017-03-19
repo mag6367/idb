@@ -1,0 +1,76 @@
+
+{
+	"Name": "David Cicilline",
+	"Image": "http://ballotpedia.org/wiki/images/b/bb/David_Cicilline.jpg",
+	"PageURL": "http://ballotpedia.org/David_Cicilline",
+	"DateBorn": "1961-07-15",
+	"IsDeceased": false,
+	"PartyAffiliation": "Democratic",
+	"Offices": [
+		{
+			"Name": "Mayor of Providence, Rhode Island",
+			"Title": "Mayor",
+			"Level": "Local",
+			"Branch": "Executive",
+			"District": {
+				"ID": 5983,
+				"Type": "Cities",
+				"Name": "City of Providence",
+				"State": "RI"
+			},
+			"Status": "Former",
+			"OfficeIsElected": true,
+			"Election": {
+				"ID": 7136,
+				"Date": "2002-11-03"
+			},
+			"OfficeIsAppointed": false,
+			"DateAssumed": "2003",
+			"DateExpires": "2011"
+		},
+		{
+			"Name": "Rhode Island House of Representatives",
+			"Title": "Representative",
+			"Level": "State",
+			"Branch": "Legislative",
+			"Chamber": "Lower",
+			"District": {
+				"ID": 5712,
+				"Type": "StateLegLower",
+				"Name": "Rhode Island House of Representatives District 4",
+				"State": "RI"
+			},
+			"Status": "Former",
+			"OfficeIsElected": true,
+			"Election": {
+				"ID": 8173,
+				"Date": "1992"
+			},
+			"OfficeIsAppointed": false,
+			"DateAssumed": "1995",
+			"DateExpires": "2003"
+		},
+		{
+			"Name": "U.S. Representative",
+			"Title": "Representative",
+			"Level": "federal",
+			"Branch": "Legislative",
+			"Chamber": "Lower",
+			"District": {
+				"ID": 1746,
+				"Type": "Congress",
+				"Name": "Rhode Island 1st Congressional District",
+				"State": "RI"
+			},
+			"Status": "Incumbent",
+			"OfficeIsElected": true,
+			"Election": {
+				"ID": 5028,
+				"Date": "2010-11-02"
+			},
+			"OfficeIsAppointed": false,
+			"DateAssumed": "2011",
+			"DateExpires": "2017-01-03"
+		}
+	]
+}
