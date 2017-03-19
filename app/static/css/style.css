@@ -128,3 +128,10 @@ body {
   border-width: 0px 0px 2px 0px;
   border-color: #B22234;
 }
+
+#table-foot {
+  background-color: #FDFDFD;
+  border-style: solid;
+  border-width: 2px 0px 0px 0px;
+  border-color: #3C3B6E;
+}
