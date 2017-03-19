@@ -179,11 +179,11 @@ class OfficeView extends React.Component {
     }
     var office = this.state.person.Offices[this.state.officeIndex];
     return (
-      <div id="office-view-content">
+      <div id="office-view">
         <div className="panel panel-default">
           <div className="panel-heading">
             <div className="row">
-              <div className="dropdown col-xs-6">
+              <div className="dropdown col-xs-4">
                 <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                   Select Information
                   <span className="caret"></span>
@@ -195,12 +195,12 @@ class OfficeView extends React.Component {
                   <li><a href="#">Commander Shepards Drinking Buddy</a></li>
                 </ul>
               </div>
-              <div className="col-xs-6" id="person-info-selected">
+              <div className="col-xs-8" id="person-info-selected">
                 <h4>{office.Name}</h4>
               </div>
             </div>
           </div>
-          <div className="panel-content">
+          <div id="office-view-content" className="panel-content">
             <h4>Office: {office.Name}</h4>
             <p>Level: {office.Level} </p>
             <p>Branch: {office.Branch} </p>
@@ -214,6 +214,40 @@ class OfficeView extends React.Component {
       </div>
     );
   }
+}
+
+
+class Person extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      person: null
+    };
+  }
+
+  componentDidMount() {
+    var that = this;
+    loadJSONWrapper("example_person_01.json", function(data) {
+      that.updatePerson(data);
+    });
+  }
+
+  updatePerson(personData) {
+    var that = this;
+    if(personData) {
+      that.setState({
+        person: personData,
+      });
+    }
+    else {
+      alert("ELSE2");
+    }
+  }
+
+  render() {
+    return (<p>TBD</p>);
+  }
+
 }
 
 // function setOffice(officeIndex) {

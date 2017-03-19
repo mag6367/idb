@@ -112,4 +112,19 @@ body {
 	background-size: cover;
 }
 
-/* Person page */
+/* People page */
+
+.search-pane {
+  background-color: #FDFDFD;
+  border-style: solid;
+  border-width: 6px 2px 6px 2px;
+  border-color: #B22234;
+  border-bottom-color: #3C3B6E;
+  border-radius: 5px;
+}
+
+#table-head {
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  border-color: #B22234;
+}
