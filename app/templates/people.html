@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Eklogi Poltical Database [PEOPLE]</title>
+<head>
+	{% include 'common-header.html' %}
+</head>
+<body>
+	<div id="top-pane">
+		{% include 'top-pane.html' %}
+	</div>
+	<div id="top-navbar">
+		{% include 'top-navbar.html' %}
+	</div>
+
+
+
+  <div class="container search-pane">
+    <div class="row" id="table-head">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4 text-center">
+				<h4>People</h4>
+			</div>
+			<div class="col-sm-4">
+        <div class="input-group">
+          <span class="input-group-addon">Search: </span>
+          <input id="search-input" type="text" class="form-control" name="query-box" placeholder="">
+        </div>
+			</div>
+    </div>
+    <div class="row" id="table-content">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Party</th>
+              <th>State</th>
+              <th>Office</th>
+              <th>Level</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><a href="people?id=1"> David Cicilline</a></td>
+              <td>Democratic</td>
+              <td>RI</td>
+              <td>Mayor of Providence, Rhode Island</td>
+              <td>Local</td>
+              <td>Former</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row" id="table-foot">
+      <h4>This is the footer right here</h4>
+    </div>
+  </div>
+
+
+<!--
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              <div class="input-group">
+                <span class="input-group-addon">Search: </span>
+                <input id="search-input2" type="text" class="form-control" name="query-box" placeholder="">
+              </div>
+          </div>
+          <div class="panel-content">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Anna</td>
+                    <td>Pitt</td>
+                    <td>35</td>
+                    <td>New York</td>
+                    <td>USA</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Test</td>
+                    <td>Testerson</td>
+                    <td>1.496x10^11</td>
+                    <td>N/A</td>
+                    <td>Sol</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Slarty</td>
+                    <td>Barfast</td>
+                    <td>1 / 0</td>
+                    <td>N/A</td>
+                    <td>Magrathea</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel-footer">
+            Panel Footer
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+
+
+
+</body>
+</html>

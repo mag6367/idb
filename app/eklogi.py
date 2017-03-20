@@ -4,8 +4,10 @@ eklogi Flask Application
 This module contains the backend application for the eklogi website.
 
 """
-from flask import Flask, render_template
+import os
+from flask import Flask, render_template, request, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)  # pylint: disable=invalid-name
 app.config.from_object('app.config.TestingConfig')
@@ -17,9 +19,130 @@ def index():
     """
     eklogi Home Page
 
-    :return: 'Hello World!'
+    :return: 'TBD'
     """
-    return 'Hello World!'
+    print("Serving the rooooooot!")
+    return render_template('index.html')
+
+@app.route('/people')
+def people():
+    """
+    eklogi People listing
+
+    :return: 'TBD'
+    """
+
+    req_id = request.args.get("id")
+    print(req_id)
+    if req_id:
+        # if the request has the ID parameter, treat it as accessing a single user
+        return render_template('person.html')
+    else:
+        # otherwise, return the people search page
+        return render_template('people.html')
+
+
+@app.route('/elections')
+def elections():
+    """
+    eklogi Election listing
+
+    :return: 'TBD'
+    """
+    req_id = request.args.get("id")
+    print(req_id)
+    if req_id:
+        # if the request has the ID parameter, treat it as accessing a single user
+        return render_template('person.html')
+    else:
+        # otherwise, return the people search page
+        return render_template('people.html')
+
+@app.route('/districts')
+def districts():
+    """
+    eklogi District listing
+
+    :return: 'TBD'
+    """
+    req_id = request.args.get("id")
+    print(req_id)
+    if req_id:
+        # if the request has the ID parameter, treat it as accessing a single user
+        return render_template('person.html')
+    else:
+        # otherwise, return the people search page
+        return render_template('people.html')
+
+@app.route('/committees')
+def committees():
+    """
+    eklogi Committee listing
+
+    :return: 'TBD'
+    """
+    req_id = request.args.get("id")
+    print(req_id)
+    if req_id:
+        # if the request has the ID parameter, treat it as accessing a single user
+        return render_template('person.html')
+    else:
+        # otherwise, return the people search page
+        return render_template('people.html')
+
+@app.route('/filings')
+def filings():
+    """
+    eklogi Filing listing
+
+    :return: 'TBD'
+    """
+    req_id = request.args.get("id")
+    print(req_id)
+    if req_id:
+        # if the request has the ID parameter, treat it as accessing a single user
+        return render_template('person.html')
+    else:
+        # otherwise, return the people search page
+        return render_template('people.html')
+
+
+@app.route('/api/v1/quotes')
+def quotes():
+    """
+    stuff
+
+    :return: 'returns the quotes json file'
+    """
+    # SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    # json_url = os.path.join(SITE_ROOT, "static/data", "quotes.json")
+    # data = json.load(open(json_url))
+    return send_from_directory('./static/data', 'quotes.json')
+
+@app.route('/api/v1/americanhero')
+def sloth():
+    """
+    stuff
+
+    :return: 'returns a picture of the astronaut sloth'
+    """
+    # SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    # json_url = os.path.join(SITE_ROOT, "static/data", "quotes.json")
+    # data = json.load(open(json_url))
+    return send_from_directory('./static/img', 'astronaut-sloth.jpg')
+
+
+@app.route('/api/v1/people/')
+def test_person():
+    """
+    stuff
+
+    :return: 'returns an example person json'
+    """
+    req_id = request.args.get("id")
+    if req_id:
+        print(req_id)
+        return send_from_directory('./static/data', 'example_person_' + req_id + '.json')
 
 
 @app.route('/template')

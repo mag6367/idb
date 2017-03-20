@@ -1,0 +1,137 @@
+/* Image and Title at the top of the splash page */
+
+body {
+    background-color: #FCFCFF;
+}
+
+.header-text {
+	/*background: url("img/cicero_denounces_catiline.jpg");*/
+	position: relative;
+	background-color: #AAAAAA;
+	background: none;
+	color: #F0F0F0;
+	margin-bottom: 0px;
+
+}
+
+.header-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("../img/constitutional_convention_2.jpg");
+	background-size: cover;
+	background-position: 0% 25%;
+	/*background-position: center top;*/
+	background-repeat: no-repeat;
+	background-color: #AAAAAA;
+	filter: blur(2px) grayscale(5%) sepia(40%);
+	z-index: -1;
+	opacity: 0.45;
+}
+
+.header-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000;
+	z-index: -2;
+}
+
+#office-view-content {
+	margin-left: 15px;
+}
+
+/* Nav Bar Configuration */
+
+.navbar-eklogi {
+	background-color: #F5F5F5;
+	margin-bottom: 50px;
+	border-radius: 0;
+	border-width: 5px 2px 5px 2px;
+	border-top-color: #B22234;
+	/*border-top-color: #3C3B6E;*/
+	border-bottom-color: #B22234;
+	border-bottom-color: #3C3B6E;
+}
+
+.navbar-eklogi .navbar-text {
+	color: #3C3B6E
+}
+.navbar-eklogi .navbar-nav > li > a {
+	color: #3C3B6E
+}
+.navbar-eklogi .navbar-nav > li > a:hover,
+.navbar-eklogi .navbar-nav > li > a:focus {
+	color: #B22234;
+	background-color: transparent;
+}
+.navbar-eklogi .navbar-nav > .active > a,
+.navbar-eklogi .navbar-nav > .active > a:hover,
+.navbar-eklogi .navbar-nav > .active > a:focus {
+	color: #B22234;
+	background-color: #E0E0E0;
+}
+.navbar-eklogi .navbar-toggle {
+	/*border-color: #3C3B6E;*/
+	background-color: #3C3B6E;
+}
+.navbar-eklogi .navbar-toggle:hover,
+.navbar-eklogi .navbar-toggle:focus {
+	background-color: #B22234;
+}
+.navbar-eklogi .navbar-toggle .icon-bar {
+	background-color: #FFFFFF;
+}
+.navbar-eklogi .navbar-collapse,
+.navbar-eklogi .navbar-form {
+	border-color: #B22234;
+}
+
+/*.navbar-inverse .navbar-nav > .disabled > a,
+.navbar-inverse .navbar-nav > .disabled > a:hover,
+.navbar-inverse .navbar-nav > .disabled > a:focus {
+	color: #444;
+	background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+	color: #fff;
+	background-color: #080808;
+}*/
+
+
+/* Splash page carousel */
+
+.main-carousel {
+	background-size: cover;
+}
+
+/* People page */
+
+.search-pane {
+  background-color: #FDFDFD;
+  border-style: solid;
+  border-width: 6px 2px 6px 2px;
+  border-color: #B22234;
+  border-bottom-color: #3C3B6E;
+  border-radius: 5px;
+}
+
+#table-head {
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  border-color: #B22234;
+}
+
+#table-foot {
+  background-color: #FDFDFD;
+  border-style: solid;
+  border-width: 2px 0px 0px 0px;
+  border-color: #3C3B6E;
+}
