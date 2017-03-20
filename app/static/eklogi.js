@@ -9,7 +9,7 @@ function setQuote(text, source) {
 }
 
 $(document.body).ready(function () {
-  $.ajax({url: "quotes.json",
+  $.ajax({url: "/api/v1/quotes",
     success: function(content){
       if(content) {
         quotes = content;
