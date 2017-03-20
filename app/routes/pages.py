@@ -11,18 +11,6 @@ blueprint = Blueprint('Main website page routes',
                       static_folder='../static',
                       template_folder='../templates')
 
-
-def pagination_parameters():
-    """
-    Retrieves the start index and request limit from the request parameters.
-
-    Start defaults to -1. Limit defaults to 0.
-
-    :return: a tuple of (start, limit)
-    """
-    return request.args.get("start") or -1, request.args.get("limit") or 0
-
-
 @blueprint.route('/')
 def index():
     """
