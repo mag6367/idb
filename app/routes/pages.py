@@ -20,7 +20,7 @@ def pagination_parameters():
 
     :return: a tuple of (start, limit)
     """
-    return (request.args.get("start") or -1), (request.args.get("limit") or 0)
+    return request.args.get("start") or -1, request.args.get("limit") or 0
 
 
 @blueprint.route('/')
