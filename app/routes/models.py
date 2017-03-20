@@ -16,20 +16,20 @@ def pagination_parameters():
     """
     Retrieves the start index and request limit from the request parameters.
 
-    Start defaults to -1. Limit defaults to 0.
+    Start defaults to 0. Limit defaults to -1.
 
     :return: a tuple of (start, limit)
     """
     start = request.args.get("start")
-    if start:
+    try:
         start = int(start)
-    else:
-        start = -1
+    except ValueError:  # ignore malformed parameter, use default
+        start = 0
     limit = request.args.get("limit")
-    if limit:
+    try:
         limit = int(limit)
-    else:
-        limit = 0
+    except ValueError:  # ignore malformed parameter, use default
+        limit = -1
     return start, limit
 
 
