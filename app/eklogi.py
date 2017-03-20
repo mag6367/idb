@@ -119,6 +119,31 @@ def quotes():
     # data = json.load(open(json_url))
     return send_from_directory('./static/data', 'quotes.json')
 
+@app.route('/api/v1/americanhero')
+def sloth():
+    """
+    stuff
+
+    :return: 'returns a picture of the astronaut sloth'
+    """
+    # SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    # json_url = os.path.join(SITE_ROOT, "static/data", "quotes.json")
+    # data = json.load(open(json_url))
+    return send_from_directory('./static/img', 'astronaut-sloth.jpg')
+
+
+@app.route('/api/v1/people/')
+def test_person():
+    """
+    stuff
+
+    :return: 'returns an example person json'
+    """
+    req_id = request.args.get("id")
+    if req_id:
+        print(req_id)
+        return send_from_directory('./static/data', 'example_person_' + req_id + '.json')
+
 
 @app.route('/template')
 def template():

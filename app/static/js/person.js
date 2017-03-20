@@ -19,11 +19,13 @@ function PersonPortrait(props) {
       <img src={props.person.Image} alt={props.person.Name} style={{width: 300 + 'px'}}/>
     );
   }
-  return null;
+  return (
+    <img src="/api/v1/americanhero" alt="A sloth for all seasons" style={{width: 300 + 'px'}}/>
+  );
 }
 
 function PersonLifespan(props) {
-  if(props.person.IsDeceased) {
+  if(false && props.person.IsDeceased) {
     return (
       <p id="person-lifespan">
         {props.person.DateBorn} - {props.person.DateDied}
@@ -32,7 +34,7 @@ function PersonLifespan(props) {
   }
   return (
     <p id="person-lifespan">
-      {props.person.DateBorn} - Present
+      {props.person.date_of_birth} - Present
     </p>
   );
 }
@@ -41,11 +43,10 @@ function PersonDetails(props) {
   return (
     <div id="person-details">
       <div className="caption text-center">
-        <h2 id="person-name">{props.person.Name}</h2>
-        <p id="person-party">Party affiliation: {props.person.PartyAffiliation}</p>
+        <h2 id="person-name">{props.person.first_name} {props.person.last_name}</h2>
+        <p id="person-party">Party affiliation: {props.person.current_party}</p>
         <PersonLifespan person={props.person}/>
-        <a id="person-website" href="#">Website</a>
-        <p>{getPerson()}</p>
+        <a id="person-website" href={props.person.url}>Website</a>
       </div>
       {/*
       <div className="caption text-center">
@@ -76,48 +77,88 @@ class PersonView extends React.Component {
   }
 }
 
+// function DistrictData(props) {
+//   if(props.district) {
+//     return (
+//       <div id="district-data">
+//         <p>District: {props.district.Name} </p>
+//         <p>State: {props.district.State} </p>
+//       </div>
+//     );
+//   }
+//   return null;
+// }
+//
+// function ElectionData(props) {
+//   if(props.office.OfficeIsElected) {
+//     return (
+//       <div id="election-data">
+//         <p>Date First Elected: {props.office.Election.Date}</p>
+//         <p>Date Last Elected: {props.office.DateAssumed}</p>
+//         <p>Date Next Election: {props.office.DateExpires}</p>
+//       </div>
+//     );
+//   }
+//   else {
+//     return null;
+//   }
+// }
+//
+// function AppointmentData(props) {
+//   if(props.office.OfficeIsAppointed) {
+//     return (
+//       <div id="appointment-data">
+//         <p>Date Appointed: </p>
+//         <p>Date Expires: </p>
+//         <p>Appointed By: </p>
+//         <p>Date Nominated: </p>
+//         <p>Date Confirmed: </p>
+//       </div>
+//     );
+//   }
+//   else {
+//     return null;
+//   }
+// }
+
+
+
+function CommitteeData(props) {
+  return (
+    <div class="committee-data">
+      <h4>{props.committee.name}</h4>
+      <p>Rank in party: {props.committee.rank_in_party}</p>
+      {/*
+      {props.committe.begin_date ? (<p>Begin Data: {props.committee.begin_date</p>}) : (<div></div>)}
+      {props.committe.end_date ? (<p>Begin Data: {props.committee.end_date</p>}) : (<div></div>)}
+      */}
+    </div>
+  );
+}
+
 function DistrictData(props) {
-  if(props.district) {
+  if(props.office.district) {
     return (
-      <div id="district-data">
-        <p>District: {props.district.Name} </p>
-        <p>State: {props.district.State} </p>
+      <div className="district-data">
+        <p>District: {props.office.district}</p>
       </div>
     );
   }
   return null;
 }
 
-function ElectionData(props) {
-  if(props.office.OfficeIsElected) {
-    return (
-      <div id="election-data">
-        <p>Date First Elected: {props.office.Election.Date}</p>
-        <p>Date Last Elected: {props.office.DateAssumed}</p>
-        <p>Date Next Election: {props.office.DateExpires}</p>
-      </div>
-    );
-  }
-  else {
-    return null;
-  }
-}
-
-function AppointmentData(props) {
-  if(props.office.OfficeIsAppointed) {
-    return (
-      <div id="appointment-data">
-        <p>Date Appointed: </p>
-        <p>Date Expires: </p>
-        <p>Appointed By: </p>
-        <p>Date Nominated: </p>
-        <p>Date Confirmed: </p>
-      </div>
-    );
-  }
-  else {
-    return null;
-  }
+function OfficeData(props) {
+  return(
+    <div className="office-data">
+      <h4>Office: {props.office.title}, {props.office.chamber}</h4>
+      <p>State: {props.office.state} </p>
+      <DistrictData office={props.office}/>
+      {/*{office.Chamber ? (<p>Chamber: NA </p>) : (<div/>)}
+      <p>Status: {office.Status}</p>
+      <ElectionData office={office}/>
+      <AppointmentData office={office}/>*/}
+    </div>
+  );
 }
 
 class OfficeView extends React.Component {
@@ -132,7 +173,7 @@ class OfficeView extends React.Component {
     if(!this.props.person) {
       return (<div id="office-view-content"><p>No Data</p></div>);
     }
-    var office = this.props.person.Offices[this.state.officeIndex];
+    var office = this.props.person.roles[this.state.officeIndex];
     return (
       <div id="office-view">
         <div className="panel panel-default">
@@ -151,19 +192,12 @@ class OfficeView extends React.Component {
                 </ul>
               </div>
               <div className="col-xs-8" id="person-info-selected">
-                <h4>{office.Name}</h4>
+                <h4>{office.title}, {office.chamber}</h4>
               </div>
             </div>
           </div>
           <div id="office-view-content" className="panel-content">
-            <h4>Office: {office.Name}</h4>
-            <p>Level: {office.Level} </p>
-            <p>Branch: {office.Branch} </p>
-            {office.Chamber ? (<p>Chamber: NA </p>) : (<div/>)}
-            <DistrictData district={office.District}/>
-            <p>Status: {office.Status}</p>
-            <ElectionData office={office}/>
-            <AppointmentData office={office}/>
+            <OfficeData office={office}/>
           </div>
         </div>
       </div>
@@ -182,7 +216,7 @@ class Person extends React.Component {
 
   componentDidMount() {
     var that = this;
-    loadJSONWrapper("example_person_" + getPerson() + ".json", function(data) {
+    loadJSONWrapper("api/v1/people/?id=" + getPerson(), function(data) {
       that.updatePerson(data);
     });
   }
@@ -191,7 +225,7 @@ class Person extends React.Component {
     var that = this;
     if(personData) {
       that.setState({
-        person: personData,
+        person: personData.results[0],
       });
 
     }
