@@ -4,12 +4,13 @@ eklogi API Routes - Pages
 This module contains the routes for main website HTML pages.
 
 """
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template
 
 blueprint = Blueprint('Main website page routes',
                       __name__,
                       static_folder='../static',
                       template_folder='../templates')
+
 
 @blueprint.route('/')
 def index():
