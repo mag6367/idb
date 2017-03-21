@@ -9,8 +9,9 @@ var loadJSONWrapper= function(path, callback) {
 }
 
 var getPerson = function() {
-  var searchParams = new URLSearchParams(window.location.search);
-  return searchParams.get("id");
+  // var searchParams = new URLSearchParams(window.location.search);
+  // return searchParams.get("id");
+  return window.location.pathname.substr(window.location.pathname.lastIndexOf('/') + 1);
 }
 
 function PersonPortrait(props) {
@@ -216,8 +217,10 @@ class Person extends React.Component {
 
   componentDidMount() {
     var that = this;
-    loadJSONWrapper("api/v1/people/?id=" + getPerson(), function(data) {
-      that.updatePerson(data);
+    loadJSONWrapper("/api/v1/people/" + getPerson(), function(data) {
+      if(data.success === 'true') {
+        that.updatePerson(data.data);
+      }
     });
   }
 

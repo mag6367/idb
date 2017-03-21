@@ -19,7 +19,7 @@ def people(id):
 
     :return: 'TBD'
     """
-    return render_template('template.html', title='Hello World Example!', body='Hello World! id: {}'.format(id))
+    return render_template('person.html', title='Person')
 
 
 @blueprint.route('/elections/<int:id>')
