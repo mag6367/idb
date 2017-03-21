@@ -6,13 +6,13 @@ This module contains the routes for individual model HTML pages.
 """
 from flask import Blueprint, render_template
 
-blueprint = Blueprint('Individual model page views',
-                      __name__,
-                      static_folder='../static',
-                      template_folder='../templates')
+modelpages = Blueprint('modelpages',
+                       __name__,
+                       static_folder='../static',
+                       template_folder='../templates')
 
 
-@blueprint.route('/people/<int:id>')
+@modelpages.route('/people/<int:id>')
 def people(id):
     """
     eklogi People Page
@@ -22,7 +22,7 @@ def people(id):
     return render_template('person.html', title='Person')
 
 
-@blueprint.route('/elections/<int:id>')
+@modelpages.route('/elections/<int:id>')
 def elections(id):
     """
     eklogi Elections Page
@@ -32,7 +32,7 @@ def elections(id):
     return render_template('template.html', title='Hello World Example!', body='Hello World! id: {}'.format(id))
 
 
-@blueprint.route('/districts/<int:id>')
+@modelpages.route('/districts/<int:id>')
 def districts(id):
     """
     eklogi Districts Page
@@ -42,7 +42,7 @@ def districts(id):
     return render_template('template.html', title='Hello World Example!', body='Hello World! id: {}'.format(id))
 
 
-@blueprint.route('/committees/<int:id>')
+@modelpages.route('/committees/<int:id>')
 def committees(id):
     """
     eklogi Committees Page
@@ -52,7 +52,7 @@ def committees(id):
     return render_template('template.html', title='Hello World Example!', body='Hello World! id: {}'.format(id))
 
 
-@blueprint.route('/filings/<int:id>')
+@modelpages.route('/filings/<int:id>')
 def filings(id):
     """
     eklogi Filings Page

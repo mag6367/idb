@@ -6,13 +6,13 @@ This module contains the routes for main website HTML pages.
 """
 from flask import Blueprint, render_template
 
-blueprint = Blueprint('Main website page routes',
-                      __name__,
-                      static_folder='../static',
-                      template_folder='../templates')
+pages = Blueprint('pages',
+                  __name__,
+                  static_folder='../static',
+                  template_folder='../templates')
 
 
-@blueprint.route('/')
+@pages.route('/')
 def index():
     """
     eklogi Home Page
@@ -23,7 +23,7 @@ def index():
     return render_template('index.html')
 
 
-@blueprint.route('/about')
+@pages.route('/about')
 def about():
     """
     eklogi About Page
@@ -33,7 +33,7 @@ def about():
     return render_template('about.html', title='About')
 
 
-@blueprint.route('/people')
+@pages.route('/people')
 def people():
     """
     eklogi People Page
@@ -43,7 +43,7 @@ def people():
     return render_template('people.html', title='People')
 
 
-@blueprint.route('/elections')
+@pages.route('/elections')
 def elections():
     """
     eklogi Elections Page
@@ -53,7 +53,7 @@ def elections():
     return render_template('template.html', title='Hello World Example!', body='Hello World!')
 
 
-@blueprint.route('/districts')
+@pages.route('/districts')
 def districts():
     """
     eklogi Districts Page
@@ -63,7 +63,7 @@ def districts():
     return render_template('template.html', title='Hello World Example!', body='Hello World!')
 
 
-@blueprint.route('/committees')
+@pages.route('/committees')
 def committees():
     """
     eklogi Committees Page
@@ -73,7 +73,7 @@ def committees():
     return render_template('template.html', title='Hello World Example!', body='Hello World!')
 
 
-@blueprint.route('/filings')
+@pages.route('/filings')
 def filings():
     """
     eklogi Filings Page

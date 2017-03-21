@@ -6,13 +6,13 @@ This module contains utility routes for testing purposes or non-model related co
 """
 from flask import Blueprint, send_from_directory
 
-blueprint = Blueprint('Website utility/testing routes',
-                      __name__,
-                      static_folder='../static',
-                      template_folder='../templates')
+utility = Blueprint('utility',
+                    __name__,
+                    static_folder='../static',
+                    template_folder='../templates')
 
 
-@blueprint.route('/api/v1/quotes')
+@utility.route('/api/v1/quotes')
 def quotes():
     """
     Retrieves the quote JSON file.
@@ -22,7 +22,7 @@ def quotes():
     return send_from_directory('static/data', 'quotes.json')
 
 
-@blueprint.route('/api/v1/americanhero')
+@utility.route('/api/v1/americanhero')
 def sloth():
     """
     Retrieves the astronaut sloth image.
