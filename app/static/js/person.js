@@ -1,23 +1,24 @@
 var loadJSONWrapper= function(path, callback) {
   $.ajax({
     url: path,
+    dataType: "json",
     success: callback,
-    error: function(result){
-        alert("Error reading person");
+    error: function(xhr, textStatus, errorThrown){
+        alert("Error reading person: " + textStatus);
     }
   });
 }
 
 var getPerson = function() {
+  return window.location.pathname.substring(window.location.pathname.lastIndexOf('/'));
   // var searchParams = new URLSearchParams(window.location.search);
   // return searchParams.get("id");
-  return window.location.pathname.substr(window.location.pathname.lastIndexOf('/') + 1);
 }
 
 function PersonPortrait(props) {
-  if(props.person && props.person.Image) {
+  if(props.person && props.person.image) {
     return (
-      <img src={props.person.Image} alt={props.person.Name} style={{width: 300 + 'px'}}/>
+      <img src={props.person.image} alt={props.person.name} style={{width: 300 + 'px'}}/>
     );
   }
   return (
@@ -44,18 +45,16 @@ function PersonDetails(props) {
   return (
     <div id="person-details">
       <div className="caption text-center">
-        <h2 id="person-name">{props.person.first_name} {props.person.last_name}</h2>
-        <p id="person-party">Party affiliation: {props.person.current_party}</p>
+        <h2>{props.person.name}</h2>
+        <p>Party affiliation: {props.person.current_party}</p>
         <PersonLifespan person={props.person}/>
-        <a id="person-website" href={props.person.url}>Website</a>
+        <a href={props.person.url}>Website</a>
       </div>
-      {/*
       <div className="caption text-center">
-        <p>Birth Place: Palaven, Apien Crest, Milky Way</p>
-        <p>Degrees: Astronaut Sloth needs none of your "degrees"</p>
-        <p>Military: Official Advisor to Admiral Hackett</p>
+        <p>Twitter Handle: {props.person.twitter_account ? (<a href={"http://www.twitter.com/" + props.person.twitter_account}>{"@" + props.person.twitter_account}</a>) : ("None")}</p>
+        <p>Facebook Account: {props.person.facebook_account ? (<a href={"http://www.facebook.com/" + props.person.facebook_account}>{props.person.facebook_account}</a>) : ("None")}</p>
+        <p>Youtube Account: {props.person.youtube_account ? (<a href={"http://www.youtube.com/user/" + props.person.youtube_account}>{props.person.youtube_account}</a>) : ("None")}</p>
       </div>
-      */}
     </div>
   );
 }
@@ -78,64 +77,57 @@ class PersonView extends React.Component {
   }
 }
 
-// function DistrictData(props) {
-//   if(props.district) {
-//     return (
-//       <div id="district-data">
-//         <p>District: {props.district.Name} </p>
-//         <p>State: {props.district.State} </p>
-//       </div>
-//     );
-//   }
-//   return null;
-// }
-//
-// function ElectionData(props) {
-//   if(props.office.OfficeIsElected) {
-//     return (
-//       <div id="election-data">
-//         <p>Date First Elected: {props.office.Election.Date}</p>
-//         <p>Date Last Elected: {props.office.DateAssumed}</p>
-//         <p>Date Next Election: {props.office.DateExpires}</p>
-//       </div>
-//     );
-//   }
-//   else {
-//     return null;
-//   }
-// }
-//
-// function AppointmentData(props) {
-//   if(props.office.OfficeIsAppointed) {
-//     return (
-//       <div id="appointment-data">
-//         <p>Date Appointed: </p>
-//         <p>Date Expires: </p>
-//         <p>Appointed By: </p>
-//         <p>Date Nominated: </p>
-//         <p>Date Confirmed: </p>
-//       </div>
-//     );
-//   }
-//   else {
-//     return null;
-//   }
-// }
-
-
-
-function CommitteeData(props) {
+function ElectionData(props) {
   return (
-    <div class="committee-data">
-      <h4>{props.committee.name}</h4>
-      <p>Rank in party: {props.committee.rank_in_party}</p>
-      {/*
-      {props.committe.begin_date ? (<p>Begin Data: {props.committee.begin_date</p>}) : (<div></div>)}
-      {props.committe.end_date ? (<p>Begin Data: {props.committee.end_date</p>}) : (<div></div>)}
-      */}
+    <div id="election-data">
+      <p>Last Elected: {props.office.start_date}</p>
+      <p>Next Election: {props.office.end_date}</p>
     </div>
   );
 }
+
+function CommitteeData(props) {
+  return (
+    <a href={"/committees/" + props.committee.code}>{props.committee.name}</a>
+  );
+}
+
+// function CommitteesData(props) {
+//   const committees = props.committees.map((committee) =>
+//     <li key={committee.code}>
+//       <CommitteeData committee={committee} />
+//     </li>
+//   );
+//
+//   return (
+//     <div className="committee-list">
+//       <ul>
+//         {committees}
+//       </ul>
+//     </div>
+//   );
+// }
+
+function CommitteesData(props) {
+  const committees = props.committees.map((committee) =>
+    <tr key={committee.code}>
+      <td><CommitteeData committee={committee} /></td>
+    </tr>
+  );
+
+  return (
+    <table className="committee-list table table-striped">
+      <thead>
+        <tr><th>Committees:</th></tr>
+      </thead>
+      <tbody>
+        {committees}
+      </tbody>
+    </table>
+  );
+}
+
+
 
 function DistrictData(props) {
   if(props.office.district) {
@@ -154,10 +146,7 @@ function OfficeData(props) {
       <h4>Office: {props.office.title}, {props.office.chamber}</h4>
       <p>State: {props.office.state} </p>
       <DistrictData office={props.office}/>
-      {/*{office.Chamber ? (<p>Chamber: NA </p>) : (<div/>)}
-      <p>Status: {office.Status}</p>
-      <ElectionData office={office}/>
-      <AppointmentData office={office}/>*/}
+      <ElectionData office={props.office}/>
     </div>
   );
 }
@@ -174,7 +163,7 @@ class OfficeView extends React.Component {
     if(!this.props.person) {
       return (<div id="office-view-content"><p>No Data</p></div>);
     }
-    var office = this.props.person.roles[this.state.officeIndex];
+    var office = this.props.person;
     return (
       <div id="office-view">
         <div className="panel panel-default">
@@ -182,14 +171,12 @@ class OfficeView extends React.Component {
             <div className="row">
               <div className="dropdown col-xs-4">
                 <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                  Select Information
+                  Office Data
                   <span className="caret"></span>
                 </button>
                 <ul className="dropdown-menu" id="person-info-select">
-                  <li><a href="#">Summary</a></li>
-                  <li><a href="#">Secretary of Space</a></li>
-                  <li><a href="#">Hero of the People (TM)</a></li>
-                  <li><a href="#">Commander Shepards Drinking Buddy</a></li>
+                  <li><a href="#">Office Data</a></li>
+                  <li><a href="#">Votes</a></li>
                 </ul>
               </div>
               <div className="col-xs-8" id="person-info-selected">
@@ -199,6 +186,7 @@ class OfficeView extends React.Component {
           </div>
           <div id="office-view-content" className="panel-content">
             <OfficeData office={office}/>
+            <CommitteesData committees={this.props.person.committees}/>
           </div>
         </div>
       </div>
@@ -217,20 +205,17 @@ class Person extends React.Component {
 
   componentDidMount() {
     var that = this;
-    loadJSONWrapper("/api/v1/people/" + getPerson(), function(data) {
-      if(data.success === 'true') {
-        that.updatePerson(data.data);
-      }
+    loadJSONWrapper("/api/v1/people" + getPerson(), function(data) {
+      that.updatePerson(data);
     });
   }
 
   updatePerson(personData) {
     var that = this;
-    if(personData) {
+    if(personData && personData.success === true) {
       that.setState({
-        person: personData.results[0],
+        person: personData.data,
       });
-
     }
     else {
       alert("ELSE2");

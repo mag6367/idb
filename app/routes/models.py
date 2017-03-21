@@ -4,7 +4,7 @@ eklogi API Routes - Model JSON
 This module contains the routes for model JSON.
 
 """
-from flask import Blueprint
+from flask import Blueprint, Response
 
 blueprint = Blueprint('Model JSON routes',
                       __name__,
@@ -19,7 +19,13 @@ def people_individual(id):
 
     :return: 'TBD'
     """
-    return "{\"success\": true, data: {id: " + str(id) + "}}"
+
+    with open("./static/data/person" + str(id) + ".json", 'r') as personFile:
+        # return "{\"success\": true, data: " + personFile.read() + "}"
+        # return Response(response="{success: true, data: " + personFile.read() + "}",
+        return Response(response="{\"success\": true, \"data\": " + personFile.read() + "}",
+                        status="200",
+                        mimetype="application/json")
 
 
 @blueprint.route('/api/v1/elections/<int:id>')
