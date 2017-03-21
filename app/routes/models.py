@@ -12,6 +12,19 @@ blueprint = Blueprint('Model JSON routes',
                       template_folder='../templates')
 
 
+@blueprint.route('/api/v1/people')
+def people_all():
+    """
+    eklogi People JSON
+
+    :return: 'TBD'
+    """
+    with open("./static/data/people.json", 'r') as allPeople:
+        return Response(response="{\"success\": true, \"data\": " + allPeople.read() + "}",
+                    status="200",
+                    mimetype="application/json")
+
+
 @blueprint.route('/api/v1/people/<int:id>')
 def people_individual(id):
     """

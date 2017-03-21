@@ -61,7 +61,7 @@ class People extends React.Component {
 
   componentDidMount() {
     var that = this;
-    loadJSONWrapper("/api/v1/test/people", function(data) {
+    loadJSONWrapper("/api/v1/people", function(data) {
       that.updatePeopleList(data);
     });
   }
