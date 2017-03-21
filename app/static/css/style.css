@@ -135,3 +135,21 @@ body {
   border-width: 2px 0px 0px 0px;
   border-color: #3C3B6E;
 }
+
+/* About page */
+
+#about-jumbo {
+  /*background-color: #5b5a72;*/
+  background-color: #555372;
+  color: #FDFDFD;
+  border-style: solid;
+  /*border-radius: 2px;*/
+  border-width: 2px 2px 2px 2px;
+  border-color: #B22234;
+}
+
+#about-panel {
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #B22234;
+}
