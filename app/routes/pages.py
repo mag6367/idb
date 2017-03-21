@@ -30,7 +30,7 @@ def about():
 
     :return: 'TBD'
     """
-    return render_template('template.html', title='Hello World Example!', body='Hello World!')
+    return render_template('about.html', title='About')
 
 
 @blueprint.route('/people')
@@ -40,7 +40,7 @@ def people():
 
     :return: 'TBD'
     """
-    return render_template('template.html', title='Hello World Example!', body='Hello World!')
+    return render_template('people.html', title='People')
 
 
 @blueprint.route('/elections')

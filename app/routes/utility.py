@@ -4,7 +4,7 @@ eklogi API Routes - Utility
 This module contains utility routes for testing purposes or non-model related content.
 
 """
-from flask import Blueprint, send_from_directory
+from flask import Blueprint, send_from_directory, Response
 
 blueprint = Blueprint('Website utility/testing routes',
                       __name__,
@@ -30,3 +30,10 @@ def sloth():
     :return: 'returns a picture of the astronaut sloth'
     """
     return send_from_directory('static/img', 'astronaut-sloth.jpg')
+
+@blueprint.route('/api/v1/test/people')
+def test_people():
+    with open("./static/data/people.json", 'r') as allPeople:
+        return Response(response="{\"success\": true, \"data\": " + allPeople.read() + "}",
+                    status="200",
+                    mimetype="application/json")
