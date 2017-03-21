@@ -1,0 +1,28 @@
+{
+  "people": [
+    {
+      "result": 1,
+      "id": 1,
+      "name": "Trent Kelly",
+      "current_party": "R",
+      "chamber": "House",
+      "state": "MS"
+    },
+    {
+      "result": 2,
+      "id": 2,
+      "name": "Todd Young",
+      "current_party": "R",
+      "chamber": "Senate",
+      "state": "IN"
+    },
+    {
+      "result": 3,
+      "id": 3,
+      "name": "Catherine Cortez Masto",
+      "current_party": "D",
+      "chamber": "Senate",
+      "state": "NV"
+    }
+  ]
+}

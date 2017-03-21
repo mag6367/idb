@@ -88,35 +88,20 @@ function ElectionData(props) {
 
 function CommitteeData(props) {
   return (
-    <a href={"/committees/" + props.committee.code}>{props.committee.name}</a>
+      <tr>
+        <td><a href={"/committees/" + props.committee.code}>{props.committee.name}</a></td>
+      </tr>
   );
 }
 
-// function CommitteesData(props) {
-//   const committees = props.committees.map((committee) =>
-//     <li key={committee.code}>
-//       <CommitteeData committee={committee} />
-//     </li>
-//   );
-//
-//   return (
-//     <div className="committee-list">
-//       <ul>
-//         {committees}
-//       </ul>
-//     </div>
-//   );
-// }
-
 function CommitteesData(props) {
   const committees = props.committees.map((committee) =>
-    <tr key={committee.code}>
-      <td><CommitteeData committee={committee} /></td>
-    </tr>
+    <CommitteeData committee={committee} key={committee.code} />
   );
 
   return (
-    <table className="committee-list table table-striped">
+    <div className="table-responsive">
+    <table className="table table-striped">
       <thead>
         <tr><th>Committees:</th></tr>
       </thead>
@@ -124,6 +109,7 @@ function CommitteesData(props) {
         {committees}
       </tbody>
     </table>
+    </div>
   );
 }
 
