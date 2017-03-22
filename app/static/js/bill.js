@@ -27,7 +27,29 @@ function BillDetails(props) {
                 <p>{props.bill.congress}th Congress</p>
             </div>
         </div>
+
     );
+}
+
+function BillTimeline(props) {
+    var container = document.getElementById('bill');
+    // Create a DataSet (allows two way data-binding)
+    var items = new vis.DataSet([
+        {id: 1, content: 'Introduced', start: props.bill.introduced_date},
+        {id: 2, content: props.bill.actions[0].description, start: props.bill.actions[0].datetime},
+        {id: 3, content: props.bill.actions[1].description, start: props.bill.actions[1].datetime},
+        {id: 4, content: 'House Passage', start: props.bill.house_passage}
+    ]);
+
+    // Configuration for the Timeline
+    var options = {};
+
+    // Create a Timeline
+    var timeline = new vis.Timeline(container, items, options);
+    return (
+        <div id="hello"></div>
+
+    )
 }
 
 class BillView extends React.Component {
@@ -40,6 +62,7 @@ class BillView extends React.Component {
             return (
                 <div className="thumbnail">
                     <BillDetails bill={this.props.bill}/>
+                    <BillTimeline bill={this.props.bill}/>
                 </div>
             );
         }
