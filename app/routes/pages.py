@@ -70,7 +70,7 @@ def committees():
 
     :return: 'TBD'
     """
-    return render_template('template.html', title='Hello World Example!', body='Hello World!')
+    return render_template('committees.html', title='Committees')
 
 
 @pages.route('/filings')

@@ -19,8 +19,8 @@ function PersonData(props) {
       <td><p>{props.person.result}</p></td>
       <td><a href={"/people/" + props.person.id}>{props.person.name}</a></td>
       <td><p>{props.person.current_party}</p></td>
-      <td><p>{props.person.chamber}</p></td>
       <td><p>{props.person.state}</p></td>
+      <td><p>{props.person.chamber}</p></td>
     </tr>
   );
 }

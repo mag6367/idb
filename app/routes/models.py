@@ -108,9 +108,10 @@ def committees():
 
     :return: 'TBD'
     """
-    params = pagination_parameters()
-    return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
-
+    with models.open_resource('../static/data/committees_static_data.json', mode='r') as committees:
+        return Response(response="{\"success\": true, \"data\": " + committees.read() + "}",
+                        status="200",
+                        mimetype="application/json")
 
 @models.route('/api/v1/committees/<int:id>')
 def committee(id):
