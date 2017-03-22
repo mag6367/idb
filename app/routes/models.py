@@ -20,12 +20,12 @@ def pagination_parameters():
 
     :return: a tuple of (start, limit)
     """
-    start = request.args.get("start")
+    start = request.args.get("start", 0)
     try:
         start = int(start)
     except ValueError:  # ignore malformed parameter, use default
         start = 0
-    limit = request.args.get("limit")
+    limit = request.args.get("limit", -1)
     try:
         limit = int(limit)
     except ValueError:  # ignore malformed parameter, use default
@@ -58,6 +58,7 @@ def person(id):
                         status="200",
                         mimetype="application/json")
 
+
 @models.route('/api/v1/committees')
 def committees():
     """
@@ -65,7 +66,6 @@ def committees():
 
     :return: 'TBD'
     """
-    params = pagination_parameters()
     # return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
     with models.open_resource('../static/data/committees.json', mode='r') as committees:
         return Response(response="{\"success\": true, \"data\": " + committees.read() + "}",
@@ -85,14 +85,14 @@ def committee(id):
                         status="200",
                         mimetype="application/json")
 
+
 @models.route('/api/v1/bills')
 def bills():
     """
-    eklogi Committees JSON
+    eklogi Bills JSON
 
     :return: 'TBD'
     """
-    params = pagination_parameters()
     # return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
     with models.open_resource('../static/data/bills.json', mode='r') as bills:
         return Response(response="{\"success\": true, \"data\": " + bills.read() + "}",
@@ -103,14 +103,16 @@ def bills():
 @models.route('/api/v1/bills/<string:id>')
 def bill(id):
     """
-    eklogi Bills JSON
+    eklogi Bill JSON
 
     :return: 'TBD'
     """
-    with models.open_resource('../static/data/bill' + id + '.json', mode='r') as bill:
+    with models.open_resource('../static/data/bill-' + id + '.json', mode='r') as bill:
+        print("HERE")
         return Response(response="{\"success\": true, \"data\": " + bill.read() + "}",
                         status="200",
                         mimetype="application/json")
+
 
 @models.route('/api/v1/votes')
 def votes():

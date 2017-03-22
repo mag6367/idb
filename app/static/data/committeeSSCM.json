@@ -1,0 +1,14 @@
+
+{
+  "chamber": "Senate",
+  "committee": "Committee on Commerce, Science, and Transportation",
+  "chairman_id": "T000250",
+  "current_members": {
+    "T000250": {
+      "name": "John Thune"
+    },
+    "Y000064": {
+      "name": "Todd Young"
+    }
+  }
+}

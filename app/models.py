@@ -59,7 +59,7 @@ class Committee(db.Model):
 
     A representation of an organization or committee that registered with the FEC.
     """
-    __tablename__ = 'committee'
+    __tablename__ = 'committees'
     id = Column(Integer, primary_key=True)
 
     def __repr__(self):
