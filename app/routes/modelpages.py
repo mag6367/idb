@@ -14,14 +14,14 @@ modelpages = Blueprint('modelpages',
                        template_folder='../templates')
 
 
-@modelpages.route('/people/<string:person_id>')
-def person(person_id):
+@modelpages.route('/people/<string:member_id>')
+def member(member_id):
     """
-    eklogi Person Page
+    eklogi Member Page
 
     :return: 'TBD'
     """
-    return render_template('person.html', title='Person')
+    return render_template('person.html', title='Member')
 
 
 @modelpages.route('/committees/<string:committee_id>')

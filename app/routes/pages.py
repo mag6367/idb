@@ -34,8 +34,8 @@ def about():
     return render_template('about.html', title='About')
 
 
-@pages.route('/people')
-def people():
+@pages.route('/members')
+def members():
     """
     eklogi People Page
 
@@ -43,7 +43,7 @@ def people():
     """
     return render_template('search.html', title='Eklogi: Search',
                            searchscript='../static/js/people.js',
-                           searchtitle='People')
+                           searchtitle='Members')
 
 
 @pages.route('/committees')

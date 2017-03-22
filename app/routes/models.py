@@ -34,10 +34,10 @@ def pagination_parameters():
     return start, limit
 
 
-@models.route('/api/v1/people')
-def people():
+@models.route('/api/v1/members')
+def members():
     """
-    eklogi People JSON
+    eklogi Member JSON
 
     :return: 'TBD'
     """
@@ -47,14 +47,14 @@ def people():
                         mimetype="application/json")
 
 
-@models.route('/api/v1/people/<string:person_id>')
-def person(person_id):
+@models.route('/api/v1/people/<string:member_id>')
+def member(member_id):
     """
     eklogi People JSON
 
     :return: 'TBD'
     """
-    with models.open_resource("../static/data/person" + person_id + ".json", mode='r') as f:
+    with models.open_resource("../static/data/person" + member_id + ".json", mode='r') as f:
         return Response(response="{\"success\": true, \"data\": " + f.read() + "}",
                         status="200",
                         mimetype="application/json")
