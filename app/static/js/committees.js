@@ -88,5 +88,5 @@ class Committees extends React.Component {
 
 ReactDOM.render(
   <Committees />,
-  document.getElementById('committees-search-results')
+  document.getElementById('search-results')
 );
