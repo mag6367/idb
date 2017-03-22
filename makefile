@@ -155,8 +155,8 @@ versions:
 	which pydoc3
 	-pydoc3 --version
 	@echo
-	which pydoc3.5
-	-pydoc3.5 --version
+	-which pydoc3.5
+	-/home/travis/virtualenv/python3.5.2/bin/pydoc3.5 --version
 	@echo
 	which $(AUTOPEP8)
 	$(AUTOPEP8) --version
