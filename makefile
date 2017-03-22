@@ -1,15 +1,19 @@
 .DEFAULT_GOAL := test
 
-PHASE      := IDB1
-APP        := app/eklogi.py
-CONFIG     := app/config.py
-MODELS     := app/models.py
-TESTS      := app/tests.py
-TEST_DEST  := eklogi-test.out
-DOC_TARGET := app/models.py
-DOC_SRC    := models.html
-DOC_DEST   := $(PHASE).html
-LOG_DEST   := $(PHASE).log
+PHASE       := IDB1
+APP         := app/eklogi.py
+CONFIG      := app/config.py
+MODELS      := app/models.py
+TESTS       := app/tests.py
+TEST_DEST   := eklogi-test.out
+DOC_TARGET  := app/models.py
+DOC_SRC     := models.html
+DOC_DEST    := $(PHASE).html
+LOG_DEST    := $(PHASE).log
+MODEL_PAGES := app/routes/modelpages.py
+MODEL_API   := app/routes/models.py
+HTML_PAGES  := app/routes/pages.py
+UTILITY     := app/routes/utility.py
 
 FILES :=               \
     $(PHASE).html      \
@@ -95,12 +99,20 @@ format:
 	$(AUTOPEP8) -i $(CONFIG)
 	$(AUTOPEP8) -i $(MODELS)
 	$(AUTOPEP8) -i $(TESTS)
+	$(AUTOPEP8) -i $(MODEL_PAGES)
+	$(AUTOPEP8) -i $(MODEL_API)
+	$(AUTOPEP8) -i $(HTML_PAGES)
+	$(AUTOPEP8) -i $(UTILITY)
 
 inspect:
 	-$(PYLINT) $(APP)
 	-$(PYLINT) $(CONFIG)
 	-$(PYLINT) $(MODELS)
 	-$(PYLINT) $(TESTS)
+	-$(PYLINT) $(MODEL_PAGES)
+	-$(PYLINT) $(MODEL_API)
+	-$(PYLINT) $(HTML_PAGES)
+	-$(PYLINT) $(UTILITY)
 
 status:
 	make clean

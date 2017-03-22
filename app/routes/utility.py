@@ -4,6 +4,7 @@ eklogi API Routes - Utility
 This module contains utility routes for testing purposes or non-model related content.
 
 """
+# pylint: disable=invalid-name
 from flask import Blueprint, send_from_directory
 
 utility = Blueprint('utility',
