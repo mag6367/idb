@@ -4,6 +4,8 @@ eklogi API Routes - Model Pages
 This module contains the routes for individual model HTML pages.
 
 """
+# pylint: disable=invalid-name
+# pylint: disable=unused-argument
 from flask import Blueprint, render_template
 
 modelpages = Blueprint('modelpages',
@@ -12,8 +14,8 @@ modelpages = Blueprint('modelpages',
                        template_folder='../templates')
 
 
-@modelpages.route('/people/<string:id>')
-def people(id):
+@modelpages.route('/people/<string:person_id>')
+def person(person_id):
     """
     eklogi Person Page
 
@@ -22,8 +24,8 @@ def people(id):
     return render_template('person.html', title='Person')
 
 
-@modelpages.route('/committees/<string:id>')
-def committees(id):
+@modelpages.route('/committees/<string:committee_id>')
+def committee(committee_id):
     """
     eklogi Committee Page
 
@@ -32,8 +34,8 @@ def committees(id):
     return render_template('committee.html', title='Committee')
 
 
-@modelpages.route('/bills/<string:id>')
-def bills(id):
+@modelpages.route('/bills/<string:bill_id>')
+def bill(bill_id):
     """
     eklogi Bill Page
 
@@ -42,21 +44,11 @@ def bills(id):
     return render_template('bill.html', title='Bill')
 
 
-@modelpages.route('/votes/<string:id>')
-def votes(id):
+@modelpages.route('/votes/<string:vote_id>')
+def vote(vote_id):
     """
     eklogi Vote Page
 
     :return: 'TBD'
     """
     return render_template('vote.html', title='Vote')
-
-
-@modelpages.route('/example/<string:id>')
-def example(id):
-    """
-    eklogi Example Page
-
-    :return: 'TBD'
-    """
-    return render_template('template.html', title='Hello World Example!', body='Hello World! id: {}'.format(id))

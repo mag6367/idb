@@ -4,6 +4,7 @@ eklogi API Routes - Pages
 This module contains the routes for main website HTML pages.
 
 """
+# pylint: disable=invalid-name
 from flask import Blueprint, render_template
 
 pages = Blueprint('pages',
@@ -40,7 +41,8 @@ def people():
 
     :return: 'TBD'
     """
-    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/people.js',
+    return render_template('search.html', title='Eklogi: Search',
+                           searchscript='../static/js/people.js',
                            searchtitle='People')
 
 
@@ -51,7 +53,8 @@ def committees():
 
     :return: 'TBD'
     """
-    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/committees.js',
+    return render_template('search.html', title='Eklogi: Search',
+                           searchscript='../static/js/committees.js',
                            searchtitle='Committees')
 
 
@@ -62,7 +65,8 @@ def bills():
 
     :return: 'TBD'
     """
-    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/bills.js',
+    return render_template('search.html', title='Eklogi: Search',
+                           searchscript='../static/js/bills.js',
                            searchtitle='Bills')
 
 
@@ -73,5 +77,6 @@ def votess():
 
     :return: 'TBD'
     """
-    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/votes.js',
+    return render_template('search.html', title='Eklogi: Search',
+                           searchscript='../static/js/votes.js',
                            searchtitle='Votes')
