@@ -1,31 +1,34 @@
 {
   "committees": [
     {
-       "id": 1,
-       "congress": "115",
-       "chamber": "Senate",
-       "committee": "Committee on Administration",
-       "num_results": "9",
-       "chairman_id": "H001045",
-       "ranking_member_id": "B001227",
+      "result": 1,
+      "id": "1",
+      "congress": "115",
+      "chamber": "Senate",
+      "committee": "Committee on Administration",
+      "num_results": "9",
+      "chairman_id": "H001045",
+      "ranking_member_id": "B001227"
     },
     {
-       "id": 2,
-       "congress": "115",
-       "chamber": "Senate",
-       "committee": "Committee on Agriculture",
-       "num_results": "46",
-       "chairman_id": "C001062",
-       "ranking_member_id": "P000258",
+      "result": 2,
+      "id": "2",
+      "congress": "115",
+      "chamber": "Senate",
+      "committee": "Committee on Agriculture",
+      "num_results": "46",
+      "chairman_id": "C001062",
+      "ranking_member_id": "P000258"
     },
     {
-       "id": 3,
-       "congress": "115",
-       "chamber": "Senate",
-       "committee": "Committee on Appropriations",
-       "num_results": "52",
-       "chairman_id": "F000372",
-       "ranking_member_id": "L000480",
+      "result": 3,
+      "id": "3",
+      "congress": "115",
+      "chamber": "Senate",
+      "committee": "Committee on Appropriations",
+      "num_results": "52",
+      "chairman_id": "F000372",
+      "ranking_member_id": "L000480"
     }
   ]
 }

@@ -4,7 +4,7 @@ var loadJSONWrapper= function(path, callback) {
     dataType: "json",
     success: callback,
     error: function(xhr, textStatus, errorThrown){
-        alert("Error reading committee: " + textStatus);
+        alert("Error reading committees dammit: " + textStatus);
     }
   });
 }
