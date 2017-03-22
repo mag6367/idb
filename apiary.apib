@@ -1,0 +1,231 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+FORMAT: 1A
+HOST: http://sample.pandurangpatil.com
+
+# Eklogi API Documentation
+Sample api documentation for sample project.
+
+# Allowed HTTPs requests:
+<pre>
+GET     : Get a resource or list of resources
+</pre>
+
+# Possible User Responses:
+- 200 `OK` - the request was successful (some API calls may return 201 instead).
+- 204 `No Content` - the request was successful but there is no representation to return (i.e. the response is empty).
+- 400 `Bad Request` - the request could not be understood or was missing required parameters.
+- 405 `Method Not Allowed` - requested method is not supported for resource.
+
+# Group People
+Represents the details of politicians.
+
+---
+**Member attributes:**
+
+- id `(String)` : unique identifier. 
+- name `(String)` : Name of member.
+- party `(String)` : Party which member is part of.
+- state `(String)` : State member represents.
+- chamber `(String)` : Which chamber of congress member is part of.
+
+---
+## User Collection [people]
+### List all members [GET]
+Retrieve all members of current congress
+
++ curl "https://api.eklogi.me/people/"
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "K000388",
+                "name": "Trent Kelly",
+                "party": "Republican",
+                "state": "MS"
+                "chamber": "House"
+            },
+            {
+                "id": "Y000064",
+                "name": "Tod Young",
+                "party": "Republican",
+                "state": "IN"
+                "chamber": "Senate"
+            },
+            {
+                "id": "C001113",
+                "name": "Catherine Cortez Masto",
+                "party": "Democrat",
+                "state": "NV"
+                "chamber": "Senate"
+            }
+        ...
+        ]
+
+
+## Chamber Collection [people/{chamber}]
+### List all members from a chamber [Get]
+Returns all members from a chamber, which can be either the house or senate.
+
++ Parameters
+    + chamber (required) ... House or senate
+
++ curl "https://api.eklogi.me/people/senate/"
+
++ Response 200 (application/json)
+
+    + Body
+        [
+            {
+                "id": "C001113",
+                "name": "Catherine Cortez Masto",
+                "party": "Democrat",
+                "state": "NV"
+                "chamber": "Senate"
+            },
+        ...
+        ]
+
++ Response 400 (application/json)
+
+        {
+            "error": "no such chamber"
+        }
+
+## Single Member [people/{chamber}/{id}.json]
+### Retrieve A Single Member [Get]
+Return a specific member 
++ Parameters
+    + chamber (required) ... House or senate
+    
++ curl "https://api.eklogi.me/senate/C001113.json"
+
++ Response 200 (application/json)
+
+        {
+                "id": "C001113",
+                "name": "Catherine Cortez Masto",
+                "party": "Democrat",
+                "state": "NV"
+                "chamber": "Senate"
+        }
+
++ curl "https://api.eklogi.me/people/house/K000388.json"
+
++ Response 200 (application/json)
+
+        {
+                "id": "K000388",
+                "name": "Trent Kelly",
+                "party": "Republican",
+                "state": "MS"
+                "chamber": "House"
+        }
+
+# Group Committees
+Represents the committees formed in both the senate and the house.
+
+---
+**Committee attributes:**
+
+- id `(String)` : unique identifier. 
+- name `(String)` : Name of member.
+- party `(String)` : Party which member is part of.
+- state `(String)` : State member represents.
+- chamber `(String)` : Which chamber of congress member is part of.
+
+---
+## User Collection [people]
+### List all members [GET]
+Retrieve all members of current congress
+
++ curl "https://api.eklogi.me/people/"
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "K000388",
+                "name": "Trent Kelly",
+                "party": "Republican",
+                "state": "MS"
+                "chamber": "House"
+            },
+            {
+                "id": "Y000064",
+                "name": "Tod Young",
+                "party": "Republican",
+                "state": "IN"
+                "chamber": "Senate"
+            },
+            {
+                "id": "C001113",
+                "name": "Catherine Cortez Masto",
+                "party": "Democrat",
+                "state": "NV"
+                "chamber": "Senate"
+            }
+        ...
+        ]
+
+
+## Chamber Collection [people/{chamber}]
+### List all members from a chamber [Get]
+Returns all members from a chamber, which can be either the house or senate.
+
++ Parameters
+    + chamber (required) ... House or senate
+
++ curl "https://api.eklogi.me/people/senate/"
+
++ Response 200 (application/json)
+
+    + Body
+        [
+            {
+                "id": "C001113",
+                "name": "Catherine Cortez Masto",
+                "party": "Democrat",
+                "state": "NV"
+                "chamber": "Senate"
+            },
+        ...
+        ]
+
++ Response 400 (application/json)
+
+        {
+            "error": "no such chamber"
+        }
+
+## Single Member [people/{chamber}/{id}.json]
+### Retrieve A Single Member [Get]
+Return a specific member 
++ Parameters
+    + chamber (required) ... House or senate
+    
++ curl "https://api.eklogi.me/senate/C001113.json"
+
++ Response 200 (application/json)
+
+        {
+                "id": "C001113",
+                "name": "Catherine Cortez Masto",
+                "party": "Democrat",
+                "state": "NV"
+                "chamber": "Senate"
+        }
+
++ curl "https://api.eklogi.me/people/house/K000388.json"
+
++ Response 200 (application/json)
+
+        {
+                "id": "K000388",
+                "name": "Trent Kelly",
+                "party": "Republican",
+                "state": "MS"
+                "chamber": "House"
+        }
