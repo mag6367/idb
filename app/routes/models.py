@@ -46,14 +46,14 @@ def people():
                         mimetype="application/json")
 
 
-@models.route('/api/v1/people/<int:id>')
+@models.route('/api/v1/people/<string:id>')
 def person(id):
     """
     eklogi People JSON
 
     :return: 'TBD'
     """
-    with models.open_resource("../static/data/person" + str(id) + ".json", mode='r') as person:
+    with models.open_resource("../static/data/person" + id + ".json", mode='r') as person:
         return Response(response="{\"success\": true, \"data\": " + person.read() + "}",
                         status="200",
                         mimetype="application/json")

@@ -12,7 +12,7 @@ modelpages = Blueprint('modelpages',
                        template_folder='../templates')
 
 
-@modelpages.route('/people/<int:id>')
+@modelpages.route('/people/<string:id>')
 def people(id):
     """
     eklogi People Page
