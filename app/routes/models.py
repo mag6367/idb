@@ -132,7 +132,7 @@ def vote(vote_id):
 
     :return: 'TBD'
     """
-    with models.open_resource('../static/data/bill' + vote_id + '.json', mode='r') as f:
+    with models.open_resource('../static/data/vote-' + vote_id + '.json', mode='r') as f:
         return Response(response="{\"success\": true, \"data\": " + f.read() + "}",
                         status="200",
                         mimetype="application/json")
