@@ -58,6 +58,7 @@ def person(id):
                         status="200",
                         mimetype="application/json")
 
+
 @models.route('/api/v1/committees')
 def committees():
     """
@@ -83,6 +84,7 @@ def committee(id):
         return Response(response="{\"success\": true, \"data\": " + committee.read() + "}",
                         status="200",
                         mimetype="application/json")
+
 
 @models.route('/api/v1/bills')
 def bills():
@@ -110,6 +112,7 @@ def bill(id):
         return Response(response="{\"success\": true, \"data\": " + bill.read() + "}",
                         status="200",
                         mimetype="application/json")
+
 
 @models.route('/api/v1/votes')
 def votes():

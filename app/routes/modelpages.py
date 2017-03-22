@@ -41,6 +41,7 @@ def bills(id):
     """
     return render_template('bill.html', title='Bill')
 
+
 @modelpages.route('/votes/<string:id>')
 def votes(id):
     """
