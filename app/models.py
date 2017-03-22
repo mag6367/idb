@@ -17,6 +17,8 @@ from app.eklogi import db  # pylint: disable=import-error
 class Bill(db.Model):
     """
     Bill
+
+    A representation of a bill voted on by congress.
     """
     __tablename__ = 'bills'
     id = Column(String, primary_key=True)
@@ -78,6 +80,8 @@ class Committee(db.Model):
 class Vote(db.Model):
     """
     Vote
+
+    A representation of a individual member vote on a bill motion.
     """
     __tablename__ = 'votes'
     id = Column(String, primary_key=True)
