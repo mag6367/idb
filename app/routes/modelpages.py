@@ -15,47 +15,46 @@ modelpages = Blueprint('modelpages',
 @modelpages.route('/people/<string:id>')
 def people(id):
     """
-    eklogi People Page
+    eklogi Person Page
 
     :return: 'TBD'
     """
     return render_template('person.html', title='Person')
 
 
-@modelpages.route('/elections/<int:id>')
-def elections(id):
-    """
-    eklogi Elections Page
-
-    :return: 'TBD'
-    """
-    return render_template('template.html', title='Hello World Example!', body='Hello World! id: {}'.format(id))
-
-
-@modelpages.route('/districts/<int:id>')
-def districts(id):
-    """
-    eklogi Districts Page
-
-    :return: 'TBD'
-    """
-    return render_template('template.html', title='Hello World Example!', body='Hello World! id: {}'.format(id))
-
-
-@modelpages.route('/committees/<int:id>')
+@modelpages.route('/committees/<string:id>')
 def committees(id):
     """
-    eklogi Committees Page
+    eklogi Committee Page
 
     :return: 'TBD'
     """
-    return render_template('template.html', title='Hello World Example!', body='Hello World! id: {}'.format(id))
+    return render_template('committee.html', title='Committee')
 
 
-@modelpages.route('/filings/<int:id>')
-def filings(id):
+@modelpages.route('/bills/<string:id>')
+def bills(id):
     """
-    eklogi Filings Page
+    eklogi Bill Page
+
+    :return: 'TBD'
+    """
+    return render_template('bill.html', title='Bill')
+
+@modelpages.route('/votes/<string:id>')
+def votes(id):
+    """
+    eklogi Vote Page
+
+    :return: 'TBD'
+    """
+    return render_template('vote.html', title='Vote')
+
+
+@modelpages.route('/example/<string:id>')
+def example(id):
+    """
+    eklogi Example Page
 
     :return: 'TBD'
     """

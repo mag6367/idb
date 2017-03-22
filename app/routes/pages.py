@@ -40,27 +40,7 @@ def people():
 
     :return: 'TBD'
     """
-    return render_template('people.html', title='People')
-
-
-@pages.route('/elections')
-def elections():
-    """
-    eklogi Elections Page
-
-    :return: 'TBD'
-    """
-    return render_template('template.html', title='Hello World Example!', body='Hello World!')
-
-
-@pages.route('/districts')
-def districts():
-    """
-    eklogi Districts Page
-
-    :return: 'TBD'
-    """
-    return render_template('template.html', title='Hello World Example!', body='Hello World!')
+    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/people.js', searchtitle='People')
 
 
 @pages.route('/committees')
@@ -70,14 +50,22 @@ def committees():
 
     :return: 'TBD'
     """
-    return render_template('committees.html', title='Committees')
+    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/committees.js', searchtitle='Committees')
 
-
-@pages.route('/filings')
-def filings():
+@pages.route('/bills')
+def bills():
     """
-    eklogi Filings Page
+    eklogi Committees Page
 
     :return: 'TBD'
     """
-    return render_template('template.html', title='Hello World Example!', body='Hello World!')
+    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/bills.js', searchtitle='Bills')
+
+@pages.route('/votes')
+def votess():
+    """
+    eklogi Committees Page
+
+    :return: 'TBD'
+    """
+    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/votes.js', searchtitle='Votes')
