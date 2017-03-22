@@ -20,12 +20,12 @@ def pagination_parameters():
 
     :return: a tuple of (start, limit)
     """
-    start = request.args.get("start")
+    start = request.args.get("start", 0)
     try:
         start = int(start)
     except ValueError:  # ignore malformed parameter, use default
         start = 0
-    limit = request.args.get("limit")
+    limit = request.args.get("limit", -1)
     try:
         limit = int(limit)
     except ValueError:  # ignore malformed parameter, use default
