@@ -24,7 +24,7 @@ script:
     - date
     - ls -al
     - make test
-    - ls -al $VIRTUAL_ENV/bin/python3.5.2/bin
+    - ls -al $VIRTUAL_ENV/bin/python3.5/bin
 
 notifications:
   slack: idb14:ymFbg1TxzwxeY4ujXkDWOKie
