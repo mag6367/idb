@@ -1,0 +1,43 @@
+{
+	"bill_id": "hr226-115",
+	"congress": "115",
+	"bill": "H.R.226",
+	"bill_type": "hr",
+	"number": "H.R.226",
+	"bill_uri": "https://api.propublica.org/congress/v1/115/bills/hr226.json",
+	"title": "African Elephant Conservation and Legal Ivory Possession Act",
+	"sponsor": "Don Young",
+	"sponsor_id": "Y000033",
+	"sponsor_uri": "https://api.propublica.org/congress/v1/members/Y000033.json",
+	"sponsor_party": "R",
+	"sponsor_state": "AK",
+	"gpo_pdf_uri": "https://www.gpo.gov/fdsys/pkg/BILLS-115hr226ih/pdf/BILLS-115hr226ih.pdf",
+	"congressdotgov_url": "https://www.congress.gov/bill/115th-congress/house-bill/226",
+	"govtrack_url": "https://www.govtrack.us/congress/bills/115/hr226",
+	"introduced_date": "2017-01-03",
+	"active": "",
+	"house_passage": "",
+	"senate_passage": "",
+	"enacted": "",
+	"vetoed": "",
+	"cosponsors": "0",
+	"withdrawn_cosponsors": "0",
+	"primary_subject": "Animals",
+	"committees": "House Natural Resources Committee",
+	"latest_major_action_date": "2017-02-10",
+	"latest_major_action": "Referred to the Subcommittee on Federal Lands.",
+	"last_vote_date": "",
+	"house_passage_vote": null,
+	"senate_passage_vote": null,
+	"summary": "African Elephant Conservation and Legal Ivory Possession Act This bill reauthorizes the African Elephant Conservation Act (AECA) through FY2022.  Ivory may be imported or exported under the AECA and the Endangered Species Act of 1973 if: (1) the raw ivory or worked ivory is solely for a museum; (2) the raw ivory or worked ivory was lawfully importable into the United States on February 24, 2014, regardless of when it was acquired; or (3) the worked ivory was previously lawfully possessed in the United States. The Department of the Interior may station one U.S. Fish and Wildlife Service law enforcement officer in the primary U.S. diplomatic or consular post in each African country that has significant population of African elephants to assist local wildlife rangers in protecting the elephants and facilitating the apprehension of individuals who illegally kill them or assist in killing them. The President may embargo any products from a country if it is a significant transit or destination point for illegal ivory trade.  This bill authorizes: (1) commerce in African elephant ivory or in products containing African elephant ivory that have been lawfully imported or crafted in the United States; and (2) the importation of a sport-hunted African elephant trophy if the trophy was taken from certain elephants populations that at the time were not necessarily threatened with extinction, but may have become so unless trade was closely controlled. ",
+	"summary_short": "African Elephant Conservation and Legal Ivory Possession Act This bill reauthorizes the African Elephant Conservation Act (AECA) through FY2022.  Ivory may be imported or exported under the AECA and the Endangered Species Act of 1973 if: (1) the raw ivory or worked ivory is solely for a museum; (2) the raw ivory or worked ivory was lawfully importable into the United States on February 24, 2014, regardless of when it was acquired; or (3) the worked ivory was previously lawfully possessed in t...",
+	"versions": [],
+	"actions": [{
+		"datetime": "2017-02-10 00:00:00 UTC",
+		"description": "Referred to the Subcommittee on Federal Lands."
+	}, {
+		"datetime": "2017-01-03 00:00:00 UTC",
+		"description": "Referred to the House Committee on Natural Resources."
+	}],
+	"votes": []
+}

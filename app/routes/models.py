@@ -6,10 +6,10 @@ This module contains the routes for model JSON.
 """
 from flask import Blueprint, Response, request
 
-blueprint = Blueprint('Model JSON routes',
-                      __name__,
-                      static_folder='../static',
-                      template_folder='../templates')
+models = Blueprint('models',
+                   __name__,
+                   static_folder='../static',
+                   template_folder='../templates')
 
 
 def pagination_parameters():
@@ -33,77 +33,32 @@ def pagination_parameters():
     return start, limit
 
 
-@blueprint.route('/api/v1/people')
+@models.route('/api/v1/people')
 def people():
     """
     eklogi People JSON
 
     :return: 'TBD'
     """
-    with open("./static/data/people.json", 'r') as allPeople:
-        return Response(response="{\"success\": true, \"data\": " + allPeople.read() + "}",
+    with models.open_resource('../static/data/people.json', mode='r') as people:
+        return Response(response="{\"success\": true, \"data\": " + people.read() + "}",
                         status="200",
                         mimetype="application/json")
 
 
-@blueprint.route('/api/v1/people/<int:id>')
+@models.route('/api/v1/people/<string:id>')
 def person(id):
     """
     eklogi People JSON
 
     :return: 'TBD'
     """
-    with open("./static/data/person" + str(id) + ".json", 'r') as personFile:
-        # return "{\"success\": true, data: " + personFile.read() + "}"
-        # return Response(response="{success: true, data: " + personFile.read() + "}",
-        return Response(response="{\"success\": true, \"data\": " + personFile.read() + "}",
+    with models.open_resource("../static/data/person" + id + ".json", mode='r') as person:
+        return Response(response="{\"success\": true, \"data\": " + person.read() + "}",
                         status="200",
                         mimetype="application/json")
 
-
-@blueprint.route('/api/v1/elections')
-def elections():
-    """
-    eklogi Elections JSON
-
-    :return: 'TBD'
-    """
-    params = pagination_parameters()
-    return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
-
-
-@blueprint.route('/api/v1/elections/<int:id>')
-def election(id):
-    """
-    eklogi Elections JSON
-
-    :return: 'TBD'
-    """
-    return "{\"success\": true, data: {id: " + str(id) + "}}"
-
-
-@blueprint.route('/api/v1/districts')
-def districts():
-    """
-    eklogi Districts JSON
-
-    :return: 'TBD'
-    """
-    params = pagination_parameters()
-    return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
-
-
-@blueprint.route('/api/v1/districts/<int:id>')
-def district(id):
-    """
-    eklogi Districts JSON
-
-    :return: 'TBD'
-    """
-    return "{\"success\": true, data: {id: " + str(id) + "}}"
-
-
-@blueprint.route('/api/v1/committees')
+@models.route('/api/v1/committees')
 def committees():
     """
     eklogi Committees JSON
@@ -111,21 +66,82 @@ def committees():
     :return: 'TBD'
     """
     params = pagination_parameters()
-    return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
+    # return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
+    with models.open_resource('../static/data/committees.json', mode='r') as committees:
+        return Response(response="{\"success\": true, \"data\": " + committees.read() + "}",
+                        status="200",
+                        mimetype="application/json")
 
 
-@blueprint.route('/api/v1/committees/<int:id>')
+@models.route('/api/v1/committees/<string:id>')
 def committee(id):
     """
     eklogi Committees JSON
 
     :return: 'TBD'
     """
-    return "{\"success\": true, data: {id: " + str(id) + "}}"
+    with models.open_resource('../static/data/committee' + id + '.json', mode='r') as committee:
+        return Response(response="{\"success\": true, \"data\": " + committee.read() + "}",
+                        status="200",
+                        mimetype="application/json")
+
+@models.route('/api/v1/bills')
+def bills():
+    """
+    eklogi Committees JSON
+
+    :return: 'TBD'
+    """
+    params = pagination_parameters()
+    # return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
+    with models.open_resource('../static/data/bills.json', mode='r') as bills:
+        return Response(response="{\"success\": true, \"data\": " + bills.read() + "}",
+                        status="200",
+                        mimetype="application/json")
 
 
-@blueprint.route('/api/v1/filings')
-def filings():
+@models.route('/api/v1/bills/<string:id>')
+def bill(id):
+    """
+    eklogi Bills JSON
+
+    :return: 'TBD'
+    """
+    with models.open_resource('../static/data/bill' + id + '.json', mode='r') as bill:
+        return Response(response="{\"success\": true, \"data\": " + bill.read() + "}",
+                        status="200",
+                        mimetype="application/json")
+
+@models.route('/api/v1/votes')
+def votes():
+    """
+    eklogi Votes JSON
+
+    :return: 'TBD'
+    """
+    params = pagination_parameters()
+    # return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
+    with models.open_resource('../static/data/votes.json', mode='r') as votes:
+        return Response(response="{\"success\": true, \"data\": " + votes.read() + "}",
+                        status="200",
+                        mimetype="application/json")
+
+
+@models.route('/api/v1/votes/<string:id>')
+def vote(id):
+    """
+    eklogi Votes JSON
+
+    :return: 'TBD'
+    """
+    with models.open_resource('../static/data/bill' + id + '.json', mode='r') as vote:
+        return Response(response="{\"success\": true, \"data\": " + vote.read() + "}",
+                        status="200",
+                        mimetype="application/json")
+
+
+@models.route('/api/v1/example')
+def examples():
     """
     eklogi Filings JSON
 
@@ -135,8 +151,8 @@ def filings():
     return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
 
 
-@blueprint.route('/api/v1/filings/<int:id>')
-def filing(id):
+@models.route('/api/v1/example/<int:id>')
+def example(id):
     """
     eklogi Filings JSON
 

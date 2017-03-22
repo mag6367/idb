@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Eklogi Poltical Database [PEOPLE]</title>
+<title>Eklogi Poltical Database [SEARCH]</title>
 <head>
 	{% include 'common-header.html' %}
 </head>
@@ -10,7 +10,7 @@
 	</div>
 	<div id="top-navbar">
 		{% include 'top-navbar.html' %}
-		<script type="text/babel" src="../static/js/people.js"></script>
+		<script type="text/babel" src="{{ searchscript }}"></script>
 	</div>
 
 
@@ -19,7 +19,7 @@
     <div class="row" id="table-head">
       <div class="col-sm-4"></div>
       <div class="col-sm-4 text-center">
-				<h4>People</h4>
+				<h4>{{ searchtitle }}</h4>
 			</div>
 			<div class="col-sm-4">
         <div class="input-group">
