@@ -88,5 +88,5 @@ class People extends React.Component {
 
 ReactDOM.render(
   <People />,
-  document.getElementById('people-search-results')
+  document.getElementById('search-results')
 );
