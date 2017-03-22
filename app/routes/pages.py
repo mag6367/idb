@@ -58,7 +58,7 @@ def committees():
 @pages.route('/bills')
 def bills():
     """
-    eklogi Committees Page
+    eklogi Bills Page
 
     :return: 'TBD'
     """
@@ -69,7 +69,7 @@ def bills():
 @pages.route('/votes')
 def votess():
     """
-    eklogi Committees Page
+    eklogi Votes Page
 
     :return: 'TBD'
     """
