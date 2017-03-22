@@ -106,7 +106,8 @@ def bill(id):
 
     :return: 'TBD'
     """
-    with models.open_resource('../static/data/bill' + id + '.json', mode='r') as bill:
+    with models.open_resource('../static/data/bill-' + id + '.json', mode='r') as bill:
+        print("HERE")
         return Response(response="{\"success\": true, \"data\": " + bill.read() + "}",
                         status="200",
                         mimetype="application/json")

@@ -22,9 +22,9 @@ function BillDetails(props) {
     return (
         <div id="bill-details">
             <div className="caption text-center">
-                <h2>{props.bill.name}</h2>
+                <h2>{props.bill.title}</h2>
                 <p>{props.bill.bill}</p>
-                <p>Congress: {props.bill.congress}</p>
+                <p>{props.bill.congress}th Congress</p>
             </div>
         </div>
     );
@@ -39,7 +39,6 @@ class BillView extends React.Component {
         if(this.props.bill) {
             return (
                 <div className="thumbnail">
-                    <BillMedia bill={this.props.bill}/>
                     <BillDetails bill={this.props.bill}/>
                 </div>
             );
@@ -69,7 +68,7 @@ class Bill extends React.Component {
 
     componentDidMount() {
         var that = this;
-        loadJSONWrapper("/api/v1/bill" + getBill(), function(data) {
+        loadJSONWrapper("/api/v1/bills" + getBill(), function(data) {
             that.updateBill(data);
         });
     }

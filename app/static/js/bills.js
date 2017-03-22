@@ -14,17 +14,43 @@ function TableHead(props) {
 
 }
 
+function BillPassage(props) {
+    if(props.bill.senate_passage == "" && props.bill.house_passage != "") {
+        return (
+            <p id="bill-passage">
+                {props.bill.house_passage}
+            </p>
+        )
+    }
+    else if(props.bill.house_passage == "" && props.bill.senate_passage != "") {
+        return (
+            <p id="bill-passage">
+                {props.bill.senate_passage}
+            </p>
+        );
+    }
+    return (
+        <p id="bill-passage">
+            TBD
+        </p>
+    );
+}
+
 function BillData(props) {
     return (
         <tr>
             <td><p>{props.bill.result}</p></td>
-            <td><p>{props.bill.name}</p></td>
+            <td><a href={"/bills/" + props.bill.id}>{props.bill.name}</a></td>
+            <td><p>{props.bill.date}</p></td>
+            <td><p>{props.bill.primary_subject}</p></td>
+            <td><p>{props.bill.chamber}</p></td>
+            <td><BillPassage bill={props.bill}/></td>
         </tr>
     );
 }
 
 function BillsData(props) {
-    const committees = props.bills.map((bill) =>
+    const bills = props.bills.map((bill) =>
         <BillData bill={bill} key={bill.id}/>
     );
     return (
@@ -34,10 +60,14 @@ function BillsData(props) {
                 <tr>
                     <th>#</th>
                     <th>Title</th>
+                    <th>Date</th>
+                    <th>Primary Subject</th>
+                    <th>Chamber</th>
+                    <th>Passage</th>
                 </tr>
                 </thead>
                 <tbody>
-                    {committees}
+                    {bills}
                 </tbody>
             </table>
         </div>
