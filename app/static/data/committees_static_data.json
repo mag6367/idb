@@ -1,59 +1,589 @@
 {
-   "status":"OK",
-   "copyright":"Copyright (c) 2017 Pro Publica Inc. All Rights Reserved.",
-   "results":[
-      {
-         "congress": "115",
-         "chamber": "Senate",
-         "committee": "Committee on Administration",
-         "num_results": "9",
-         "chairman_id": "H001045",
-         "ranking_member_id": "B001227",
-         "current_members": [
-]
-          ,
-          "former_members": [
-]
-      }
-   ]
-}
-
-{
-   "status":"OK",
-   "copyright":"Copyright (c) 2017 Pro Publica Inc. All Rights Reserved.",
-   "results":[
-      {
-         "congress": "115",
-         "chamber": "Senate",
-         "committee": "Committee on Agriculture",
-         "num_results": "46",
-         "chairman_id": "C001062",
-         "ranking_member_id": "P000258",
-         "current_members": [
-]
-          ,
-          "former_members": [
-]
-      }
-   ]
-}
-
-{
-   "status":"OK",
-   "copyright":"Copyright (c) 2017 Pro Publica Inc. All Rights Reserved.",
-   "results":[
-      {
-         "congress": "115",
-         "chamber": "Senate",
-         "committee": "Committee on Appropriations",
-         "num_results": "52",
-         "chairman_id": "F000372",
-         "ranking_member_id": "L000480",
-         "current_members": [
-]
-          ,
-          "former_members": [
-]
-      }
-   ]
+	"status": "OK",
+	"copyright": "Copyright (c) 2017 Pro Publica Inc. All Rights Reserved.",
+	"results": [{
+		"congress": "115",
+		"chamber": "House",
+		"num_results": "22",
+		"committees": [{
+			"id": "HSHA",
+			"name": "Committee on Administration",
+			"url": "http://cha.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSHA.json",
+			"chair": "Gregg Harper",
+			"chair_id": "H001045",
+			"chair_party": "R",
+			"chair_state": "MS",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/H001045.json",
+			"ranking_member_id": "B001227",
+			"subcommittees": []
+		}, {
+			"id": "HSAG",
+			"name": "Committee on Agriculture",
+			"url": "http://agriculture.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSAG.json",
+			"chair": "K. Michael Conaway",
+			"chair_id": "C001062",
+			"chair_party": "R",
+			"chair_state": "TX",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/C001062.json",
+			"ranking_member_id": "P000258",
+			"subcommittees": [{
+				"id": "HSAG15",
+				"name": "Conservation and Forestry"
+			}, {
+				"id": "HSAG22",
+				"name": "Commodity Exchanges, Energy, and Credit"
+			}, {
+				"id": "HSAG16",
+				"name": "General Farm Commodities and Risk Management"
+			}, {
+				"id": "HSAG29",
+				"name": "Livestock and Foreign Agriculture"
+			}, {
+				"id": "HSAG14",
+				"name": "Biotechnology, Horticulture, and Research"
+			}, {
+				"id": "HSAG03",
+				"name": "Nutrition"
+			}]
+		}, {
+			"id": "HSAP",
+			"name": "Committee on Appropriations",
+			"url": "http://appropriations.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSAP.json",
+			"chair": "Rodney Frelinghuysen",
+			"chair_id": "F000372",
+			"chair_party": "R",
+			"chair_state": "NJ",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/F000372.json",
+			"ranking_member_id": "L000480",
+			"subcommittees": [{
+				"id": "HSAP01",
+				"name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies"
+			}, {
+				"id": "HSAP19",
+				"name": "Commerce, Justice, Science, and Related Agencies"
+			}, {
+				"id": "HSAP02",
+				"name": "Defense"
+			}, {
+				"id": "HSAP10",
+				"name": "Energy and Water Development, and Related Agencies"
+			}, {
+				"id": "HSAP23",
+				"name": "Financial Services and General Government"
+			}, {
+				"id": "HSAP15",
+				"name": "Homeland Security"
+			}, {
+				"id": "HSAP06",
+				"name": "Interior, Environment, and Related Agencies"
+			}, {
+				"id": "HSAP07",
+				"name": "Labor, Health and Human Services, Education, and Related Agencies"
+			}, {
+				"id": "HSAP24",
+				"name": "Legislative Branch"
+			}, {
+				"id": "HSAP18",
+				"name": "Military Construction, Veterans Affairs, and Related Agencies"
+			}, {
+				"id": "HSAP04",
+				"name": "State, Foreign Operations, and Related Programs"
+			}, {
+				"id": "HSAP20",
+				"name": "Transportation, and Housing and Urban Development, and Related Agencies"
+			}]
+		}, {
+			"id": "HSAS",
+			"name": "Committee on Armed Services",
+			"url": "http://armedservices.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSAS.json",
+			"chair": "William M. Thornberry",
+			"chair_id": "T000238",
+			"chair_party": "R",
+			"chair_state": "TX",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/T000238.json",
+			"ranking_member_id": "S000510",
+			"subcommittees": [{
+				"id": "HSAS25",
+				"name": "Tactical Air and Land Forces"
+			}, {
+				"id": "HSAS02",
+				"name": "Military Personnel"
+			}, {
+				"id": "HSAS06",
+				"name": "Oversight and Investigations"
+			}, {
+				"id": "HSAS03",
+				"name": "Readiness"
+			}, {
+				"id": "HSAS28",
+				"name": "Seapower and Projection Forces"
+			}, {
+				"id": "HSAS29",
+				"name": "Strategic Forces"
+			}, {
+				"id": "HSAS26",
+				"name": "Emerging Threats and Capabilities"
+			}]
+		}, {
+			"id": "HSED",
+			"name": "Committee on Education and the Workforce",
+			"url": "http://edworkforce.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSED.json",
+			"chair": "Virginia Foxx",
+			"chair_id": "F000450",
+			"chair_party": "R",
+			"chair_state": "NC",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/F000450.json",
+			"ranking_member_id": "S000185",
+			"subcommittees": [{
+				"id": "HSED14",
+				"name": "Early Childhood, Elementary, and Secondary Education"
+			}, {
+				"id": "HSED02",
+				"name": "Health, Employment, Labor, and Pensions"
+			}, {
+				"id": "HSED13",
+				"name": "Higher Education and Workforce Development"
+			}, {
+				"id": "HSED10",
+				"name": "Workforce Protections"
+			}]
+		}, {
+			"id": "HSIF",
+			"name": "Committee on Energy and Commerce",
+			"url": "http://energycommerce.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSIF.json",
+			"chair": "Greg Walden",
+			"chair_id": "W000791",
+			"chair_party": "R",
+			"chair_state": "OR",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/W000791.json",
+			"ranking_member_id": "P000034",
+			"subcommittees": [{
+				"id": "HSIF17",
+				"name": "Digital Commerce and Consumer Protection"
+			}, {
+				"id": "HSIF16",
+				"name": "Communications and Technology"
+			}, {
+				"id": "HSIF03",
+				"name": "Energy"
+			}, {
+				"id": "HSIF14",
+				"name": "Health"
+			}, {
+				"id": "HSIF02",
+				"name": "Oversight and Investigations"
+			}, {
+				"id": "HSIF18",
+				"name": "Environment"
+			}]
+		}, {
+			"id": "HSBA",
+			"name": "Committee on Financial Services",
+			"url": "http://financialservices.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSBA.json",
+			"chair": "Jeb Hensarling",
+			"chair_id": "H001036",
+			"chair_party": "R",
+			"chair_state": "TX",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/H001036.json",
+			"ranking_member_id": "W000187",
+			"subcommittees": [{
+				"id": "HSBA16",
+				"name": "Capital Markets, Securities, and Investment"
+			}, {
+				"id": "HSBA15",
+				"name": "Financial Institutions and Consumer Credit"
+			}, {
+				"id": "HSBA04",
+				"name": "Housing and Insurance"
+			}, {
+				"id": "HSBA20",
+				"name": "Monetary Policy and Trade"
+			}, {
+				"id": "HSBA09",
+				"name": "Oversight and Investigations"
+			}, {
+				"id": "HSBA01",
+				"name": "Terrorism and Illicit Finance"
+			}]
+		}, {
+			"id": "HSFA",
+			"name": "Committee on Foreign Affairs",
+			"url": "http://foreignaffairs.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSFA.json",
+			"chair": "Edward  Royce",
+			"chair_id": "R000487",
+			"chair_party": "R",
+			"chair_state": "CA",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/R000487.json",
+			"ranking_member_id": "E000179",
+			"subcommittees": [{
+				"id": "HSFA16",
+				"name": "Africa, Global Health, Global Human Rights, and International Organizations"
+			}, {
+				"id": "HSFA05",
+				"name": "Asia and the Pacific"
+			}, {
+				"id": "HSFA14",
+				"name": "Europe, Eurasia, and Emerging Threats"
+			}, {
+				"id": "HSFA18",
+				"name": "Terrorism, Nonproliferation, and Trade"
+			}, {
+				"id": "HSFA13",
+				"name": "The Middle East and North Africa"
+			}, {
+				"id": "HSFA07",
+				"name": "The Western Hemisphere"
+			}]
+		}, {
+			"id": "HSHM",
+			"name": "Committee on Homeland Security",
+			"url": "http://homeland.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSHM.json",
+			"chair": "Michael McCaul",
+			"chair_id": "M001157",
+			"chair_party": "R",
+			"chair_state": "TX",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/M001157.json",
+			"ranking_member_id": "T000193",
+			"subcommittees": [{
+				"id": "HSHM11",
+				"name": "Border and Maritime Security"
+			}, {
+				"id": "HSHM12",
+				"name": "Emergency Preparedness, Response, and Communications"
+			}, {
+				"id": "HSHM08",
+				"name": "Cybersecurity and Infrastructure Protection"
+			}, {
+				"id": "HSHM05",
+				"name": "Counterterrorism and Intelligence"
+			}, {
+				"id": "HSHM09",
+				"name": "Oversight and Management Efficiency"
+			}, {
+				"id": "HSHM07",
+				"name": "Transportation and Protective Security"
+			}]
+		}, {
+			"id": "HSII",
+			"name": "Committee on Natural Resources",
+			"url": "http://naturalresources.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSII.json",
+			"chair": "Rob Bishop",
+			"chair_id": "B001250",
+			"chair_party": "R",
+			"chair_state": "UT",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/B001250.json",
+			"ranking_member_id": "G000551",
+			"subcommittees": [{
+				"id": "HSII06",
+				"name": "Energy and Mineral Resources"
+			}, {
+				"id": "HSII10",
+				"name": "Federal Lands"
+			}, {
+				"id": "HSII13",
+				"name": "Water, Power and Oceans"
+			}, {
+				"id": "HSII22",
+				"name": "Fisheries, Wildlife, Oceans and Insular Affairs"
+			}, {
+				"id": "HSII24",
+				"name": "Indian, Insular and Alaska Native Affairs"
+			}, {
+				"id": "HSII15",
+				"name": "Oversight and Investigations"
+			}]
+		}, {
+			"id": "HSGO",
+			"name": "Committee on Oversight and Government Reform",
+			"url": "http://oversight.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSGO.json",
+			"chair": "Jason Chaffetz",
+			"chair_id": "C001076",
+			"chair_party": "R",
+			"chair_state": "UT",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/C001076.json",
+			"ranking_member_id": "C000984",
+			"subcommittees": [{
+				"id": "HSGO25",
+				"name": "Information Technology"
+			}, {
+				"id": "HSGO24",
+				"name": "Government Operations"
+			}, {
+				"id": "HSGO06",
+				"name": "National Security"
+			}, {
+				"id": "HSGO27",
+				"name": "Health Care, Benefits, and Administrative Rules"
+			}, {
+				"id": "HSGO28",
+				"name": "The Interior, Energy and Environment"
+			}, {
+				"id": "HSGO29",
+				"name": "Intergovernmental Affairs"
+			}]
+		}, {
+			"id": "HSRU",
+			"name": "Committee on Rules",
+			"url": "http://rules.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSRU.json",
+			"chair": "Pete Sessions",
+			"chair_id": "S000250",
+			"chair_party": "R",
+			"chair_state": "TX",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/S000250.json",
+			"ranking_member_id": "S000480",
+			"subcommittees": [{
+				"id": "HSRU02",
+				"name": "Legislative and Budget Process"
+			}, {
+				"id": "HSRU04",
+				"name": "Rules and Organization of the House"
+			}]
+		}, {
+			"id": "HSSY",
+			"name": "Committee on Science, Space, and Technology",
+			"url": "http://science.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSSY.json",
+			"chair": "Lamar Smith",
+			"chair_id": "S000583",
+			"chair_party": "R",
+			"chair_state": "TX",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/S000583.json",
+			"ranking_member_id": "J000126",
+			"subcommittees": [{
+				"id": "HSSY20",
+				"name": "Energy"
+			}, {
+				"id": "HSSY21",
+				"name": "Oversight"
+			}, {
+				"id": "HSSY16",
+				"name": "Space"
+			}, {
+				"id": "HSSY18",
+				"name": "Environment"
+			}, {
+				"id": "HSSY15",
+				"name": "Research and Technology"
+			}]
+		}, {
+			"id": "HSSM",
+			"name": "Committee on Small Business",
+			"url": "http://smallbusiness.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSSM.json",
+			"chair": "Steven J. Chabot",
+			"chair_id": "C000266",
+			"chair_party": "R",
+			"chair_state": "OH",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/C000266.json",
+			"ranking_member_id": "V000081",
+			"subcommittees": [{
+				"id": "HSSM23",
+				"name": "Contracting and Workforce"
+			}, {
+				"id": "HSSM24",
+				"name": "Investigations, Oversight and Regulations"
+			}, {
+				"id": "HSSM25",
+				"name": "Agriculture, Energy and Trade"
+			}, {
+				"id": "HSSM26",
+				"name": "Health and Technology"
+			}, {
+				"id": "HSSM27",
+				"name": "Economic Growth, Tax and Capital Access"
+			}]
+		}, {
+			"id": "HSSO",
+			"name": "Committee on Standards of Official Conduct",
+			"url": "http://ethics.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSSO.json",
+			"chair": "Susan Brooks",
+			"chair_id": "B001284",
+			"chair_party": "R",
+			"chair_state": "IN",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/B001284.json",
+			"ranking_member_id": "D000610",
+			"subcommittees": []
+		}, {
+			"id": "HSBU",
+			"name": "Committee on the Budget",
+			"url": "http://budget.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSBU.json",
+			"chair": "Diane Black",
+			"chair_id": "B001273",
+			"chair_party": "R",
+			"chair_state": "TN",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/B001273.json",
+			"ranking_member_id": "Y000062",
+			"subcommittees": []
+		}, {
+			"id": "HSJU",
+			"name": "Committee on the Judiciary",
+			"url": "http://judiciary.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSJU.json",
+			"chair": "Robert W. Goodlatte",
+			"chair_id": "G000289",
+			"chair_party": "R",
+			"chair_state": "VA",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/G000289.json",
+			"ranking_member_id": "C000714",
+			"subcommittees": [{
+				"id": "HSJU10",
+				"name": "The Constitution and Civil Justice"
+			}, {
+				"id": "HSJU03",
+				"name": "Courts, Intellectual Property, and the Internet"
+			}, {
+				"id": "HSJU08",
+				"name": "Crime, Terrorism, Homeland Security, and Investigations"
+			}, {
+				"id": "HSJU01",
+				"name": "Immigration and Border Security"
+			}, {
+				"id": "HSJU05",
+				"name": "Regulatory Reform, Commercial and Antitrust Law"
+			}]
+		}, {
+			"id": "HSPW",
+			"name": "Committee on Transportation and Infrastructure",
+			"url": "http://transportation.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSPW.json",
+			"chair": "Bill Shuster",
+			"chair_id": "S001154",
+			"chair_party": "R",
+			"chair_state": "PA",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/S001154.json",
+			"ranking_member_id": "D000191",
+			"subcommittees": [{
+				"id": "HSPW05",
+				"name": "Aviation"
+			}, {
+				"id": "HSPW07",
+				"name": "Coast Guard and Maritime Transportation"
+			}, {
+				"id": "HSPW13",
+				"name": "Economic Development, Public Buildings, and Emergency Management"
+			}, {
+				"id": "HSPW12",
+				"name": "Highways and Transit"
+			}, {
+				"id": "HSPW14",
+				"name": "Railroads, Pipelines, and Hazardous Materials"
+			}, {
+				"id": "HSPW02",
+				"name": "Water Resources and Environment"
+			}]
+		}, {
+			"id": "HSVR",
+			"name": "Committee on Veterans&#39; Affairs",
+			"url": "http://veterans.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSVR.json",
+			"chair": "Phil Roe",
+			"chair_id": "R000582",
+			"chair_party": "R",
+			"chair_state": "TN",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/R000582.json",
+			"ranking_member_id": "W000799",
+			"subcommittees": [{
+				"id": "HSVR09",
+				"name": "Disability Assistance and Memorial Affairs"
+			}, {
+				"id": "HSVR10",
+				"name": "Economic Opportunity"
+			}, {
+				"id": "HSVR03",
+				"name": "Health"
+			}, {
+				"id": "HSVR08",
+				"name": "Oversight and Investigations"
+			}]
+		}, {
+			"id": "HSWM",
+			"name": "Committee on Ways and Means",
+			"url": "http://waysandmeans.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HSWM.json",
+			"chair": "Kevin Brady",
+			"chair_id": "B000755",
+			"chair_party": "R",
+			"chair_state": "TX",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/B000755.json",
+			"ranking_member_id": "N000015",
+			"subcommittees": [{
+				"id": "HSWM02",
+				"name": "Health"
+			}, {
+				"id": "HSWM03",
+				"name": "Human Resources"
+			}, {
+				"id": "HSWM06",
+				"name": "Oversight"
+			}, {
+				"id": "HSWM05",
+				"name": "Tax Policy"
+			}, {
+				"id": "HSWM01",
+				"name": "Social Security"
+			}, {
+				"id": "HSWM04",
+				"name": "Trade"
+			}]
+		}, {
+			"id": "HLIG",
+			"name": "Permanent Select Committee on Intelligence",
+			"url": "http://intelligence.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HLIG.json",
+			"chair": "Devin Nunes",
+			"chair_id": "N000181",
+			"chair_party": "R",
+			"chair_state": "CA",
+			"chair_uri": "https://api.propublica.org/congress/v1/members/N000181.json",
+			"ranking_member_id": "S001150",
+			"subcommittees": [{
+				"id": "HLIG09",
+				"name": "Oversight and Investigations"
+			}, {
+				"id": "HLIG05",
+				"name": "Technical and Tactical Intelligence"
+			}, {
+				"id": "HLIG08",
+				"name": "Terrorism, Human Intelligence, Analysis, and Counterintelligence"
+			}, {
+				"id": "HLIG01",
+				"name": "Central Intelligence Agency"
+			}, {
+				"id": "HLIG02",
+				"name": "National Security Agency and Cybersecurity"
+			}, {
+				"id": "HLIG03",
+				"name": "Emerging Threats"
+			}, {
+				"id": "HLIG04",
+				"name": "Department of Defense Intelligence and Overhead Architecture"
+			}]
+		}, {
+			"id": "HLZI",
+			"name": "Select Committee on Benghazi",
+			"url": "http://benghazi.house.gov/",
+			"api_uri": "https://api.propublica.org/congress/v1/115/house/committees/HLZI.json",
+			"chair": "",
+			"chair_id": "",
+			"chair_party": "",
+			"chair_state": "",
+			"chair_uri": "",
+			"ranking_member_id": "C000984",
+			"subcommittees": []
+		}]
+	}]
 }
