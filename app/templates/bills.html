@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Eklogi Poltical Database [BILLS]</title>
+<head>
+    {% include 'common-header.html' %}
+</head>
+<body>
+<div id="top-pane">
+    {% include 'top-pane.html' %}
+</div>
+<div id="top-navbar">
+    {% include 'top-navbar.html' %}
+    <script type="text/babel" src="../static/js/bills.js"></script>
+</div>
+
+
+
+<div class="container search-pane">
+    <div class="row" id="table-head">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 text-center">
+            <h4>Bills</h4>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon">Search: </span>
+                <input id="search-input" type="text" class="form-control" name="query-box" placeholder="">
+            </div>
+        </div>
+    </div>
+    <div class="row" id="table-content">
+        <div id="search-results"></div>
+    </div>
+    <div class="row" id="table-foot">
+        <p>Showing all results</p>
+    </div>
+</div>
+
+</body>
+</html>
