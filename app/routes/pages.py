@@ -71,7 +71,7 @@ def bills():
 
 
 @pages.route('/votes')
-def votess():
+def votes():
     """
     eklogi Votes Page
 
