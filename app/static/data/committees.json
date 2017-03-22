@@ -2,33 +2,30 @@
   "committees": [
     {
       "result": 1,
-      "id": "1",
-      "congress": "115",
-      "chamber": "Senate",
-      "committee": "Committee on Administration",
-      "num_results": "9",
-      "chairman_id": "H001045",
-      "ranking_member_id": "B001227"
+      "id": "HSAG",
+      "chamber": "House",
+      "committee": "Committee on Agriculture",
+      "num_results": "2",
+      "chairman_id": "C001062",
+      "chairman_name": "K. Conaway"
     },
     {
       "result": 2,
-      "id": "2",
-      "congress": "115",
+      "id": "SSCM",
       "chamber": "Senate",
-      "committee": "Committee on Agriculture",
-      "num_results": "46",
-      "chairman_id": "C001062",
-      "ranking_member_id": "P000258"
+      "committee": "Committee on Commerce, Science, and Transportation",
+      "num_results": "2",
+      "chairman_id": "T000250",
+      "chairman_name": "John Thune"
     },
     {
       "result": 3,
-      "id": "3",
-      "congress": "115",
+      "id": "SLIA",
       "chamber": "Senate",
-      "committee": "Committee on Appropriations",
-      "num_results": "52",
-      "chairman_id": "F000372",
-      "ranking_member_id": "L000480"
+      "committee": "Committee on Indian Affairs",
+      "num_results": "2",
+      "chairman_id": "H001061",
+      "chairman_name": "John Hoeven"
     }
   ]
 }

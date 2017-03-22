@@ -16,10 +16,10 @@ function TableHead(props) {
 function CommitteeData(props) {
   return (
     <tr>
-      <td><p>{props.committee.congress}</p></td>
+      <td><p>{props.committee.result}</p></td>
       <td><a href={"/committees/" + props.committee.id}>{props.committee.committee}</a></td>
       <td><p>{props.committee.num_results}</p></td>
-      <td><p>{props.committee.chairman_id}</p></td>
+      <td><a href={"/people/" + props.committee.chairman_id}>{props.committee.chairman_name}</a></td>
       <td><p>{props.committee.chamber}</p></td>
     </tr>
   );
@@ -35,7 +35,7 @@ function CommitteesData(props) {
       <table className="table table-striped">
         <thead>
           <tr>
-            <th>Congress</th>
+            <th>#</th>
             <th>Name</th>
             <th>Members</th>
             <th>Chairman</th>
