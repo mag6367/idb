@@ -40,7 +40,8 @@ def people():
 
     :return: 'TBD'
     """
-    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/people.js', searchtitle='People')
+    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/people.js',
+                           searchtitle='People')
 
 
 @pages.route('/committees')
@@ -50,7 +51,9 @@ def committees():
 
     :return: 'TBD'
     """
-    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/committees.js', searchtitle='Committees')
+    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/committees.js',
+                           searchtitle='Committees')
+
 
 @pages.route('/bills')
 def bills():
@@ -59,7 +62,9 @@ def bills():
 
     :return: 'TBD'
     """
-    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/bills.js', searchtitle='Bills')
+    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/bills.js',
+                           searchtitle='Bills')
+
 
 @pages.route('/votes')
 def votess():
@@ -68,4 +73,5 @@ def votess():
 
     :return: 'TBD'
     """
-    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/votes.js', searchtitle='Votes')
+    return render_template('search.html', title='Eklogi: Search', searchscript='../static/js/votes.js',
+                           searchtitle='Votes')
