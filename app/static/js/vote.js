@@ -7,7 +7,7 @@ var loadJSONWrapper= function(path, callback) {
     dataType: "json",
     success: callback,
     error: function(xhr, textStatus, errorThrown){
-        alert("Skit jaevla fan! Error reading vote: " + textStatus);
+        alert("Error reading vote: " + textStatus);
     }
   });
 }
@@ -36,7 +36,7 @@ class SummaryView extends React.Component {
           <div className="panel-heading" id="vote-summary-view-bill">
             <h4>Bill: <a href={"/bills/" + vote.bill.bill_id}>{vote.bill.number}</a></h4>
             <p><i>{vote.bill.title}</i></p>
-            <p>Latest Action: {this.props.vote.bill.latest_action}</p>
+            {/*<p>Latest Action: {this.props.vote.bill.latest_action}</p>*/}
           </div>
           <div className="panel-content">
             <div className="caption text-center">
@@ -44,14 +44,9 @@ class SummaryView extends React.Component {
               <p>Chamber: {vote.chamber}</p>
               <p>Session {vote.session}, roll call {vote.roll_call}</p>
               <p>Question: {vote.question}</p>
-              <p>Vote Type: {vote.vote_type}</p>
+              {/*<p>Vote Type: {vote.vote_type}</p>*/}
               <p>Date: {vote.date}</p>
               <p>Time: {vote.time}</p>
-              {/*
-              <p>Twitter Handle: {props.person.twitter_account ? (<a href={"http://www.twitter.com/" + props.person.twitter_account}>{"@" + props.person.twitter_account}</a>) : ("None")}</p>
-              <p>Facebook Account: {props.person.facebook_account ? (<a href={"http://www.facebook.com/" + props.person.facebook_account}>{props.person.facebook_account}</a>) : ("None")}</p>
-              <p>Youtube Account: {props.person.youtube_account ? (<a href={"http://www.youtube.com/user/" + props.person.youtube_account}>{props.person.youtube_account}</a>) : ("None")}</p>
-              */}
             </div>
           </div>
         </div>
@@ -59,66 +54,6 @@ class SummaryView extends React.Component {
     }
     return (<p>No Data</p>);
   }
-}
-
-function ElectionData(props) {
-  return (
-    <div id="election-data">
-      <p>Last Elected: {props.office.start_date}</p>
-      <p>Next Election: {props.office.end_date}</p>
-    </div>
-  );
-}
-
-function CommitteeData(props) {
-  return (
-      <tr>
-        <td><a href={"/committees/" + props.committee.code}>{props.committee.name}</a></td>
-      </tr>
-  );
-}
-
-function CommitteesData(props) {
-  const committees = props.committees.map((committee) =>
-    <CommitteeData committee={committee} key={committee.code} />
-  );
-
-  return (
-    <div className="table-responsive">
-    <table className="table table-striped">
-      <thead>
-        <tr><th>Committees:</th></tr>
-      </thead>
-      <tbody>
-        {committees}
-      </tbody>
-    </table>
-    </div>
-  );
-}
-
-
-
-function DistrictData(props) {
-  if(props.office.district) {
-    return (
-      <div className="district-data">
-        <p>District: {props.office.district}</p>
-      </div>
-    );
-  }
-  return null;
-}
-
-function OfficeData(props) {
-  return(
-    <div className="office-data">
-      <h4>Office: {props.office.title}, {props.office.chamber}</h4>
-      <p>State: {props.office.state} </p>
-      <DistrictData office={props.office}/>
-      <ElectionData office={props.office}/>
-    </div>
-  );
 }
 
 function VoterData(props) {
@@ -209,21 +144,22 @@ class VotesView extends React.Component {
     if(!this.props.votes) {
       return (<p>No Data</p>);
     }
-    var votes = this.props.votes;
-    var content;
-    if(this.state.index === 0) {
-      content = <VoteResults votes={this.props.votes}/>
-    }
-    else {
-      content = <VoteList votes={this.props.votes}/>
-    }
+    // var votes = this.props.votes;
+    // var content;
+    // if(this.state.index === 0) {
+    //   content = <VoteResults votes={this.props.votes}/>
+    // }
+    // else {
+    //   content = <VoteList votes={this.props.votes}/>
+    // }
     return (
       <div id="votes-view">
         <div className="panel panel-default">
           <div className="panel-heading">
             <ul className="nav nav-tabs" role="tablist">
               <li role="presentation" className="active"><a href="#votes-view-results-tab-pane" aria-controls="votes-view-results-tab-pane" role="tab" data-toggle="tab" >Voting Summary</a></li>
-              <li role="presentation">                   <a href="#votes-view-list-tab-pane" aria-controls="votes-view-list-tab-pane" role="tab" data-toggle="tab" >Voting List</a></li>
+              <li role="presentation"><a href="#votes-view-list-tab-pane" aria-controls="votes-view-list-tab-pane" role="tab" data-toggle="tab" >Voting List</a></li>
+              <li role="presentation"><a href="#votes-view-map-pane" aria-controls="votes-view-map-pane" role="tab" data-toggle="tab" >Voting Map</a></li>
             </ul>
           </div>
           <div className="tab-content">
@@ -232,6 +168,9 @@ class VotesView extends React.Component {
             </div>
             <div role="tabpanel" className="tab-pane" id="votes-view-list-tab-pane">
               <VoteList votes={this.props.votes}/>
+            </div>
+            <div role="tabpanel" className="tab-pane" id="votes-view-map-pane">
+              <img src="/api/v1/americanhero" alt="A sloth for all seasons" style={{width: 300 + 'px'}}/>
             </div>
           </div>
           {/*{content}*/}
