@@ -1,8 +1,12 @@
 /* Image and Title at the top of the splash page */
-
+html { height:100%; width:100%;}
 body {
     background-color: #FCFCFF;
+    height: 100%;
+    width:100%;
 }
+
+
 
 .header-text {
 	/*background: url("img/cicero_denounces_catiline.jpg");*/
@@ -44,8 +48,6 @@ body {
 #office-view-content {
 	margin-left: 15px;
 }
-
-
 
 /* Nav Bar Configuration */
 
@@ -110,9 +112,82 @@ body {
 
 /* Splash page carousel */
 
-.main-carousel {
-	background-size: cover;
+#index-body {
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  /*background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;*/
 }
+
+#index-body > .innercontents #top-pane {
+  flex:0 0 content;
+}
+
+#index-body > .innercontents #top-navbar {
+  flex:0 0 content;
+}
+
+
+
+#splash-carousel {
+  margin-top: -50px;
+	background-size: cover;
+  /*background-color: #F00;*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b2/United_States_Capitol_-_west_front.jpg");
+  background: none;
+
+  flex-grow:1;
+  overflow:auto;
+}
+
+.splash-carousel-item {
+  /*background-color: #3C3B6E;*/
+  background: none;
+  /*opacity: 0.2;*/
+  margin-left: 75px;
+  margin-top: 40px;
+}
+
+.splash-carousel-item h4 {
+  color: #FFFFFF;
+}
+
+.splash-carousel-item h1 a {
+  color: #FFFFFF;
+}
+
+#splash-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b2/United_States_Capitol_-_west_front.jpg");
+	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #DDD;
+	filter: blur(2px) grayscale(5%) sepia(40%);
+	z-index: -1;
+	opacity: 0.55;
+}
+
+#splash-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000;
+	z-index: -2;
+}
+
+
 
 /* People page */
 
@@ -154,31 +229,4 @@ body {
   border-style: solid;
   border-width: 2px 2px 2px 2px;
   border-color: #B22234;
-}
-
-/* Votes page */
-#vote-summary-view-panel {
-  border-color: #B22234;
-  /*border-width: 2px 2px 2px 2px;*/
-}
-
-#vote-summary-view-top-heading {
-  background-color: #555372;
-  color: #FDFDFD;
-  border-color: #B22234;
-  border-width: 0px 0px 1px 0px;
-}
-
-#vote-summary-view-bill {
-  border-color: #B22234;
-  border-width: 0px 0px 1px 0px;
-}
-
-#vote-results-col-left {
-  padding-right: 0px;
-}
-
-#vote-results-col-right {
-  /* looks better on large screens, but worse on small screens*/
-  padding-left: 0px;
 }
