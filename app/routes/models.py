@@ -5,6 +5,7 @@ This module contains the routes for model JSON.
 
 """
 # pylint: disable=invalid-name
+# pylint: disable=unused-argument
 from flask import Blueprint, Response, request
 
 models = Blueprint('models',
@@ -47,14 +48,14 @@ def members():
                         mimetype="application/json")
 
 
-@models.route('/api/v1/people/<string:member_id>')
+@models.route('/api/v1/members/<string:member_id>')
 def member(member_id):
     """
     eklogi People JSON
 
     :return: 'TBD'
     """
-    with models.open_resource("../static/data/person" + member_id + ".json", mode='r') as f:
+    with models.open_resource('../static/data/people.json', mode='r') as f:
         return Response(response="{\"success\": true, \"data\": " + f.read() + "}",
                         status="200",
                         mimetype="application/json")
@@ -80,7 +81,7 @@ def committee(committee_id):
 
     :return: 'TBD'
     """
-    with models.open_resource('../static/data/committee' + committee_id + '.json', mode='r') as f:
+    with models.open_resource('../static/data/committees.json', mode='r') as f:
         return Response(response="{\"success\": true, \"data\": " + f.read() + "}",
                         status="200",
                         mimetype="application/json")
@@ -106,7 +107,7 @@ def bill(bill_id):
 
     :return: 'TBD'
     """
-    with models.open_resource('../static/data/bill-' + bill_id + '.json', mode='r') as f:
+    with models.open_resource('../static/data/bills.json', mode='r') as f:
         return Response(response="{\"success\": true, \"data\": " + f.read() + "}",
                         status="200",
                         mimetype="application/json")
@@ -119,7 +120,7 @@ def votes():
 
     :return: 'TBD'
     """
-    with models.open_resource('../static/data/votes.json', mode='r') as f:
+    with models.open_resource('../static/data/votes_static_data.json', mode='r') as f:
         return Response(response="{\"success\": true, \"data\": " + f.read() + "}",
                         status="200",
                         mimetype="application/json")
@@ -132,18 +133,7 @@ def vote(vote_id):
 
     :return: 'TBD'
     """
-    with models.open_resource('../static/data/vote-' + vote_id + '.json', mode='r') as f:
+    with models.open_resource('../static/data/votes_static_data.json', mode='r') as f:
         return Response(response="{\"success\": true, \"data\": " + f.read() + "}",
                         status="200",
                         mimetype="application/json")
-
-
-@models.route('/api/v1/example')
-def examples():
-    """
-    eklogi Filings JSON
-
-    :return: 'TBD'
-    """
-    params = pagination_parameters()
-    return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
