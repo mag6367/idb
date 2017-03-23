@@ -13,7 +13,8 @@ setup(
     packages=['app', 'app.routes'],
     entry_points={
         'console_scripts': [
-            'start-server = app.eklogi:run'
+            'start-server = app.eklogi:server',
+            'start-debug = app.eklogi:debug'
         ],
     },
     package_dir={'app': 'app'},

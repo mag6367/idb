@@ -21,5 +21,15 @@ app.register_blueprint(models.models)
 app.register_blueprint(utility.utility)
 
 
-def run():
+def debug():
+    """
+    Launches the eklogi web application in debug mode.
+    """
     app.run(debug=True)
+
+
+def server():
+    """
+    Launches the eklogi web application in production mode.
+    """
+    app.run(host='0.0.0.0', port=80)
