@@ -9,6 +9,7 @@ Model unit tests ensure database schema validity, testing for loading, saving, a
 
 """
 from unittest import main, TestCase
+from functools import wraps
 
 from app.eklogi import app  # pylint: disable=import-error
 
@@ -30,6 +31,7 @@ def route(path, *, method='get', code='200 OK'):  # pylint: disable=no-self-argu
         :param f: the function to perform additional response checks
         :return: the check function to query client and test the response
         """
+
 
         def check(self):
             """
@@ -58,7 +60,84 @@ class EklogiTests(TestCase):
     @route('/')
     def test_index(self, res):
         """
-        Checks the route to '/' exists and returns the test string 'Hello World'.
+        Checks the route to '/' exists.
+        """
+        pass
+
+    @route('/about')
+    def test_about(self, res):
+        """
+        Checks the route to '/about' exists.
+        """
+        pass
+
+    @route('/bills')
+    def test_bills(self, res):
+        """
+        Checks the route to '/bills' exists.
+        """
+        pass
+
+    @route('/committees')
+    def test_committees(self, res):
+        """
+        Checks the route to '/committees' exists.
+        """
+        pass
+
+    @route('/members')
+    def test_members(self, res):
+        """
+        Checks the route to '/members' exists.
+        """
+        pass
+
+    @route('/votes')
+    def test_votes(self, res):
+        """
+        Checks the route to '/votes' exists.
+        """
+        pass
+
+    @route('/api/v1/quotes')
+    def test_quotes(self, res):
+        """
+        Checks the route to '/api/v1/quotes' exists.
+        """
+        pass
+
+    @route('/api/v1/americanhero')
+    def test_sloth(self, res):
+        """
+        Checks the route to '/api/v1/americanhero' exists.
+        """
+        pass
+
+    @route('/bills/BILL_ID')
+    def test_bill(self, res):
+        """
+        Checks the route to '/bills' exists.
+        """
+        pass
+
+    @route('/committees/COMMITTEE_ID')
+    def test_committee(self, res):
+        """
+        Checks the route to '/committees' exists.
+        """
+        pass
+
+    @route('/members/MEMBER_ID')
+    def test_member(self, res):
+        """
+        Checks the route to '/members' exists.
+        """
+        pass
+
+    @route('/votes/VOTE_ID')
+    def test_vote(self, res):
+        """
+        Checks the route to '/votes' exists.
         """
         pass
 
