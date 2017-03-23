@@ -179,14 +179,14 @@ Retrieve all committees of current congress
             ...
         ]
 
-## Single Committee [committee/{id}.json]
+## Single Committee [committees/{id}.json]
 ### Retrieve A Single Commitee [Get]
 Return a specific member.
 
 + Parameters
     + id (required) ... member's Id
     
-+ curl "https://api.eklogi.me/committee/HSAG.json"
++ curl "https://api.eklogi.me/committees/HSAG.json"
 
 + Response 200 (application/json)
 
@@ -198,7 +198,7 @@ Return a specific member.
             "num_members": 12
         }
 
-+ curl "https://api.eklogi.me/committee/HSHA.json"
++ curl "https://api.eklogi.me/committees/HSHA.json"
 
 + Response 200 (application/json)
 
@@ -237,7 +237,7 @@ Retrieve all bills introduced during the current congress.
                 "id": "hr21-115",
                 "name": "Midnight Rules Relief Act of 2017",
                 "date": "2017-01-03",
-                "primary_subject": "",
+                "primary_subject": "Government Operations and Politics",
                 "chamber": "House",
                 "house_passage_date": "2017-01-04",
                 "senate_passage_date": null
@@ -247,6 +247,7 @@ Retrieve all bills introduced during the current congress.
                 "id": "hr210-115",
                 "title": "Native American Energy Act",
                 "date": "2017-01-03",
+                "primary_subject": "Native Americans",
                 "chamber": "House",
                 "house_passage_date": null,
                 "senate_passage_date": null
