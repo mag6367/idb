@@ -1,15 +1,11 @@
 {
         "vote": {
-           "congress": "115",
            "session": "1",
            "chamber": "Senate",
            "roll_call": "2",
-           "source": "http://www.senate.gov/legislative/LIS/roll_call_votes/vote1151/vote_115_1_00002.xml",
-           "url": "http://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=115&session=1&vote=00002",
                         "bill": {
             "bill_id": "sconres3-115",
             "number": "S.CON.RES.3",
-            "api_uri": "https://api.propublica.org/congress/v1/115/bills/sconres3.json",
             "title": "A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2017 and setting forth the appropriate budgetary levels for fiscal years 2018 through 2026.",
             "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
             },
@@ -19,23 +15,17 @@
            "date": "2017-01-05",
            "time": "14:47:00",
            "result": "Motion Rejected",
-           "tie_breaker": "",
-           "tie_breaker_vote": "",
-           "document_number": "",
-           "document_title": "",
            "democratic": {
              "yes": "46",
              "no": "0",
              "present": "0",
-             "not_voting": "0",
-             "majority_position": "Yes"
+             "not_voting": "0"
             },
            "republican": {
              "yes": "0",
              "no": "52",
              "present": "0",
-             "not_voting": "0",
-             "majority_position": "No"
+             "not_voting": "0"
             },
            "independent": {
              "yes": "2",
@@ -52,503 +42,403 @@
             "positions": [
               {
                 "member_id": "A000360",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "B001230",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "B001261",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "B001267",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "B001277",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "B000575",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "B001288",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "B001236",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "B000944",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "B001135",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "C000127",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "C001047",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "C000141",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "C000174",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "C001070",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "C001075",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "C000567",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "C001035",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "C001088",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "C001071",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "C001056",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "C001113",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "C001095",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "C000880",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "C001098",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "D000618",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "D000607",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "D000622",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "D000563",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "E000285",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "E000295",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "F000062",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "F000463",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "F000444",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "F000457",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "G000562",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "G000555",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "G000359",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "G000386",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "H001075",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "H001076",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "H000338",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "H001046",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "H001069",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "H001041",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "H001042",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "H001061",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "I000024",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "I000055",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "J000293",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "K000384",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "K000393",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "K000383",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "K000367",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "L000575",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "L000174",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "L000577",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "M001183",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "M000133",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "M000303",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "M001170",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "M000355",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "M000639",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "M001176",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "M000934",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "M001153",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "M001169",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "M001111",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "N000032",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "P000603",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "P000612",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "P000595",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "P000449",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "R000122",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "R000584",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "R000307",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "R000605",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "R000595",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "S000033",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "S001197",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "S001194",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "S000148",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "S001184",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "S001141",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "S001181",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "S000320",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "S000770",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "S001198",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "T000464",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "T000250",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "T000476",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "T000461",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "U000039",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "V000128",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "W000805",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "W000817",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "W000802",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "W000437",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               },
                             {
                 "member_id": "W000779",
-                "vote_position": "Yes",
-                "dw_nominate": ""
+                "vote_position": "Yes"
               },
                             {
                 "member_id": "Y000064",
-                "vote_position": "No",
-                "dw_nominate": ""
+                "vote_position": "No"
               }
               ]
             },
