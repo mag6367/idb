@@ -32,6 +32,13 @@ function CommitteeDetails(props) {
   );
 }
 
+function ChairPortrait(props) {
+    if(props.committee && props.committee.image) {
+        return (<img src={props.committee.image} alt={props.committee.chairman_id} style={{width: 300 + 'px'}}/>);
+    }
+    return (<img src="/api/v1/americanhero" alt="A sloth for all seasons" style={{width: 300 + 'px'}}/>);
+}
+
 class CommitteeView extends React.Component {
   constructor() {
     super();
@@ -42,6 +49,7 @@ class CommitteeView extends React.Component {
       return (
         <div className="thumbnail">
           <CommitteeDetails committee={this.props.committee}/>
+          <ChairPortrait committee={this.props.committee}/>
         </div>
       );
     }
