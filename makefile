@@ -1,15 +1,19 @@
 .DEFAULT_GOAL := test
 
-PHASE      := IDB1
-APP        := app/eklogi.py
-CONFIG     := app/config.py
-MODELS     := app/models.py
-TESTS      := app/tests.py
-TEST_DEST  := eklogi-test.out
-DOC_TARGET := app/models.py
-DOC_SRC    := models.html
-DOC_DEST   := $(PHASE).html
-LOG_DEST   := $(PHASE).log
+PHASE       := IDB1
+APP         := app/eklogi.py
+CONFIG      := app/config.py
+MODELS      := app/models.py
+TESTS       := app/tests.py
+TEST_DEST   := eklogi-test.out
+DOC_TARGET  := app/models.py
+DOC_SRC     := models.html
+DOC_DEST    := $(PHASE).html
+LOG_DEST    := $(PHASE).log
+MODEL_PAGES := app/routes/modelpages.py
+MODEL_API   := app/routes/models.py
+HTML_PAGES  := app/routes/pages.py
+UTILITY     := app/routes/utility.py
 
 FILES :=               \
     $(PHASE).html      \
@@ -42,7 +46,7 @@ else ifeq ($(shell uname -p), unknown) # Docker
 else                                   # UTCS
     PYTHON   := python3
     PIP      := pip3
-    PYLINT   := pylint3
+    PYLINT   := pylint
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
     AUTOPEP8 := autopep8
@@ -50,6 +54,9 @@ endif
 
 .pylintrc:
 	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
+
+build:
+	$(PIP) install -e .
 
 check:
 	@not_found=0;                                 \
@@ -82,6 +89,9 @@ clean:
 config:
 	git config -l
 
+debug:
+	start-debug
+
 eklogi.html: $(MODELS)
 	$(PYDOC) -w $(DOC_TARGET)
 	cp $(DOC_SRC) $(DOC_DEST)
@@ -95,12 +105,23 @@ format:
 	$(AUTOPEP8) -i $(CONFIG)
 	$(AUTOPEP8) -i $(MODELS)
 	$(AUTOPEP8) -i $(TESTS)
+	$(AUTOPEP8) -i $(MODEL_PAGES)
+	$(AUTOPEP8) -i $(MODEL_API)
+	$(AUTOPEP8) -i $(HTML_PAGES)
+	$(AUTOPEP8) -i $(UTILITY)
 
 inspect:
 	-$(PYLINT) $(APP)
 	-$(PYLINT) $(CONFIG)
 	-$(PYLINT) $(MODELS)
 	-$(PYLINT) $(TESTS)
+	-$(PYLINT) $(MODEL_PAGES)
+	-$(PYLINT) $(MODEL_API)
+	-$(PYLINT) $(HTML_PAGES)
+	-$(PYLINT) $(UTILITY)
+
+server:
+	start-server
 
 status:
 	make clean
