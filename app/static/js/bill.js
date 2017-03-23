@@ -88,8 +88,8 @@ class SponsorView extends React.Component {
                             <div className="caption text-center">
                                 <h4>Sponsor Details</h4>
                                 <div className="caption text-center">
-                                    <p>{this.props.bill.sponsor} ({this.props.bill.sponsor_party},
-                                        {this.props.bill.sponsor_state})</p>
+                                    <a href={"/members/" + this.props.bill.sponsor_id}>{this.props.bill.sponsor} ({this.props.bill.sponsor_party},
+                                        {this.props.bill.sponsor_state})</a>
 
                                 </div>
                             </div>

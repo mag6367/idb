@@ -19,7 +19,7 @@ function CommitteeData(props) {
       <td><p>{props.committee.result}</p></td>
       <td><a href={"/committees/" + props.committee.id}>{props.committee.committee}</a></td>
       <td><p>{props.committee.num_results}</p></td>
-      <td><a href={"/people/" + props.committee.chairman_id}>{props.committee.chairman_name}</a></td>
+      <td><a href={"/members/" + props.committee.chairman_id}>{props.committee.chairman_name}</a></td>
       <td><p>{props.committee.chamber}</p></td>
     </tr>
   );
