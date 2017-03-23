@@ -36,11 +36,11 @@ Represents the details of politicians.
 - district `(String)` : District member represents (only for house members).
 
 ---
-## Member Collection [people]
+## Member Collection [member]
 ### List all members [GET]
 Retrieve all members of current congress.
 
-+ curl "https://api.eklogi.me/people/"
++ curl "eklogi.me/api/v1/members"
 
 + Response 200 (application/json)
 
@@ -69,36 +69,7 @@ Retrieve all members of current congress.
         ...
         ]
 
-
-## Chamber Collection [people/{chamber}]
-### List all members from a chamber [Get]
-Returns all members from a chamber, which can be either the house or senate.
-
-+ Parameters
-    + chamber (required) ... House or senate
-
-+ curl "https://api.eklogi.me/people/senate/"
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "id": "C001113",
-                "name": "Catherine Cortez Masto",
-                "party": "Democrat",
-                "state": "NV",
-                "chamber": "Senate"
-            }
-        ...
-        ]
-
-+ Response 400 (application/json)
-
-        {
-            "error": "no such chamber"
-        }
-
-## Single Member [people/{chamber}/{id}.json]
+## Single Member [api/members/{id}.json]
 ### Retrieve A Single Member [Get]
 Return a specific member.
 
@@ -106,7 +77,7 @@ Return a specific member.
     + chamber (required) ... House or senate
     + id (required) ... member's Id
     
-+ curl "https://api.eklogi.me/senate/C001113.json"
++ curl "eklogi.me/api/v1/members/{id}.json"
 
 + Response 200 (application/json)
 
@@ -123,7 +94,7 @@ Return a specific member.
                 "district": ""
         }
 
-+ curl "https://api.eklogi.me/people/house/K000388.json"
++ curl "eklogi.me/api/v1/members/K000388.json"
 
 + Response 200 (application/json)
 
@@ -156,7 +127,7 @@ Represents the committees formed in both the senate and the house.
 ### List all committees [GET]
 Retrieve all committees of current congress
 
-+ curl "https://api.eklogi.me/comittees/"
++ curl "eklogi.me/api/v1/comittees"
 
 + Response 200 (application/json)
 
@@ -179,14 +150,14 @@ Retrieve all committees of current congress
             ...
         ]
 
-## Single Committee [committees/{id}.json]
+## Single Committee [api/v1/committees/{id}.json]
 ### Retrieve A Single Commitee [Get]
 Return a specific member.
 
 + Parameters
     + id (required) ... member's Id
     
-+ curl "https://api.eklogi.me/committees/HSAG.json"
++ curl "eklogi.me/api/v1/comittees/HSAG.json"
 
 + Response 200 (application/json)
 
@@ -198,7 +169,7 @@ Return a specific member.
             "num_members": 12
         }
 
-+ curl "https://api.eklogi.me/committees/HSHA.json"
++ curl "eklogi.me/api/v1/comittees/HSHA.json"
 
 + Response 200 (application/json)
 
@@ -228,7 +199,7 @@ Represents the bills introduced in the both the senate and house.
 ### List all bills [GET]
 Retrieve all bills introduced during the current congress.
 
-+ curl "https://api.eklogi.me/bills"
++ curl "eklogi.me/api/v1/bills"
 
 + Response 200 (application/json)
 
@@ -255,13 +226,13 @@ Retrieve all bills introduced during the current congress.
             ...
         ]
 
-## Single Bill [bills/{id}.json]
+## Single Bill [api/v1/bills/{id}.json]
 ### Retrieve A Single Bill [Get]
 Return a specific member 
 + Parameters
     + id (required) ... bill's unique Id
     
-+ curl "https://api.eklogi.me/bills/hr21-115.json"
++ curl "eklogi.me/api/v1/bill/hr21-115.json"
 
 + Response 200 (application/json)
 
@@ -275,7 +246,7 @@ Return a specific member
             "senate_passage_date": null
         }
 
-+ curl "https://api.eklogi.me/billsvo/hr210-115.json"
++ curl "eklogi.me/api/v1/bill/hr210-115.json"
 
 + Response 200 (application/json)
 
@@ -301,11 +272,12 @@ Represents the detailed votes for specific bills introduced in the both the sena
 - date `(String): Date when this vote happened
 - time `(String): Time the vote was casted
 ---
-## Votes Collection [votes]
+
+## Votes Collection [api/v1/votes]
 ### List all votes [GET]
 Retrieve all votes on every bill introduced during the current congress.
 
-+ curl "https://api.eklogi.me/votes"
++ curl "eklogi.me/api/v1/votes"
 
 + Response 200 (application/json)
 
@@ -332,15 +304,14 @@ Retrieve all votes on every bill introduced during the current congress.
             ...
         ]
 
-## Single Votes [votes/{chamber}/{id}.json]
+## Single Votes [api/v1/votes/{id}.json]
 ### Retrieve a vote on specific bill [Get]
 Return a specific member.
 
 + Parameters
-    + chamber (required) ... chamber in which vote happened
     + id (required) ... bill's unique Id
-    
-+ curl "https://api.eklogi.me/votes/senate/hr21-115.json"
+
++ curl "eklogi.me/api/v1/votes/hr21-115.json"
 
 + Response 200 (application/json)
 
@@ -354,7 +325,7 @@ Return a specific member.
             "time": "22:07:00"
         }
 
-+ curl "https://api.eklogi.me/votes/senate/hr210-115.json"
++ curl "eklogi.me/api/v1/votes/hr210-115.json"
 
 + Response 200 (application/json)
 
