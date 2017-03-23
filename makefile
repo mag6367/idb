@@ -55,6 +55,9 @@ endif
 .pylintrc:
 	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
 
+build:
+	$(PIP) install -e .
+
 check:
 	@not_found=0;                                 \
     for i in $(FILES);                            \
@@ -73,9 +76,6 @@ check:
         exit 1;                                   \
     fi;                                           \
     echo "success";
-
-build:
-	$(PIP) install -e .
 
 clean:
 	rm -f  .coverage
@@ -118,7 +118,6 @@ inspect:
 	-$(PYLINT) $(UTILITY)
 
 server:
-	@echo
 	start-server
 
 status:
