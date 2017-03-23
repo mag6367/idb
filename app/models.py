@@ -18,8 +18,8 @@ from sqlalchemy.sql.sqltypes import Integer, Date, DateTime, String
 from app.eklogi import db  # pylint: disable=import-error
 
 
-# TODO: Add association table for Member -> Committee (member_id, committee_code)
-# TODO: Add relational mappings, instead of raw ids
+# TODO: Add association table for Member -> Committee (member_id, committee_code) in Phase 2
+# TODO: Add relational mappings, instead of raw ids in Phase 2
 
 class Bill(db.Model):
     """
