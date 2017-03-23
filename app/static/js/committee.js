@@ -51,19 +51,20 @@ class CommitteeView extends React.Component {
 function MemberData(props) {
   return (
     <div>
-        <p>Name: {props.name}</p>
+        <a href={"/members/" + props.id}>Name: {props.name}</a>
     </div>
   );
 }
 
 function MemberDetails(props) {
   const badname = props.committee.current_members.map((member) =>
-    <MemberData member={member} name={member.name}/>
+    <MemberData id={member.id} name={member.name}/>
   );
 
   return (
     <div id="member-details">
       <div className="caption text-center">
+        <h2>Members</h2>
         <div>{badname}</div>
       </div>
 
