@@ -3,6 +3,7 @@
   "chamber": "Senate",
   "committee": "Committee on Indian Affairs",
   "chairman_id": "C001113",
+  "image": "http://bioguide.congress.gov/bioguide/photo/C/C001113.jpg",
   "current_members": {
     "H001061": {
       "name": "John Hoeven"
