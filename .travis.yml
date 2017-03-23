@@ -9,7 +9,7 @@ before_install:
     - pip install --upgrade pip
 
 install:
-    - python3.5 -m pip install -e .
+    - pip install -e .
 
 before_script:
     - uname -a
