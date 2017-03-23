@@ -153,3 +153,30 @@ body {
   border-width: 2px 2px 2px 2px;
   border-color: #B22234;
 }
+
+/* Votes page */
+#vote-summary-view-panel {
+  border-color: #B22234;
+  /*border-width: 2px 2px 2px 2px;*/
+}
+
+#vote-summary-view-top-heading {
+  background-color: #555372;
+  color: #FDFDFD;
+  border-color: #B22234;
+  border-width: 0px 0px 1px 0px;
+}
+
+#vote-summary-view-bill {
+  border-color: #B22234;
+  border-width: 0px 0px 1px 0px;
+}
+
+#vote-results-col-left {
+  padding-right: 0px;
+}
+
+#vote-results-col-right {
+  /* looks better on large screens, but worse on small screens*/
+  padding-left: 0px;
+}
