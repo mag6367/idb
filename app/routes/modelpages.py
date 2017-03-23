@@ -14,7 +14,7 @@ modelpages = Blueprint('modelpages',
                        template_folder='../templates')
 
 
-@modelpages.route('/people/<string:member_id>')
+@modelpages.route('/members/<string:member_id>')
 def member(member_id):
     """
     eklogi Member Page
