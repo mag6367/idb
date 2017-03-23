@@ -122,6 +122,15 @@ body {
   overflow: auto;*/
 }
 
+#splash-content-holder {
+  margin-top: -50px;
+  height: 100%;
+  flex-grow:1;
+  overflow:auto;
+  position: relative;
+  min-height: 500px;
+}
+
 #index-body > .innercontents #top-pane {
   flex:0 0 content;
 }
@@ -130,27 +139,20 @@ body {
   flex:0 0 content;
 }
 
-
-
 #splash-carousel {
-  margin-top: -50px;
 	background-size: cover;
   /*background-color: #F00;*/
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b2/United_States_Capitol_-_west_front.jpg");
   background: none;
+  min-height: 500px;
 
-  flex-grow:1;
-  overflow:auto;
 }
 
 .splash-carousel-item {
   /*background-color: #3C3B6E;*/
   background: none;
   /*opacity: 0.2;*/
-  margin-left: 75px;
-  margin-top: 40px;
+  /*margin-left: 75px;*/
+  /*margin-top: 40px;*/
 }
 
 .splash-carousel-item h4 {
