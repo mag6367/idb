@@ -1,0 +1,31 @@
+{
+  "committees": [
+    {
+      "result": 1,
+      "id": "HSAG",
+      "chamber": "House",
+      "committee": "Committee on Agriculture",
+      "num_results": "2",
+      "chairman_id": "K000388",
+      "chairman_name": "Trent Kelly"
+    },
+    {
+      "result": 2,
+      "id": "SSCM",
+      "chamber": "Senate",
+      "committee": "Committee on Commerce, Science, and Transportation",
+      "num_results": "2",
+      "chairman_id": "Y000064",
+      "chairman_name": "Todd Yound"
+    },
+    {
+      "result": 3,
+      "id": "SLIA",
+      "chamber": "Senate",
+      "committee": "Committee on Indian Affairs",
+      "num_results": "2",
+      "chairman_id": "C001113",
+      "chairman_name": "Catherine Cortez Masto"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+
+{
+  "chamber": "House",
+  "committee": "Committee on Agriculture",
+  "chairman_id": "K000388",
+  "current_members": {
+    "C001062": {
+      "name": "K. Conaway"
+    },
+    "K000388": {
+      "name": "Trent Kelly"
+    }
+  }
+}
