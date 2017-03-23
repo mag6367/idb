@@ -24,6 +24,7 @@ function CommitteeDetails(props) {
         <h2>{props.committee.committee}</h2>
         <p>Chamber: {props.committee.chamber}</p>
         <a href={"/members/" + props.committee.chairman_id}>Chair: {props.committee.chairman_id}</a>
+        {MemberDetails(props)}
       </div>
 
     </div>
@@ -47,13 +48,29 @@ class CommitteeView extends React.Component {
   }
 }
 
+function MemberData(props) {
+  return (
+    <div>
+        <a href={"/members/" + props.id}>Name: {props.name}</a>
+    </div>
+  );
+}
 
+function MemberDetails(props) {
+  const badname = props.committee.current_members.map((member) =>
+    <MemberData id={member.id} name={member.name}/>
+  );
 
+  return (
+    <div id="member-details">
+      <div className="caption text-center">
+        <h2>Members</h2>
+        <div>{badname}</div>
+      </div>
 
-
-
-
-
+    </div>
+  );
+}
 
 
 
