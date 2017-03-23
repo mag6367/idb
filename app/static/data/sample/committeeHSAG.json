@@ -4,12 +4,15 @@
   "committee": "Committee on Agriculture",
   "chairman_id": "K000388",
   "image": "http://bioguide.congress.gov/bioguide/photo/K/K000388.jpg",
-  "current_members": {
-    "C001062": {
+
+  "current_members": [
+    {
+      "id": "C001062",
       "name": "K. Conaway"
     },
-    "K000388": {
+    {
+      "id": "K000388",
       "name": "Trent Kelly"
     }
-  }
+  ]
 }

@@ -112,35 +112,35 @@ class EklogiTests(TestCase):
         """
         pass
 
-    @route('/bills/BILL_ID')
+    @route('/bills/hr21-115')
     def test_bill(self, res):
         """
         Checks the route to '/bills' exists.
         """
         pass
 
-    @route('/committees/COMMITTEE_ID')
+    @route('/committees/HSAG')
     def test_committee(self, res):
         """
         Checks the route to '/committees' exists.
         """
         pass
 
-    @route('/members/MEMBER_ID')
+    @route('/members/K000388')
     def test_member(self, res):
         """
         Checks the route to '/members' exists.
         """
         pass
 
-    @route('/votes/VOTE_ID')
+    @route('/votes/Senate-1-1')
     def test_vote(self, res):
         """
         Checks the route to '/votes' exists.
         """
         pass
 
-    @route('/api/v1/bills/BILL_ID')
+    @route('/api/v1/bills/hr21-115')
     def test_bill_json(self, res):
         """
         Checks the route to '/api/v1/bills' exists.
@@ -154,7 +154,7 @@ class EklogiTests(TestCase):
         """
         pass
 
-    @route('/api/v1/committees/COMMITTEE_ID')
+    @route('/api/v1/committees/HSAG')
     def test_committee_json(self, res):
         """
         Checks the route to '/api/v1/committees' exists.
@@ -168,7 +168,7 @@ class EklogiTests(TestCase):
         """
         pass
 
-    @route('/api/v1/members/MEMBER_ID')
+    @route('/api/v1/members/K000388')
     def test_member_json(self, res):
         """
         Checks the route to '/api/v1/members' exists.
@@ -182,7 +182,7 @@ class EklogiTests(TestCase):
         """
         pass
 
-    @route('/api/v1/votes/VOTE_ID')
+    @route('/api/v1/votes/Senate-1-1')
     def test_vote_json(self, res):
         """
         Checks the route to '/api/v1/votes' exists.

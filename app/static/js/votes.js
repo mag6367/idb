@@ -4,7 +4,7 @@ var loadJSONWrapper= function(path, callback) {
     dataType: "json",
     success: callback,
     error: function(xhr, textStatus, errorThrown){
-        alert("Error reading votes! Skit jaevla fan! : " + textStatus);
+        alert("Error reading votes!: " + textStatus);
     }
   });
 }

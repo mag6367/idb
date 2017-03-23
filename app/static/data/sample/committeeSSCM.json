@@ -4,12 +4,15 @@
   "committee": "Committee on Commerce, Science, and Transportation",
   "chairman_id": "Y000064",
   "image": "http://bioguide.congress.gov/bioguide/photo/Y/Y000064.jpg",
-  "current_members": {
-    "T000250": {
+
+  "current_members": [
+    {
+      "id": "T000250",
       "name": "John Thune"
     },
-    "Y000064": {
+    {
+      "id": "Y000064",
       "name": "Todd Young"
     }
-  }
+  ]
 }
