@@ -89,6 +89,9 @@ clean:
 config:
 	git config -l
 
+debug:
+	start-debug
+
 eklogi.html: $(MODELS)
 	$(PYDOC) -w $(DOC_TARGET)
 	cp $(DOC_SRC) $(DOC_DEST)
