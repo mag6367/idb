@@ -106,7 +106,7 @@ def bill(bill_id):
     eklogi Bill JSON
 
     :return: 'TBD'
-    """
+    """ 
     with models.open_resource('../static/data/bills.json', mode='r') as f:
         return Response(response="{\"success\": true, \"data\": " + f.read() + "}",
                         status="200",
