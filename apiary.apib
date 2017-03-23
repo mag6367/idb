@@ -26,9 +26,14 @@ Represents the details of politicians.
 
 - id `(String)` : Unique identifier. 
 - name `(String)` : Name of member.
+- facebook `(Link)` : Link to official member's Facebook page.
+- twitter `(Link)` : Link to official member's Twitter page.
+- website `(Link)` : Link to official website of member.
+- date_of_birth `(String)` : Date of Birth.
 - party `(String)` : Party which member is part of.
-- state `(String)` : State member represents.
 - chamber `(String)` : Which chamber of congress member is part of.
+- state `(String)` : State member represents.
+- district `(String)` : District member represents (only for house members).
 
 ---
 ## Member Collection [people]
@@ -108,9 +113,14 @@ Return a specific member.
         {
                 "id": "C001113",
                 "name": "Catherine Cortez Masto",
+                "date_of_birth": "1964-03-29",
+                "facebook": "SenatorCortezMasto",
+                "twitter": "sencortezmasto",
+                "website": "https://www.cortezmasto.senate.gov",
                 "party": "Democrat",
-                "state": "NV"
-                "chamber": "Senate"
+                "state": "NV",
+                "chamber": "Senate",
+                "district": ""
         }
 
 + curl "https://api.eklogi.me/people/house/K000388.json"
@@ -120,9 +130,14 @@ Return a specific member.
         {
                 "id": "K000388",
                 "name": "Trent Kelly",
+                "date_of_birth": "1966-03-01",
+                "facebook": "reptrentkelly",
+                "twitter": "reptrentkelly",
+                "website": "https://trentkelly.house.gov",
                 "party": "Republican",
-                "state": "MS"
-                "chamber": "House"
+                "state": "MS",
+                "chamber": "House",
+                "district": "1"
         }
 
 # Group Committees
@@ -132,9 +147,9 @@ Represents the committees formed in both the senate and the house.
 **Committee attributes:**
 - id `(String)` : Id of committee.
 - name `(String)` : Name of committee.
-- members `(List)` : List of members on the committee.
 - chair `(String)` : Committee chair.
 - chamber `(String)` : Which chamber of congress member is part of.
+- num_members `(Integer)` : Number of members on the committee.
 
 ---
 ## Committee Collection [comittees]
@@ -151,7 +166,7 @@ Retrieve all committees of current congress
                 "name": "Committee on Administration",
                 "chair": "Gregg Harper",
                 "chamber": "House",
-                "members": ["", "", ""]
+                "num_members": 12
             }, 
             
             {
@@ -159,7 +174,7 @@ Retrieve all committees of current congress
                 "name": "Committee on Agriculture",
                 "chair": "K. Michael Conaway",
                 "chamber": "House",
-                "members": ["", "", ""]
+                "num_members": 14
             }
             ...
         ]
@@ -180,7 +195,7 @@ Return a specific member.
             "name": "Committee on Agriculture",
             "chair": "K. Michael Conaway",
             "chamber": "House",
-            "members": ["", "", ""]
+            "num_members": 12
         }
 
 + curl "https://api.eklogi.me/committee/HSHA.json"
@@ -192,7 +207,7 @@ Return a specific member.
             "name": "Committee on Administration",
             "chair": "Gregg Harper",
             "chamber": "House",
-            "members": ["", "", ""]
+            "num_members": 14
         }
         
 # Group Bills
@@ -201,14 +216,12 @@ Represents the bills introduced in the both the senate and house.
 ---
 **Bill attributes:**
 - id `(String)` : Id of bill.
-- title `(String)` : Name of bill.
-- sponsor `(List)` : Main sponsor of the bill.
-- date_introduced `(String)` : Date the bill was introduced.
-- chamber `(String)` : Chamber was this bill introduced on.
-- voted_house `(String)` : Was the bill voted on in the house.
-- voted_senate `(String)` : Was the bill voted on in the senate.
-- passed_house `(String)` : Did the bill pass in the house?
-- passed_senate `(String)` : Did the bill pass in the senate?
+- name `(String)`: Official title for bill
+- date `(String)`: Date when bill was introduced
+- primare_subject `(String)`: Main subject of the bill
+- chamber `(String)`: Chamber where the bill was introduced
+- house_passage_date `(String)`: Date the bill passed on House
+- senate_passage_date `(String)`: Date the bill passed on Senate
 
 ---
 ## Bill Collection [bills]
@@ -222,26 +235,21 @@ Retrieve all bills introduced during the current congress.
         [
             {
                 "id": "hr21-115",
-                "title": "Midnight Rules Relief Act of 2017",
-                "sponsor": "Darrell Issa",
-                "date_introduced": "2017-01-03",
+                "name": "Midnight Rules Relief Act of 2017",
+                "date": "2017-01-03",
+                "primary_subject": "",
                 "chamber": "House",
-                "voted_house": "yes",
-                "voted_senate": "no",
-                "passed_house": "yes",
-                "passed_senate": "no"
+                "house_passage_date": "2017-01-04",
+                "senate_passage_date": null
             }, 
             
             {
                 "id": "hr210-115",
                 "title": "Native American Energy Act",
-                "sponsor": "Don Young",
-                "date_introduced": "2017-01-03",
+                "date": "2017-01-03",
                 "chamber": "House",
-                "voted_house": "no",
-                "voted_senate": "no",
-                "passed_house": "no",
-                "passed_senate": "no"
+                "house_passage_date": null,
+                "senate_passage_date": null
             }
             ...
         ]
@@ -258,14 +266,12 @@ Return a specific member
 
         {
             "id": "hr21-115",
-            "title": "Midnight Rules Relief Act of 2017",
-            "sponsor": "Darrell Issa",
-            "date_introduced": "2017-01-03",
+            "name": "Midnight Rules Relief Act of 2017",
+            "date": "2017-01-03",
+            "primary_subject": "",
             "chamber": "House",
-            "voted_house": "yes",
-            "voted_senate": "no",
-            "passed_house": "yes",
-            "passed_senate": "no"
+            "house_passage_date": "2017-01-04",
+            "senate_passage_date": null
         }
 
 + curl "https://api.eklogi.me/billsvo/hr210-115.json"
@@ -275,13 +281,10 @@ Return a specific member
         {
             "id": "hr210-115",
             "title": "Native American Energy Act",
-            "sponsor": "Don Young",
-            "date_introduced": "2017-01-03",
+            "date": "2017-01-03",
             "chamber": "House",
-            "voted_house": "no",
-            "voted_senate": "no",
-            "passed_house": "no",
-            "passed_senate": "no"
+            "house_passage_date": null,
+            "senate_passage_date": null
         }
         
 # Group Votes
@@ -289,17 +292,13 @@ Represents the detailed votes for specific bills introduced in the both the sena
 
 ---
 **Votes attributes:**
-- id `(String)` : Id of bill on this vote.
-- title `(String)` : Name of bill.
-- chamber `(String)` : Chamber where this vote happened.
-- dem_yes `(Integer)` : Number of yes votes from democratic members the bill received.
-- rep_yes `(Integer)` : Number of yes votes from republican members the bill received.
-- ind_yes `(Integer)` : Number of yes votes from independent members the bill received.
-- dem_no `(Integer)` : Number of no votes from democratic members the bill received.
-- rep_no `(Integer)` : Number of no votes from republican members the bill received.
-- ind_no `(Integer)` : Number of no votes from independent members the bill received.
-- total_yes `(Integer)` : Total yes votes the bills received.
-- total_yes `(Integer)` : Total no votes the bills received.
+- id `(String)' : Id of bill on this vote.
+- session `(String): Session where vote was casted
+- chamber `(String): Chamber where the vote was casted
+- question `(String): Question surrounding the bill
+- result `(String): Result of the vote
+- date `(String): Date when this vote happened
+- time `(String): Time the vote was casted
 ---
 ## Votes Collection [votes]
 ### List all votes [GET]
@@ -312,30 +311,22 @@ Retrieve all votes on every bill introduced during the current congress.
         [
             {
                 "id": "hr21-115",
-                "title": "Midnight Rules Relief Act of 2017",
+                "session": "1",
                 "chamber": "House",
-                "dem_yes": 0,
-                "rep_yes": 51,
-                "ind_yes": 0,
-                "dem_no": 45,
-                "rep_no": 0,
-                "ind_no": 2,
-                "total_yes": 51,
-                "total_no": 47
+                "question": "On the Motion",
+                "result": "Motion Rejected",
+                "date": "2017-01-11",
+                "time": "22:07:00"
             }, 
             
             {
                 "id": "hr210-115",
                 "title": "Native American Energy Act",
                 "chamber": "House"
-                "dem_yes": 45,
-                "rep_yes": 0,
-                "ind_yes": 2,
-                "dem_no": 0,
-                "rep_no": 49,
-                "ind_no": 0,
-                "total_yes": 49,
-                "total_no": 49
+                "question": "On the Motion",
+                "result": "Motion Rejected",
+                "date": "2017-01-11",
+                "time": "21:17:00"
             }
             ...
         ]
@@ -354,16 +345,12 @@ Return a specific member.
 
         {
             "id": "hr21-115",
-            "title": "Midnight Rules Relief Act of 2017",
+            "session": "1",
             "chamber": "House",
-            "dem_yes": 0,
-            "rep_yes": 51,
-            "ind_yes": 0,
-            "dem_no": 45,
-            "rep_no": 0,
-            "ind_no": 2,
-            "total_yes": 51,
-            "total_no": 47
+            "question": "On the Motion",
+            "result": "Motion Rejected",
+            "date": "2017-01-11",
+            "time": "22:07:00"
         }
 
 + curl "https://api.eklogi.me/votes/senate/hr210-115.json"
@@ -374,12 +361,8 @@ Return a specific member.
             "id": "hr210-115",
             "title": "Native American Energy Act",
             "chamber": "House"
-            "dem_yes": 45,
-            "rep_yes": 0,
-            "ind_yes": 2,
-            "dem_no": 0,
-            "rep_no": 49,
-            "ind_no": 0,
-            "total_yes": 49,
-            "total_no": 49
+            "question": "On the Motion",
+            "result": "Motion Rejected",
+            "date": "2017-01-11",
+            "time": "21:17:00"
         }
