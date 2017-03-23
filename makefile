@@ -74,6 +74,9 @@ check:
     fi;                                           \
     echo "success";
 
+build:
+	$(PIP) install -e .
+
 clean:
 	rm -f  .coverage
 	rm -f  .pylintrc
@@ -113,6 +116,10 @@ inspect:
 	-$(PYLINT) $(MODEL_API)
 	-$(PYLINT) $(HTML_PAGES)
 	-$(PYLINT) $(UTILITY)
+
+server:
+	@echo
+	start-server
 
 status:
 	make clean
