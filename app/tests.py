@@ -8,13 +8,13 @@ Route tests ensure attempts to reach a route return a 200 OK response and the da
 Model unit tests ensure database schema validity, testing for loading, saving, and updating entries.
 
 """
+# pylint: disable=too-many-public-methods
 from unittest import main, TestCase
-from functools import wraps
 
 from app.eklogi import app  # pylint: disable=import-error
 
 
-def route(path, *, method='get', code='200 OK'):  # pylint: disable=no-self-argument
+def route(path, *, method='get', code=200):  # pylint: disable=no-self-argument
     """
     Performs a basic check against a route.
 
@@ -32,14 +32,13 @@ def route(path, *, method='get', code='200 OK'):  # pylint: disable=no-self-argu
         :return: the check function to query client and test the response
         """
 
-
         def check(self):
             """
             Queries the client at the specified route, checking the status and data.
 
             """
             res = getattr(self.app, method)(path)
-            self.assertEqual(code, res.status)
+            self.assertIn(str(code), res.status)
             f(self, res)
 
         return check
@@ -138,6 +137,62 @@ class EklogiTests(TestCase):
     def test_vote(self, res):
         """
         Checks the route to '/votes' exists.
+        """
+        pass
+
+    @route('/api/v1/bills/BILL_ID')
+    def test_bill_json(self, res):
+        """
+        Checks the route to '/api/v1/bills' exists.
+        """
+        pass
+
+    @route('/api/v1/bills')
+    def test_bills_json(self, res):
+        """
+        Checks the route to '/api/v1/bills' exists.
+        """
+        pass
+
+    @route('/api/v1/committees/COMMITTEE_ID')
+    def test_committee_json(self, res):
+        """
+        Checks the route to '/api/v1/committees' exists.
+        """
+        pass
+
+    @route('/api/v1/committees')
+    def test_committees_json(self, res):
+        """
+        Checks the route to '/api/v1/committees' exists.
+        """
+        pass
+
+    @route('/api/v1/members/MEMBER_ID')
+    def test_member_json(self, res):
+        """
+        Checks the route to '/api/v1/members' exists.
+        """
+        pass
+
+    @route('/api/v1/members')
+    def test_members_json(self, res):
+        """
+        Checks the route to '/api/v1/members' exists.
+        """
+        pass
+
+    @route('/api/v1/votes/VOTE_ID')
+    def test_vote_json(self, res):
+        """
+        Checks the route to '/api/v1/votes' exists.
+        """
+        pass
+
+    @route('/api/v1/votes')
+    def test_votes_json(self, res):
+        """
+        Checks the route to '/api/v1/votes' exists.
         """
         pass
 
