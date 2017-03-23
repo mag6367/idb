@@ -14,6 +14,7 @@ MODEL_PAGES := app/routes/modelpages.py
 MODEL_API   := app/routes/models.py
 HTML_PAGES  := app/routes/pages.py
 UTILITY     := app/routes/utility.py
+IGNORE      := "app/templates/*"
 
 FILES :=               \
     $(PHASE).html      \
@@ -29,6 +30,7 @@ ifeq ($(shell uname), Darwin)          # Apple
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
     AUTOPEP8 := autopep8
+    USR_LIBS := "/usr/*"
 else ifeq ($(CI), true)                # Travis CI
     PYTHON   := python3.5
     PIP      := pip3.5
@@ -36,6 +38,7 @@ else ifeq ($(CI), true)                # Travis CI
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3
     AUTOPEP8 := autopep8
+    USR_LIBS := "$(VIRTUAL_ENV)*"
 else ifeq ($(shell uname -p), unknown) # Docker
     PYTHON   := python3.5
     PIP      := pip3.5
@@ -43,6 +46,7 @@ else ifeq ($(shell uname -p), unknown) # Docker
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
     AUTOPEP8 := autopep8
+    USR_LIBS := "/usr/*"
 else                                   # UTCS
     PYTHON   := python3
     PIP      := pip3
@@ -50,6 +54,7 @@ else                                   # UTCS
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
     AUTOPEP8 := autopep8
+    USR_LIBS := "/usr/*"
 endif
 
 .pylintrc:
@@ -135,7 +140,7 @@ submit: eklogi.html eklogi.log
 
 test: inspect
 	make versions
-	-$(COVERAGE) run --branch $(TESTS) > $(TEST_DEST) 2>&1
+	-$(COVERAGE) run --omit $(IGNORE),$(USR_LIBS) --branch $(TESTS) > $(TEST_DEST) 2>&1
 	-$(COVERAGE) report -m >> $(TEST_DEST)
 	cat $(TEST_DEST)
 
