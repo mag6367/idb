@@ -17,7 +17,7 @@ function PersonData(props) {
   return (
     <tr>
       <td><p>{props.person.result}</p></td>
-      <td><a href={"/people/" + props.person.id}>{props.person.name}</a></td>
+      <td><a href={"/members/" + props.person.id}>{props.person.name}</a></td>
       <td><p>{props.person.current_party}</p></td>
       <td><p>{props.person.state}</p></td>
       <td><p>{props.person.chamber}</p></td>
@@ -61,7 +61,7 @@ class People extends React.Component {
 
   componentDidMount() {
     var that = this;
-    loadJSONWrapper("/api/v1/people", function(data) {
+    loadJSONWrapper("/api/v1/members", function(data) {
       that.updatePeopleList(data);
     });
   }

@@ -13,13 +13,13 @@ Models all are subclasses of SQLAlchemy's Model class.
 # pylint: disable=too-many-arguments
 # pylint: disable=too-many-instance-attributes
 from sqlalchemy.sql.schema import Column
-from sqlalchemy.sql.sqltypes import String, Date, DateTime
+from sqlalchemy.sql.sqltypes import Integer, Date, DateTime, String
 
 from app.eklogi import db  # pylint: disable=import-error
 
 
-# TODO: Add association table for Member -> Committee (member_id, committee_code)
-# TODO: Add relational mappings, instead of raw ids
+# TODO: Add association table for Member -> Committee (member_id, committee_code) in Phase 2
+# TODO: Add relational mappings, instead of raw ids in Phase 2
 
 class Bill(db.Model):
     """
@@ -29,6 +29,7 @@ class Bill(db.Model):
     """
     __tablename__ = 'bills'
     id = Column(String, primary_key=True)
+    code = Column(String)
     title = Column(String)
     subject = Column(String)
     summary = Column(String)
@@ -38,9 +39,10 @@ class Bill(db.Model):
     senate_passage_date = Column(Date)
     sponsor_id = Column(String)
 
-    def __init__(self, title, subject, summary, introduced_date, committee_name,
-                 house_passage_date, senate_passage_date, sponsor_id):
+    def __init__(self, title, code, subject, summary, introduced_date,
+                 committee_name, house_passage_date, senate_passage_date, sponsor_id):
         self.title = title
+        self.code = code
         self.subject = subject
         self.summary = summary
         self.introduced_date = introduced_date
@@ -50,10 +52,10 @@ class Bill(db.Model):
         self.sponsor_id = sponsor_id
 
     def __repr__(self):
-        return '<Bill {id: {}, title: {}, subject: {}, summary: {}, ' \
+        return '<Bill {id: {}, code: {}, title: {}, subject: {}, summary: {}, ' \
                'introduced_date: {}, house_passage_date: {}, ' \
                'senate_passage_date: {}, sponsor_id: {}}>'. \
-            format(self.id, self.title, self.subject, self.summary, self.introduced_date,
+            format(self.id, self.code, self.title, self.subject, self.summary, self.introduced_date,
                    self.house_passage_date, self.senate_passage_date, self.sponsor_id)
 
 
@@ -67,6 +69,7 @@ class Member(db.Model):
     id = Column(String, primary_key=True)
     first_name = Column(String)
     last_name = Column(String)
+    picture_url = Column(String)
     dob = Column(Date)
     party = Column(String)
     chamber = Column(String)
@@ -76,11 +79,15 @@ class Member(db.Model):
     website = Column(String)
     facebook_alias = Column(String)
     twitter_alias = Column(String)
+    term_start = Column(Date)
+    term_end = Column(Date)
 
-    def __init__(self, first_name, last_name, dob, party, chamber, title,
-                 state, district, website, facebook_alias, twitter_alias):
+    def __init__(self, first_name, last_name, picture_url, dob, party, chamber, title,
+                 state, district, website, facebook_alias, twitter_alias,
+                 term_start, term_end):
         self.first_name = first_name
         self.last_name = last_name
+        self.picture_url = picture_url
         self.dob = dob
         self.party = party
         self.chamber = chamber
@@ -90,14 +97,17 @@ class Member(db.Model):
         self.website = website
         self.facebook_alias = facebook_alias
         self.twitter_alias = twitter_alias
+        self.term_start = term_start
+        self.term_end = term_end
 
     def __repr__(self):
-        return '<Person {id: {}, first_name: {}, last_name: {}, dob: {}, ' \
+        return '<Person {id: {}, first_name: {}, last_name: {}, picture_url: {}, dob: {}, ' \
                'party: {}, chamber: {}, title: {}, state: {}, district: {}, ' \
-               'website: {}, facebook_alias: {}, twitter_alias: {}}>'. \
-            format(self.id, self.first_name, self.last_name, self.dob, self.party,
+               'website: {}, facebook_alias: {}, twitter_alias: {},' \
+               'term_start: {}, term_end: {}}>'. \
+            format(self.id, self.first_name, self.last_name, self.picture_url, self.dob, self.party,
                    self.chamber, self.title, self.state, self.district, self.website,
-                   self.facebook_alias, self.twitter_alias)
+                   self.facebook_alias, self.twitter_alias, self.term_start, self.term_end)
 
 
 class Committee(db.Model):
@@ -112,17 +122,20 @@ class Committee(db.Model):
     name = Column(String)
     website = Column(String)
     chamber = Column(String)
+    size = Column(Integer)
 
-    def __init__(self, chair_id, name, website, chamber):
+    def __init__(self, chair_id, name, website, chamber, size):
         self.chair_id = chair_id
         self.name = name
         self.website = website
         self.chamber = chamber
+        self.size = size
 
     def __repr__(self):
-        return '<Committee {id: {}, chair_id: {}, name: {}, website: {}, chamber: {}}>'. \
+        return '<Committee {id: {}, chair_id: {}, name: {}, website: {}, ' \
+               'chamber: {}, size: {}}>'. \
             format(self.id, self.chair_id, self.name,
-                   self.website, self.chamber)
+                   self.website, self.chamber, self.size)
 
 
 class Vote(db.Model):

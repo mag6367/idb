@@ -17,28 +17,16 @@ var getPerson = function() {
 
 function PersonPortrait(props) {
   if(props.person && props.person.image) {
-    return (
-      <img src={props.person.image} alt={props.person.name} style={{width: 300 + 'px'}}/>
-    );
+    return (<img src={props.person.image} alt={props.person.name} style={{width: 300 + 'px'}}/>);
   }
-  return (
-    <img src="/api/v1/americanhero" alt="A sloth for all seasons" style={{width: 300 + 'px'}}/>
-  );
+  return (<img src="/api/v1/americanhero" alt="A sloth for all seasons" style={{width: 300 + 'px'}}/>);
 }
 
 function PersonLifespan(props) {
   if(false && props.person.IsDeceased) {
-    return (
-      <p id="person-lifespan">
-        {props.person.DateBorn} - {props.person.DateDied}
-      </p>
-    );
+    return (<p id="person-lifespan">{props.person.DateBorn} - {props.person.DateDied}</p>);
   }
-  return (
-    <p id="person-lifespan">
-      {props.person.date_of_birth} - Present
-    </p>
-  );
+  return (<p id="person-lifespan">{props.person.date_of_birth} - Present</p>);
 }
 
 function PersonDetails(props) {
@@ -155,24 +143,62 @@ class OfficeView extends React.Component {
         <div className="panel panel-default">
           <div className="panel-heading">
             <div className="row">
-              <div className="dropdown col-xs-4">
-                <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                  Office Data
-                  <span className="caret"></span>
-                </button>
-                <ul className="dropdown-menu" id="person-info-select">
-                  <li><a href="#">Office Data</a></li>
-                  <li><a href="#">Votes</a></li>
+              <div className="col-xs-5">
+                {/*
+                <div className="dropdown">
+                  <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Office Data
+                    <span className="caret"></span>
+                  </button>
+                  <ul className="dropdown-menu" id="person-info-select">
+                    <li><a href="#">Office Data</a></li>
+                    <li><a href="#">Votes</a></li>
+                  </ul>
+                </div>
+                */}
+                <ul className="nav nav-tabs" role="tablist">
+                  <li role="presentation" className="active"><a href="#office-view-tab-pane" aria-controls="office-view-tab-pane" role="tab" data-toggle="tab" >Office Data</a></li>
+                  <li role="presentation"><a href="#votes-view-tab-pane" aria-controls="votes-view-tab-pane" role="tab" data-toggle="tab" >Votes</a></li>
                 </ul>
               </div>
-              <div className="col-xs-8" id="person-info-selected">
+              <div className="col-xs-7" id="person-info-selected">
                 <h4>{office.title}, {office.chamber}</h4>
               </div>
             </div>
           </div>
           <div id="office-view-content" className="panel-content">
-            <OfficeData office={office}/>
-            <CommitteesData committees={this.props.person.committees}/>
+            <div className="tab-content">
+              <div role="tabpanel" className="tab-pane active" id="office-view-tab-pane">
+                <OfficeData office={office}/>
+                <CommitteesData committees={this.props.person.committees}/>
+              </div>
+              <div role="tabpanel" className="tab-pane" id="votes-view-tab-pane">
+                <div className="table-responsive">
+                  <table className="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Bill</th>
+                        <th>Vote</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="/bills/hres5-115">H.RES.5</a></td>
+                        <td><a href="/votes/House-1-3">House-1-3</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="/bills/sconres3-115">S.CON.RES.3</a></td>
+                        <td><a href="/votes/Senate-1-1">Senate-1-1</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="/bills/sconres3-115">S.CON.RES.3</a></td>
+                        <td><a href="/votes/Senate-1-2">Senate-1-2</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -181,26 +207,26 @@ class OfficeView extends React.Component {
 }
 
 
-class Person extends React.Component {
+class Member extends React.Component {
   constructor() {
     super();
     this.state = {
-      person: null
+      member: null
     };
   }
 
   componentDidMount() {
     var that = this;
-    loadJSONWrapper("/api/v1/people" + getPerson(), function(data) {
-      that.updatePerson(data);
+    loadJSONWrapper("/api/v1/members" + getPerson(), function(data) {
+      that.updateData(data);
     });
   }
 
-  updatePerson(personData) {
+  updateData(data) {
     var that = this;
-    if(personData && personData.success === true) {
+    if(data && data.success === true) {
       that.setState({
-        person: personData.data,
+        member: data.data,
       });
     }
     else {
@@ -213,23 +239,12 @@ class Person extends React.Component {
       <div className="container">
     		<div className="row">
     			<div className="col-sm-6">
-    				<PersonView person={this.state.person}/>
+    				<PersonView person={this.state.member}/>
     			</div>
     			<div className="col-sm-6">
-    				<OfficeView person={this.state.person}/>
+    				<OfficeView person={this.state.member}/>
     			</div>
     		</div>
-        {/*
-    		<div className="row">
-    			<div className="col-sm-12">
-    				<div className="panel panel-default">
-    					<div className="panel-content" id="person-summary">
-    						Summary
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-        */}
     	</div>
 
     );
@@ -237,21 +252,7 @@ class Person extends React.Component {
 
 }
 
-// function setOffice(officeIndex) {
-//   var office = person["Offices"][officeIndex];
-// }
-
 ReactDOM.render(
-  <Person />,
+  <Member />,
   document.getElementById('person')
 );
-
-// ReactDOM.render(
-//   <PersonView />,
-//   document.getElementById('person-info-view')
-// );
-//
-// ReactDOM.render(
-//   <OfficeView />,
-//   document.getElementById('person-office-view')
-// );
