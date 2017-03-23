@@ -183,15 +183,15 @@ class OfficeView extends React.Component {
                     </thead>
                     <tbody>
                       <tr>
-                        <td><a href="/bills/hres5-115">H.RES.5</a></td>
+                        <td><a href="/bills/hr21-115">H.RES.5</a></td>
                         <td><a href="/votes/House-1-3">House-1-3</a></td>
                       </tr>
                       <tr>
-                        <td><a href="/bills/sconres3-115">S.CON.RES.3</a></td>
+                        <td><a href="/bills/hr210-115">S.CON.RES.3</a></td>
                         <td><a href="/votes/Senate-1-1">Senate-1-1</a></td>
                       </tr>
                       <tr>
-                        <td><a href="/bills/sconres3-115">S.CON.RES.3</a></td>
+                        <td><a href="/bills/hr226-115">S.CON.RES.3</a></td>
                         <td><a href="/votes/Senate-1-2">Senate-1-2</a></td>
                       </tr>
                     </tbody>

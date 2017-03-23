@@ -1,0 +1,26 @@
+{
+  "id": "K000388",
+  "name": "Trent Kelly",
+  "date_of_birth": "1966-03-01",
+  "gender": "M",
+  "image": "http://bioguide.congress.gov/bioguide/photo/K/K000388.jpg",
+  "url": "https://trentkelly.house.gov",
+  "twitter_account": "reptrentkelly",
+  "facebook_account": "reptrentkelly",
+  "youtube_account": "",
+  "rss_url": "",
+  "in_office": "true",
+  "current_party": "R",
+  "chamber": "House",
+  "title": "Representative",
+  "state": "MS",
+  "district": "1",
+  "start_date": "2017-01-03",
+  "end_date": "2019-01-03",
+  "committees": [
+    {
+      "name": "Committee on Agriculture",
+      "code": "HSAG"
+    }
+  ]
+}

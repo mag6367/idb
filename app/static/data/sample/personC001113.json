@@ -1,0 +1,25 @@
+{
+  "id": "C001113",
+  "name": "Catherine Cortez Masto",
+  "date_of_birth": "1964-03-29",
+  "gender": "F",
+  "image": "http://bioguide.congress.gov/bioguide/photo/C/C001113.jpg",
+  "url": "https://www.cortezmasto.senate.gov",
+  "twitter_account": "sencortezmasto",
+  "facebook_account": "SenatorCortezMasto",
+  "youtube_account": "",
+  "rss_url": "",
+  "in_office": "true",
+  "current_party": "D",
+  "chamber": "Senate",
+  "title": "Senator, 3rd Class",
+  "state": "NV",
+  "start_date": "2017-01-03",
+  "end_date": "2019-01-03",
+  "committees": [
+    {
+      "name": "Committee on Indian Affairs",
+      "code": "SLIA"
+    }
+  ]
+}

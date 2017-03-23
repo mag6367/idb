@@ -1,0 +1,34 @@
+{
+  "bills": [
+    {
+      "result": 1,
+      "id": "hr21-115",
+      "name": "Midnight Rules Relief Act of 2017",
+      "date": "2017-01-03",
+      "primary_subject": "Government Operations and Politics",
+      "chamber": "House",
+      "senate_passage": "",
+      "house_passage": "2017-01-04"
+    },
+    {
+      "result": 2,
+      "id": "hr210-115",
+      "name": "Native American Energy Act",
+      "date": "2017-01-03",
+      "primary_subject": "Native Americans",
+      "chamber": "House",
+      "senate_passage": "",
+      "house_passage": ""
+    },
+    {
+      "result": 3,
+      "id": "hr226-115",
+      "name": "African Elephant Conservation and Legal Ivory Possession Act",
+      "date": "2017-01-03",
+      "primary_subject": "Animals",
+      "chamber": "House",
+      "senate_passage": "",
+      "house_passage": ""
+    }
+  ]
+}

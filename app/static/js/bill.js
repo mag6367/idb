@@ -1,21 +1,19 @@
-var loadJSONWrapper= function(path, callback) {
+var loadJSONWrapper = function (path, callback) {
     $.ajax({
         url: path,
         dataType: "json",
         success: callback,
-        error: function(xhr, textStatus, errorThrown){
+        error: function (xhr, textStatus, errorThrown) {
             alert("Error reading bill: " + textStatus);
         }
     });
 }
 
-var getBill = function() {
+var getBill = function () {
     return window.location.pathname.substring(window.location.pathname.lastIndexOf('/'));
     // var searchParams = new URLSearchParams(window.location.search);
     // return searchParams.get("id");
 }
-
-
 
 
 function BillDetails(props) {
@@ -27,7 +25,31 @@ function BillDetails(props) {
                 <p>{props.bill.congress}th Congress</p>
             </div>
         </div>
+
     );
+}
+
+
+function BillTimeline(props) {
+    var container = document.getElementById('bill');
+    // Create a DataSet (allows two way data-binding)
+    var items = new vis.DataSet([
+        {id: 1, content: 'Introduced', start: props.bill.introduced_date},
+        {id: 2, content: props.bill.actions[0].description, start: props.bill.actions[0].datetime},
+        {id: 3, content: props.bill.actions[1].description, start: props.bill.actions[1].datetime},
+        {id: 4, content: 'House Passage', start: props.bill.house_passage}
+    ]);
+
+    // Configuration for the Timeline
+    var options = {};
+
+    // Create a Timeline
+    var timeline = new vis.Timeline(container, items, options);
+
+    return (
+        <div id="timeline"></div>
+    )
+
 }
 
 class BillView extends React.Component {
@@ -36,11 +58,13 @@ class BillView extends React.Component {
     }
 
     render() {
-        if(this.props.bill) {
+        if (this.props.bill) {
             return (
                 <div className="thumbnail">
                     <BillDetails bill={this.props.bill}/>
+                    <BillTimeline bill={this.props.bill}/>
                 </div>
+
             );
         }
         return (<p>No Data</p>);
@@ -48,14 +72,52 @@ class BillView extends React.Component {
 }
 
 
+class SponsorView extends React.Component {
+    constructor() {
+        super();
+    }
 
+    render() {
+        if (!this.props.bill) {
+            return (<div id="sponsor-view-content"><p>No Data</p></div>);
+        }
+        var sponsor = this.props.bill;
+        return (
+            <div id="sponsor-view">
+                        <div className="thumbnail">
+                            <div className="caption text-center">
+                                <h4>Sponsor Details</h4>
+                                <div className="caption text-center">
+                                    <a href={"/members/" + this.props.bill.sponsor_id}>{this.props.bill.sponsor} ({this.props.bill.sponsor_party},
+                                        {this.props.bill.sponsor_state})</a>
 
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        );
+    }
+}
 
+class SummaryView extends React.Component {
+    constructor() {
+        super();
+    }
 
+    render() {
+        if (!this.props.bill) {
+            return (<div id="summary-view-content"><p>No Data</p></div>);
+        }
+        return (
+            <div id="summary-view">
+                <div className="thumbnail">
+                    <p>{this.props.bill.summary}</p>
+                </div>
+            </div>
+        )
+    }
 
-
-
-
+}
 
 
 class Bill extends React.Component {
@@ -68,14 +130,14 @@ class Bill extends React.Component {
 
     componentDidMount() {
         var that = this;
-        loadJSONWrapper("/api/v1/bills" + getBill(), function(data) {
+        loadJSONWrapper("/api/v1/bills" + getBill(), function (data) {
             that.updateBill(data);
         });
     }
 
     updateBill(billData) {
         var that = this;
-        if(billData && billData.success === true) {
+        if (billData && billData.success === true) {
             that.setState({
                 bill: billData.data,
             });
@@ -91,6 +153,14 @@ class Bill extends React.Component {
                 <div className="row">
                     <div className="col-sm-6">
                         <BillView bill={this.state.bill}/>
+                    </div>
+                    <div className="col-sm-6">
+                        <SponsorView bill={this.state.bill}/>
+                    </div>
+                </div>
+                <div className="row">
+                    <div>
+                        <SummaryView bill={this.state.bill}/>
                     </div>
                 </div>
                 {/*
