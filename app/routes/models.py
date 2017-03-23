@@ -136,14 +136,3 @@ def vote(vote_id):
         return Response(response="{\"success\": true, \"data\": " + f.read() + "}",
                         status="200",
                         mimetype="application/json")
-
-
-@models.route('/api/v1/example')
-def examples():
-    """
-    eklogi Filings JSON
-
-    :return: 'TBD'
-    """
-    params = pagination_parameters()
-    return "{\"success\": true, data: {id: " + str(id) + ", params: \"" + str(params) + "\"}}"
