@@ -135,7 +135,7 @@ submit: eklogi.html eklogi.log
 
 test: inspect
 	make versions
-	-$(COVERAGE) run --branch $(TESTS) > $(TEST_DEST) 2>&1
+	-$(COVERAGE) run --omit "/usr/*","/home/travis/*","/app/templates/*" --branch $(TESTS) > $(TEST_DEST) 2>&1
 	-$(COVERAGE) report -m >> $(TEST_DEST)
 	cat $(TEST_DEST)
 
