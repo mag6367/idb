@@ -1,0 +1,2228 @@
+{
+  "vote": {
+    "congress": "115",
+    "session": "1",
+    "chamber": "House",
+    "roll_call": "3",
+    "source": "http://clerk.house.gov/evs/2017/roll003.xml",
+    "url": "http://clerk.house.gov/evs/2017/roll003.xml",
+    "bill": {
+    "bill_id": "hres5-115",
+    "number": "H.RES.5",
+    "api_uri": "https://api.propublica.org/congress/v1/115/bills/hres5.json",
+    "title": "Adopting rules for the One Hundred Fifteenth Congress.",
+    "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
+  },
+  "question": "Table Motion to Refer",
+  "description": "Adopting rules for the One Hundred Fifteenth Congress",
+  "vote_type": "YEA-AND-NAY",
+  "date": "2017-01-03",
+  "time": "15:04:00",
+  "result": "Passed",
+           "democratic": {
+             "yes": "0",
+             "no": "184",
+             "present": "0",
+             "not_voting": "9",
+             "majority_position": "No"
+            },
+           "republican": {
+             "yes": "228",
+             "no": "0",
+             "present": "0",
+             "not_voting": "13",
+             "majority_position": "Yes"
+            },
+           "independent": {
+             "yes": "0",
+             "no": "0",
+             "present": "0",
+             "not_voting": "0"
+            },
+           "total": {
+             "yes": "228",
+             "no": "184",
+             "present": "0",
+             "not_voting": "21"
+            },
+            "positions": [
+              {
+                "member_id": "A000374",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "A000370",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "A000055",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "A000371",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "A000372",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "A000367",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "A000369",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "A000375",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001291",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001298",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001299",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001269",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001282",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001300",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B000213",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001270",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001281",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B000287",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001287",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001301",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001056",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001292",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001302",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001257",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B000490",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001293",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001250",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001273",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001243",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001294",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B000574",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001303",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001278",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001295",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001296",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001227",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B000755",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001290",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001283",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001274",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001284",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001304",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001285",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001260",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001297",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001275",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001305",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001248",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001286",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001251",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "B001289",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C000059",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001037",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001112",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001097",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001072",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001103",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001051",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001090",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001066",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001091",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C000266",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001076",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001109",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001080",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001084",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001101",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001067",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001049",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001061",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C000537",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001077",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001068",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001053",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001093",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001092",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001108",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001105",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001062",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001078",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C000714",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001094",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C000754",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001110",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001059",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001106",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001069",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001096",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001087",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001111",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001038",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001063",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001048",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C000984",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "C001107",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000626",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000598",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000096",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000619",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000191",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000197",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000620",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000216",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000617",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000627",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000612",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000604",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000621",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000623",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000616",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000610",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000600",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000624",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000399",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000625",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000482",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000614",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000615",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000533",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "D000628",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "E000288",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "E000294",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "E000179",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "E000215",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "E000297",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "E000293",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "E000296",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000460",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000464",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000465",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000466",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000459",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000461",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000449",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000454",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000450",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000462",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000448",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000372",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "F000455",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000571",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000578",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000579",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000574",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000559",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000580",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000563",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000552",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000581",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000289",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000565",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000583",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000566",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000377",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000560",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000577",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000546",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000553",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000410",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000568",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000551",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000576",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000558",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "G000535",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001050",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001045",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001052",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001053",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H000324",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001064",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001036",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001071",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001077",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001038",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001072",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001047",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001065",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001074",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H000874",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001067",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001068",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001058",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001059",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001048",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "H001073",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "I000056",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000032",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000298",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000294",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000290",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000297",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000288",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000299",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000292",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000126",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000174",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000255",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000289",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "J000295",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000009",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000386",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000375",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000385",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000388",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000376",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000379",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000389",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000390",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000380",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000381",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000188",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000362",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000210",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000378",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000387",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000391",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000382",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "K000392",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000573",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000585",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000578",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000564",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000567",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000559",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000560",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000557",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000566",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000581",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000586",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000551",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000263",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000287",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000587",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000582",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000563",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000554",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000565",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000397",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000576",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000583",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000584",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000579",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000480",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000491",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000569",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000580",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000570",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "L000562",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001193",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M000087",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001185",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001158",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001179",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001198",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001184",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001199",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001163",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001165",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001157",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001177",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001143",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001200",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M000312",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001156",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001180",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001159",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001166",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001197",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001187",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001181",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001137",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001188",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001189",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001201",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001194",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001195",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001160",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001196",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001190",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001182",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001202",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "M001151",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "N000002",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "N000179",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "N000015",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "N000189",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "N000184",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "N000127",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "N000188",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "N000181",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "O000171",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "O000170",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "O000168",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000601",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000034",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000609",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000613",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000096",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000594",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000604",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000588",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000197",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000593",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000605",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000608",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000258",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000597",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000606",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000607",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000592",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000611",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000598",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000602",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000599",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000523",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "P000591",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "Q000023",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000606",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000601",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000585",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000578",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000586",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000602",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000597",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000588",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000591",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000582",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000575",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000395",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000409",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000592",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000607",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000583",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000435",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000608",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000580",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000593",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000598",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000603",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000486",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000487",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000599",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000576",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000515",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000604",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000609",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000577",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001156",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000051",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001168",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001176",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001145",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001150",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001190",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001183",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000185",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001189",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001157",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000244",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000248",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000250",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001185",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001170",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000344",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000364",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001154",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001148",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001191",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001165",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000480",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001195",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001172",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000522",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000583",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S000510",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001199",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001200",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001175",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001196",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001192",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001187",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001201",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "S001193",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000472",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000477",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000478",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000460",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000193",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000467",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000238",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000462",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000470",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000468",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000469",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000474",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000475",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000465",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "T000463",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "U000031",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "V000129",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "V000130",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "V000131",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "V000132",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "V000081",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "V000108",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000812",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000798",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000791",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000819",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000813",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000820",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000799",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000797",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000187",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000822",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000814",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000806",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000800",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000815",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000821",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000816",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000808",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000795",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000804",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000809",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "W000810",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "Y000062",
+                "vote_position": "No",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "Y000063",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "Y000065",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "Y000033",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "Y000066",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "Z000017",
+                "vote_position": "Yes",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "Z000018",
+                "vote_position": "Not Voting",
+                "dw_nominate": ""
+              },
+                            {
+                "member_id": "R000570",
+                "vote_position": "Speaker",
+                "dw_nominate": ""
+              }
+              ]
+            },
+
+            "vacant_seats": [
+              {
+                "state": "OR",
+                "district": "5"
+              }
+              ]
+         }
