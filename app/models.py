@@ -33,16 +33,18 @@ class Bill(db.Model):
     subject = Column(String)
     summary = Column(String)
     introduced_date = Column(Date)
+    committee_name = Column(String)
     house_passage_date = Column(Date)
     senate_passage_date = Column(Date)
     sponsor_id = Column(String)
 
-    def __init__(self, title, subject, summary, introduced_date,
+    def __init__(self, title, subject, summary, introduced_date, committee_name,
                  house_passage_date, senate_passage_date, sponsor_id):
         self.title = title
         self.subject = subject
         self.summary = summary
         self.introduced_date = introduced_date
+        self.committee_name = committee_name
         self.house_passage_date = house_passage_date
         self.senate_passage_date = senate_passage_date
         self.sponsor_id = sponsor_id
