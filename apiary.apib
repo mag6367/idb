@@ -24,7 +24,7 @@ Represents the details of politicians.
 ---
 **Member attributes:**
 
-- id `(String)` : unique identifier. 
+- id `(String)` : Unique identifier. 
 - name `(String)` : Name of member.
 - party `(String)` : Party which member is part of.
 - state `(String)` : State member represents.
@@ -33,7 +33,7 @@ Represents the details of politicians.
 ---
 ## Member Collection [people]
 ### List all members [GET]
-Retrieve all members of current congress
+Retrieve all members of current congress.
 
 + curl "https://api.eklogi.me/people/"
 
@@ -95,7 +95,8 @@ Returns all members from a chamber, which can be either the house or senate.
 
 ## Single Member [people/{chamber}/{id}.json]
 ### Retrieve A Single Member [Get]
-Return a specific member 
+Return a specific member.
+
 + Parameters
     + chamber (required) ... House or senate
     + id (required) ... member's Id
@@ -165,7 +166,8 @@ Retrieve all committees of current congress
 
 ## Single Committee [committee/{id}.json]
 ### Retrieve A Single Commitee [Get]
-Return a specific member 
+Return a specific member.
+
 + Parameters
     + id (required) ... member's Id
     
@@ -194,7 +196,7 @@ Return a specific member
         }
         
 # Group Bills
-Represents the bills introduced in the both the senate and house
+Represents the bills introduced in the both the senate and house.
 
 ---
 **Bill attributes:**
@@ -259,10 +261,10 @@ Return a specific member
             "title": "Midnight Rules Relief Act of 2017",
             "sponsor": "Darrell Issa",
             "date_introduced": "2017-01-03",
-            "chamber": "House"
-            "voted_house": "yes"
-            "voted_senate": "no"
-            "passed_house": "yes"
+            "chamber": "House",
+            "voted_house": "yes",
+            "voted_senate": "no",
+            "passed_house": "yes",
             "passed_senate": "no"
         }
 
@@ -275,15 +277,15 @@ Return a specific member
             "title": "Native American Energy Act",
             "sponsor": "Don Young",
             "date_introduced": "2017-01-03",
-            "chamber": "House"
-            "voted_house": "no"
-            "voted_senate": "no"
-            "passed_house": "no"
+            "chamber": "House",
+            "voted_house": "no",
+            "voted_senate": "no",
+            "passed_house": "no",
             "passed_senate": "no"
         }
         
 # Group Votes
-Represents the detailed votes for specific bills introduced in the both the senate and house
+Represents the detailed votes for specific bills introduced in the both the senate and house.
 
 ---
 **Votes attributes:**
@@ -311,14 +313,14 @@ Retrieve all votes on every bill introduced during the current congress.
             {
                 "id": "hr21-115",
                 "title": "Midnight Rules Relief Act of 2017",
-                "chamber": "House"
-                "dem_yes": 0
-                "rep_yes": 51
-                "ind_yes": 0
-                "dem_no": 45
-                "rep_no": 0
-                "ind_no": 2
-                "total_yes": 51
+                "chamber": "House",
+                "dem_yes": 0,
+                "rep_yes": 51,
+                "ind_yes": 0,
+                "dem_no": 45,
+                "rep_no": 0,
+                "ind_no": 2,
+                "total_yes": 51,
                 "total_no": 47
             }, 
             
@@ -326,13 +328,13 @@ Retrieve all votes on every bill introduced during the current congress.
                 "id": "hr210-115",
                 "title": "Native American Energy Act",
                 "chamber": "House"
-                "dem_yes": 45
-                "rep_yes": 0
-                "ind_yes": 2
-                "dem_no": 0
-                "rep_no": 49
-                "ind_no": 0
-                "total_yes": 49
+                "dem_yes": 45,
+                "rep_yes": 0,
+                "ind_yes": 2,
+                "dem_no": 0,
+                "rep_no": 49,
+                "ind_no": 0,
+                "total_yes": 49,
                 "total_no": 49
             }
             ...
@@ -340,7 +342,8 @@ Retrieve all votes on every bill introduced during the current congress.
 
 ## Single Votes [votes/{chamber}/{id}.json]
 ### Retrieve a vote on specific bill [Get]
-Return a specific member 
+Return a specific member.
+
 + Parameters
     + chamber (required) ... chamber in which vote happened
     + id (required) ... bill's unique Id
@@ -352,14 +355,14 @@ Return a specific member
         {
             "id": "hr21-115",
             "title": "Midnight Rules Relief Act of 2017",
-            "chamber": "House"
-            "dem_yes": 0
-            "rep_yes": 51
-            "ind_yes": 0
-            "dem_no": 45
-            "rep_no": 0
-            "ind_no": 2
-            "total_yes": 51
+            "chamber": "House",
+            "dem_yes": 0,
+            "rep_yes": 51,
+            "ind_yes": 0,
+            "dem_no": 45,
+            "rep_no": 0,
+            "ind_no": 2,
+            "total_yes": 51,
             "total_no": 47
         }
 
@@ -371,12 +374,12 @@ Return a specific member
             "id": "hr210-115",
             "title": "Native American Energy Act",
             "chamber": "House"
-            "dem_yes": 45
-            "rep_yes": 0
-            "ind_yes": 2
-            "dem_no": 0
-            "rep_no": 49
-            "ind_no": 0
-            "total_yes": 49
+            "dem_yes": 45,
+            "rep_yes": 0,
+            "ind_yes": 2,
+            "dem_no": 0,
+            "rep_no": 49,
+            "ind_no": 0,
+            "total_yes": 49,
             "total_no": 49
         }
