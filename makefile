@@ -38,7 +38,7 @@ else ifeq ($(CI), true)                # Travis CI
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3
     AUTOPEP8 := autopep8
-    USR_LIBS := "/home/travis/*"
+    USR_LIBS := "/home/travis/virtualenv/python3.5.2/lib/python3.5/site-packages/*"
 else ifeq ($(shell uname -p), unknown) # Docker
     PYTHON   := python3.5
     PIP      := pip3.5
