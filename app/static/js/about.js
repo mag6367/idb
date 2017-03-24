@@ -9,10 +9,10 @@ class AboutNick extends React.Component {
             <div className="thumbnail">
                 <div id="person-details">
                     <div className="caption text-center">
-                        <img src="../static/img/nick.jpeg" style={{width: 300 + 'px'}}/>
+                        <img src="/img/nick.jpeg" style={{width: 300 + 'px'}}/>
                         <h2>Nick Dant</h2>
                         <a href="https://github.com/NickDant">
-                            <img src="../static/img/Github-Mark-32px.png"/>
+                            <img src="/img/GitHub-Mark-32px.png"/>
                         </a>
                     </div>
                 </div>
@@ -54,10 +54,10 @@ class AboutIan extends React.Component {
             <div className="thumbnail">
                 <div id="person-details">
                     <div className="caption text-center">
-                        <img src="../static/img/ian.jpeg" style={{width: 300 + 'px'}}/>
+                        <img src="/img/ian.jpeg" style={{width: 300 + 'px'}}/>
                         <h2>Ian Caffey</h2>
                         <a href="https://github.com/iancaffey">
-                            <img src="../static/img/Github-Mark-32px.png"/>
+                            <img src="/img/GitHub-Mark-32px.png"/>
                         </a>
 
                     </div>
@@ -100,10 +100,10 @@ class AboutJared extends React.Component {
             <div className="thumbnail">
                 <div id="person-details">
                     <div className="caption text-center">
-                        <img src="../static/img/jared.jpeg" style={{width: 300 + 'px'}}/>
+                        <img src="/img/jared.jpeg" style={{width: 300 + 'px'}}/>
                         <h2>Jared McArthur</h2>
                         <a href="https://github.com/ascensionra">
-                            <img src="../static/img/Github-Mark-32px.png"/>
+                            <img src="/img/GitHub-Mark-32px.png"/>
                         </a>
                     </div>
                     <div className="caption text-center">
@@ -145,10 +145,10 @@ class AboutEvan extends React.Component {
             <div className="thumbnail">
                 <div id="person-details">
                     <div className="caption text-center">
-                        <img src="../static/img/evan.jpeg" style={{width: 300 + 'px'}}/>
+                        <img src="/img/evan.jpeg" style={{width: 300 + 'px'}}/>
                         <h2>Evan Durfee</h2>
                         <a href="https://github.com/durfeeUT">
-                            <img src="../static/img/Github-Mark-32px.png"/>
+                            <img src="/img/GitHub-Mark-32px.png"/>
                         </a>
                     </div>
                     <div className="caption text-center">
@@ -190,10 +190,10 @@ class AboutRick extends React.Component {
             <div className="thumbnail">
                 <div id="person-details">
                     <div className="caption text-center">
-                        <img src="../static/img/rick.png" style={{width: 300 + 'px'}}/>
+                        <img src="/img/rick.png" style={{width: 300 + 'px'}}/>
                         <h2>Rick</h2>
                         <a href="https://github.com/RickHasAGit">
-                            <img src="../static/img/Github-Mark-32px.png"/>
+                            <img src="/img/GitHub-Mark-32px.png"/>
                         </a>
                     </div>
                     <div className="caption text-center">
@@ -235,10 +235,10 @@ class AboutMarco extends React.Component {
             <div className="thumbnail">
                 <div id="person-details">
                     <div className="caption text-center">
-                        <img src="../static/img/marco.png" style={{width: 300 + 'px'}}/>
+                        <img src="/img/marco.png" style={{width: 300 + 'px'}}/>
                         <h2>Marco Guajardo</h2>
                         <a href="https://github.com/mag6367">
-                            <img src="../static/img/Github-Mark-32px.png"/>
+                            <img src="/img/GitHub-Mark-32px.png"/>
                         </a>
                     </div>
                     <div className="caption text-center">

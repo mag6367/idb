@@ -31,3 +31,8 @@ def sloth():
     :return: 'returns a picture of the astronaut sloth'
     """
     return send_from_directory('static/img', 'astronaut-sloth.jpg')
+
+
+@utility.route('/img/<path:path>')
+def images(path):
+    return send_from_directory('static/img', path)
