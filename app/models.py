@@ -39,8 +39,10 @@ class Bill(db.Model):
     senate_passage_date = Column(Date)
     sponsor_id = Column(String)
 
-    def __init__(self, title, code, subject, summary, introduced_date,
+    def __init__(self, id, title, code, subject, summary, introduced_date,
                  committee_name, house_passage_date, senate_passage_date, sponsor_id):
+        assert id
+        self.id = id
         self.title = title
         self.code = code
         self.subject = subject
@@ -82,9 +84,11 @@ class Member(db.Model):
     term_start = Column(Date)
     term_end = Column(Date)
 
-    def __init__(self, first_name, last_name, picture_url, dob, party, chamber, title,
+    def __init__(self, id, first_name, last_name, picture_url, dob, party, chamber, title,
                  state, district, website, facebook_alias, twitter_alias,
                  term_start, term_end):
+        assert id
+        self.id = id
         self.first_name = first_name
         self.last_name = last_name
         self.picture_url = picture_url
@@ -125,6 +129,7 @@ class Committee(db.Model):
     size = Column(Integer)
 
     def __init__(self, chair_id, name, website, chamber, size):
+        assert chair_id
         self.chair_id = chair_id
         self.name = name
         self.website = website
@@ -154,6 +159,7 @@ class Vote(db.Model):
     position = Column(String)
 
     def __init__(self, bill_id, member_id, date, question, description, position):
+        assert bill_id
         self.bill_id = bill_id
         self.member_id = member_id
         self.date = date

@@ -2,30 +2,71 @@
 <html lang="en">
 <title>Eklogi Poltical Database [ABOUT]</title>
 <head>
-	{% include 'common-header.html' %}
+    {% include 'common-header.html' %}
+    <script type="text/babel" src="../static/js/about.js"></script>
 </head>
 <body>
-	<div id="top-pane">
-		{% include 'top-pane.html' %}
-	</div>
-	<div id="top-navbar">
-		{% include 'top-navbar.html' %}
-	</div>
+<div id="top-pane">
+    {% include 'top-pane.html' %}
+</div>
+<div id="top-navbar">
+    {% include 'top-navbar.html' %}
+</div>
 
-	<div class="container">
+<div class="container">
     <div class=row>
-      <div class="jumbotron text-center" id="about-jumbo">
-        <h1>About Eklogi</h1>
-      </div>
+        <div class="jumbotron text-center" id="about-jumbo">
+            <h1>About Eklogi</h1>
+            <p>A site to explore the U.S. political environment. Eklogi tracks politicians of the current Congress and
+                shows how
+                they vote, which committeess they belong to, and the progression of bills.</p>
+        </div>
+    </div>
+    <div class=row>
+        <div class="panel panel-default" id="about-stats">
+            <div class="panel-content">
+                <div class="caption text-center">
+                    <span id="stats" class="col-sm-6">
+                        <div class="thumbnail" >
+                            <h2>Stats</h2>
+                            <p>Total commits: </p>
+                            <p>Total issues: </p>
+                            <p>Total unit tests: </p>
+                            <p><a href="http://docs.mag6367.apiary.io/">Apiary</a></p>
+                            <p><a href="https://github.com/eklogi/idb/issues">Issue Tracker</a></p>
+                            <p><a href="https://github.com/eklogi/idb">Code Repo</a></p>
+                        </div>
+                    </span>
+                </div>
+                <div class="caption text-center">
+                    <span id="data-tools" class="col-sm-6">
+                        <div class="thumbnail">
+                            <h2>Data + Tools</h2>
+                            <p>We scraped <a href="https://propublica.github.io/congress-api-docs/">Propublica API</a> to get
+                            the necessary info for members, committees, bills, and votes.</p>
+                            <p>Hosting: We use AWS to host our web application </p>
+                            <p>API Documentation: We use Apiary to document the Probublica API</p>
+                            <p>GUI: Utilize Bootstrap for dynamic rending of our content.</p>
+                            <p>Frontend: We implement our pages with Javascript, particularly React</p>
+                            <p>Backend: Our templates are served using Flask</p>
+                            <p>Database: We have setup our models for use with SQLAlchemy to achieve persistence</p>
+                            <p>Domain: Our url was acquired through Namecheap</p>
+                            <p>Logistics: Github for version control and project management</p>
+                            <p>Communication: Slack with integrations to keep the team up-to-date</p>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
-      <div class="panel panel-default" id="about-panel">
-        <div class="panel-content">
-          <p>This is about us.</p>
+        <div class="panel panel-default" id="about-panel">
+            <div class="panel-content">
+                <div id="about"></div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
 </body>
 </html>

@@ -23,12 +23,20 @@ function CommitteeDetails(props) {
       <div className="caption text-center">
         <h2>{props.committee.committee}</h2>
         <p>Chamber: {props.committee.chamber}</p>
+        <p><img src={props.committee.image} /></p>
         <a href={"/members/" + props.committee.chairman_id}>Chair: {props.committee.chairman_id}</a>
         {MemberDetails(props)}
       </div>
 
     </div>
   );
+}
+
+function ChairPortrait(props) {
+    if(props.committee && props.committee.image) {
+        return (<img src={props.committee.image} alt={props.committee.chairman_id} style={{width: 300 + 'px'}}/>);
+    }
+    return (<img src="/api/v1/americanhero" alt="A sloth for all seasons" style={{width: 300 + 'px'}}/>);
 }
 
 class CommitteeView extends React.Component {
@@ -41,6 +49,7 @@ class CommitteeView extends React.Component {
       return (
         <div className="thumbnail">
           <CommitteeDetails committee={this.props.committee}/>
+          <ChairPortrait committee={this.props.committee}/>
         </div>
       );
     }

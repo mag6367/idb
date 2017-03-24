@@ -104,7 +104,7 @@ function VoteResults(props) {
   return (
     <div className="panel-content" id="vote-results" >
       <div className="row">
-        <div className="col-sm-6" id="vote-results-col-left">
+        <div className="col-xs-12 col-sm-6" id="vote-results-col-left">
           <table className="table">
             <thead></thead>
             <tbody>
@@ -115,7 +115,7 @@ function VoteResults(props) {
             </tbody>
           </table>
         </div>
-        <div className="col-sm-6" id="vote-results-col-right">
+        <div className="col-xs-12 col-sm-6" id="vote-results-col-right">
           <table className="table">
             <thead></thead>
             <tbody>
